@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 interface ButtonProps {
   active?: boolean;
+}
+
+interface MobileMenuProps {
+  isOpen?: boolean;
+}
+
+interface OverlayProps {
+  isOpen?: boolean;
 }
 
 export const Container = styled.header`
@@ -17,8 +26,12 @@ export const Container = styled.header`
   left: 0;
   box-sizing: border-box;
   background-color: white;
-  z-index: 1;
+  z-index: 1000;
   border-bottom: 1px solid #e0e0e0;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
 `;
 
 export const SvgWrapper = styled.div`
@@ -27,10 +40,6 @@ export const SvgWrapper = styled.div`
   width: 152px;
   min-width: 120px;
   transition: all 0.2s ease-in-out;
-  @media (max-width: 768px) {
-    padding: 10px 16px;
-    font-size: 0.9rem;
-  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -48,6 +57,10 @@ export const ButtonGroup = styled.div`
   }
   scrollbar-width: none;
   -ms-overflow-style: none;
+
+  @media (max-width: 900px) {
+    gap: 12px;
+  }
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -71,6 +84,9 @@ export const Button = styled.button<ButtonProps>`
   &:hover {
     color: ${(props) => props.theme.colors.primary[400]};
   }
+  @media (max-width: 900px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export const DonateButton = styled.button`
@@ -83,16 +99,153 @@ export const DonateButton = styled.button`
   color: white;
   background-color: ${(props) => props.theme.colors.primary[400]};
   transition: all 0.2s ease-in-out;
-
   white-space: nowrap;
 
   &:hover {
-    background-color: #e57d19;
-    transform: translateY(-2px);
+    background-color: ${(props) => props.theme.colors.primary[500]};
+  }
+  &:active {
+    background-color: ${(props) => props.theme.colors.secondary[600]};
   }
 
-  @media (max-width: 768px) {
-    padding: 10px 16px;
-    font-size: 0.9rem;
+  @media (max-width: 900px) {
+    padding: 8px 16px;
+    font-size: 0.7rem;
+  }
+`;
+
+export const HamburgerButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  gap: 4px;
+
+  span {
+    width: 20px;
+    height: 2px;
+    background-color: ${(props) => props.theme.colors.secondary[600]};
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &:hover span {
+    background-color: ${(props) => props.theme.colors.primary[400]};
+  }
+`;
+
+export const Overlay = styled.div<OverlayProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  opacity: ${(props) => (props.isOpen ? 1 : 0)};
+  visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+`;
+
+export const MobileMenu = styled.div<MobileMenuProps>`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  transform: ${(props) =>
+    props.isOpen ? "translateX(0)" : "translateX(100%)"};
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MobileMenuHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  height: 64px;
+  box-sizing: border-box;
+`;
+
+export const CloseButton = styled.button`
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.secondary[600]};
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary[400]};
+  }
+`;
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
+export const MobileMenuItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  flex: 1;
+`;
+
+export const MobileMenuButton = styled.div`
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const MobileMenuItem = styled.div<ButtonProps>`
+  padding: 16px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+
+  color: ${(props) =>
+    props.active
+      ? props.theme.colors.primary[400]
+      : props.theme.colors.secondary[600]};
+
+  border-left-color: ${(props) =>
+    props.active ? props.theme.colors.primary[400] : "transparent"};
+
+  background-color: ${(props) =>
+    props.active ? "rgba(255, 153, 51, 0.1)" : "transparent"};
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary[400]};
+    background-color: rgba(255, 153, 51, 0.05);
   }
 `;
