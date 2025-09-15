@@ -63,6 +63,10 @@ export const theme = {
     "1_5x": 1.5,
     "1_1x": 1.1,
   },
+  shadows: {
+    "highlight":"0px 4px 16px 0px rgba(0, 0, 0, 0.08)",
+    "depth":"0px 4px 16px 0px rgba(0, 0, 0, 0.24)"
+  }
 };
 
 export default theme;
