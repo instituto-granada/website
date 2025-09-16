@@ -1,7 +1,7 @@
-import React from "react";
 import Header from "../../components/Header";
 import { HomerContainer, Container, Text } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
+import Card from "../../components/Card";
 
 export default function Home() {
   return (
@@ -27,6 +27,16 @@ export default function Home() {
         >
           Button Sample
         </ButtonPrincipal>
+      </Container>
+
+      <Container>
+      <Text>Exemplo de uso dos cards:</Text>
+        <Card 
+          image="https://picsum.photos/200/85?greyscale"
+          text="Doe seu tempo e habilidades para fortalecer a comunidade."
+          buttonLabel="Inscreva-se" 
+          onButtonClick={() => alert("Botão Secundário Clicado!")}
+        />
       </Container>
     </HomerContainer>
   );

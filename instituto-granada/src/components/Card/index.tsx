@@ -1,4 +1,4 @@
-import { StyledCard } from "./styles";
+import { CardContent, CardFooter, CardHeader, StyledCard } from "./styles";
 import ButtonPrincipal, {ButtonProps} from "../ButtonPrincipal";
 
 export interface CardProps {
@@ -16,11 +16,25 @@ export default function Card({
 }: CardProps) {
     return (
         <StyledCard>
-            {image}
-            {text}
-            <ButtonPrincipal variant="secondary" onClick={onButtonClick}>
-                {buttonLabel}
-            </ButtonPrincipal>
+            <CardHeader>
+                {image && (
+                    <img
+                        src={image}
+                        alt={text || 'Card Image'}
+                        className="card-image"
+                    />
+                )}
+            </CardHeader>
+
+            <CardContent>
+                {text && (<p className="card-text">{text}</p>)}
+            </CardContent>
+
+            <CardFooter>
+                <ButtonPrincipal variant="secondary" onClick={onButtonClick} className="card-button">
+                    {buttonLabel}
+                </ButtonPrincipal>
+            </CardFooter>
         </StyledCard>
     );
 }
