@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const ProjectsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex: 1;
+  flex-direction: column;
+`;
+
+export const HeroContainer = styled.div`
+  margin-top: 64px;
 `;

@@ -7,7 +7,7 @@ export const HomerContainer = styled.div`
   flex-direction: column;
 `;
 
-export const Container = styled.div`
+export const HeroContainer = styled.div`
   margin-top: 64px;
 `;
 

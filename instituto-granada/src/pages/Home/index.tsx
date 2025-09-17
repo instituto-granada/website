@@ -1,43 +1,27 @@
 import Header from "../../components/Header";
-import { HomerContainer, Container, Text } from "./styles";
-import ButtonPrincipal from "../../components/ButtonPrincipal";
-import Card from "../../components/Card";
+import { HomerContainer, HeroContainer } from "./styles";
+import Hero from "../../components/Hero";
+import heroImage from "../../assets/hero/Home_Backgound.png";
 
 export default function Home() {
   return (
     <HomerContainer>
       <Header />
-      <Container>
-        <Text>Exemplo de uso dos botões com variantes logo abaixo:</Text>
-        <ButtonPrincipal
-          variant="primary"
-          onClick={() => alert("Botão Primário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-        <ButtonPrincipal
-          variant="secondary"
-          onClick={() => alert("Botão Secundário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-        <ButtonPrincipal
-          variant="ghost"
-          onClick={() => alert("Botão Secundário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-      </Container>
-
-      <Container>
-      <Text>Exemplo de uso dos cards:</Text>
-        <Card 
-          image="https://picsum.photos/200/85?greyscale"
-          text="Doe seu tempo e habilidades para fortalecer a comunidade."
-          buttonLabel="Inscreva-se" 
-          onButtonClick={() => alert("Botão Secundário Clicado!")}
+      <HeroContainer>
+        <Hero
+          isHome={true}
+          imageUrl={heroImage}
+          title="TRANSFORME A REALIDADE DE CRIANÇAS E FAMÍLIAS"
+          text="Desde 2008, o Instituto Granada oferece aprendizagem, alimentação gratuita, apoio às famílias, saúde emocional e capacitação profissional em Mairinque/SP"
+          buttons={[
+            {
+              label: "Quero doar agora",
+              variant: "primary",
+              onClick: () => console.log("Clicou em Quero doar agora!"),
+            },
+          ]}
         />
-      </Container>
+      </HeroContainer>
     </HomerContainer>
   );
 }
