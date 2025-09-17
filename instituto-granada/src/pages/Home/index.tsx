@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../../components/Header";
 import { HomerContainer, HeroContainer } from "./styles";
 import Hero from "../../components/Hero";
