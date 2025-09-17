@@ -1,33 +1,28 @@
 import React from "react";
 import Header from "../../components/Header";
-import { HomerContainer, Container, Text } from "./styles";
-import ButtonPrincipal from "../../components/ButtonPrincipal";
+import { HomerContainer, HeroContainer } from "./styles";
+import Hero from "../../components/Hero";
+import heroImage from "../../assets/hero/Home_Backgound.png";
 
 export default function Home() {
   return (
     <HomerContainer>
       <Header />
-      <Container>
-        <Text>Exemplo de uso dos botões com variantes logo abaixo:</Text>
-        <ButtonPrincipal
-          variant="primary"
-          onClick={() => alert("Botão Primário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-        <ButtonPrincipal
-          variant="secondary"
-          onClick={() => alert("Botão Secundário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-        <ButtonPrincipal
-          variant="ghost"
-          onClick={() => alert("Botão Secundário Clicado!")}
-        >
-          Button Sample
-        </ButtonPrincipal>
-      </Container>
+      <HeroContainer>
+        <Hero
+          isHome={true}
+          imageUrl={heroImage}
+          title="TRANSFORME A REALIDADE DE CRIANÇAS E FAMÍLIAS"
+          text="Desde 2008, o Instituto Granada oferece aprendizagem, alimentação gratuita, apoio às famílias, saúde emocional e capacitação profissional em Mairinque/SP"
+          buttons={[
+            {
+              label: "Quero doar agora",
+              variant: "primary",
+              onClick: () => console.log("Clicou em Quero doar agora!"),
+            },
+          ]}
+        />
+      </HeroContainer>
     </HomerContainer>
   );
 }

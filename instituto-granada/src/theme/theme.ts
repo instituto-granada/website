@@ -28,6 +28,14 @@ export const theme = {
       700: "#4A4541",
       800: "#33302D",
     },
+    extra: {
+      orange: "#f3821f",
+      white: "#ffffff",
+    },
+  },
+  font_family: {
+    sora: '"Sora", "sans-serif"',
+    outfit: '"Outfit", "sans-serif"',
   },
   typography: {
     sora: {

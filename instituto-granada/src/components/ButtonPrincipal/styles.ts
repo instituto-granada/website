@@ -30,7 +30,7 @@ const variantStyles = {
     }
   `,
   secondary: css`
-    background-color: transparent;
+    background-color: ${(props) => props.theme.colors.extra.white};
     color: ${(props) => props.theme.colors.secondary[600]};
     border: 1px solid ${(props) => props.theme.colors.secondary[600]};
 
@@ -56,9 +56,9 @@ const variantStyles = {
 
 export const StyledButton = styled.button<StyledButtonProps>`
   height: 52px;
-  padding: 16px 24px;
   border-radius: 50px;
-
+  width: 100%;
+  font-size: clamp(0.75rem, 4vw, 1rem);
   font-size: ${(props) => props.theme.typography.sora.XXS};
   font-weight: bold;
   cursor: pointer;
