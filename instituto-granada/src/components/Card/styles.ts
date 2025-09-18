@@ -26,7 +26,7 @@ export const CardHeader = styled.div`
     align-items: center;
 
     .card-image {
-        max-height> 85px;
+        max-height: 85px;
     }
 `;
 
