@@ -16,8 +16,9 @@ import {
   DonateButton,
 } from "./styles";
 import { Link, useLocation } from "react-router-dom";
-import { ReactComponent as Logo } from "../../assets/Logo_Instituto_Granada.svg";
 import ButtonPrincipal from "../ButtonPrincipal";
+import Image from "../Image";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -71,7 +72,7 @@ export default function Header() {
     <>
       <Container>
         <SvgWrapper>
-          <Logo />
+          <Image name="logo" width={150} />
         </SvgWrapper>
 
         {/* Menu Desktop */}
@@ -119,7 +120,7 @@ export default function Header() {
           <Overlay isOpen={isMenuOpen} onClick={closeMenu} />
           <MobileMenu className="mobile-menu" isOpen={isMenuOpen}>
             <MobileMenuHeader>
-              <Logo />
+              <Image name="logo" width={150} />
               <CloseButton onClick={closeMenu}>×</CloseButton>
             </MobileMenuHeader>
             <MobileMenuItems>
