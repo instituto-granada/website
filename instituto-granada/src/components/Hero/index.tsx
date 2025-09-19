@@ -1,14 +1,13 @@
-import React from "react";
 import ButtonPrincipal from "../ButtonPrincipal";
+import { ButtonVariant } from "~/types/componentTypes";
 import {
-  HeroContainer,
+  Container,
   ContentColumn,
-  HeroTitle,
-  HeroText,
+  Title,
+  Text,
   ButtonsContainer,
   HighlightedWord,
 } from "./styles";
-import { ButtonVariant } from "../ButtonPrincipal/styles";
 
 interface ButtonAction {
   label: string;
@@ -36,27 +35,23 @@ export default function Hero({
   const restOfTitle = words.join(" ");
 
   return (
-    <HeroContainer imageUrl={imageUrl} isHome={isHome}>
+    <Container imageUrl={imageUrl} isHome={isHome}>
       <ContentColumn>
-        <HeroTitle>
+        <Title>
           <HighlightedWord>{firstWord}</HighlightedWord> {restOfTitle}
-        </HeroTitle>
-        <HeroText style={{ whiteSpace: "pre-line" }}>{text}</HeroText>
+        </Title>
+        <Text style={{ whiteSpace: "pre-line" }}>{text}</Text>
 
         {buttons && buttons.length > 0 && (
           <ButtonsContainer>
-            {buttons.map((button, index) => (
-              <ButtonPrincipal
-                key={index}
-                variant={button.variant}
-                onClick={button.onClick}
-              >
-                {button.label}
+            {buttons.map(({ label, onClick, variant }, index) => (
+              <ButtonPrincipal key={index} variant={variant} onClick={onClick}>
+                {label}
               </ButtonPrincipal>
             ))}
           </ButtonsContainer>
         )}
       </ContentColumn>
-    </HeroContainer>
+    </Container>
   );
 }

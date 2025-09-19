@@ -1,27 +1,26 @@
-import Header from "../../components/Header";
-import { HomerContainer, HeroContainer } from "./styles";
+import { Container } from "./styles";
 import Hero from "../../components/Hero";
-import heroImage from "../../assets/hero/Home_Backgound.png";
+import { Images } from "../../assets/";
+import { useTranslate } from "../../hooks/useTranslate";
 
 export default function Home() {
+  const { text } = useTranslate();
+
   return (
-    <HomerContainer>
-      <Header />
-      <HeroContainer>
-        <Hero
-          isHome={true}
-          imageUrl={heroImage}
-          title="TRANSFORME A REALIDADE DE CRIANÇAS E FAMÍLIAS"
-          text="Desde 2008, o Instituto Granada oferece aprendizagem, alimentação gratuita, apoio às famílias, saúde emocional e capacitação profissional em Mairinque/SP"
-          buttons={[
-            {
-              label: "Quero doar agora",
-              variant: "primary",
-              onClick: () => console.log("Clicou em Quero doar agora!"),
-            },
-          ]}
-        />
-      </HeroContainer>
-    </HomerContainer>
+    <Container>
+      <Hero
+        isHome={true}
+        imageUrl={Images.backgroundHome}
+        title={text.home.hero.title}
+        text={text.home.hero.text}
+        buttons={[
+          {
+            label: text.home.hero.buttons.primary.label,
+            variant: "primary",
+            onClick: () => console.log("Clicou em Quero doar agora!"),
+          },
+        ]}
+      />
+    </Container>
   );
 }
