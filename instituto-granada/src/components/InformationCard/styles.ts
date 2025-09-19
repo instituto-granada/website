@@ -1,4 +1,6 @@
+import { breakpoints } from "~/styles/breakpoints";
 import styled, { css } from "styled-components";
+import theme from "~/theme/theme";
 
 const colors = {
     black: "#2D2B29",
@@ -67,8 +69,7 @@ export const StyledInformationCard = styled.div`
         }
     }
 
-    /* Mobile Grande (480px+) */
-    @media (min-width: 480px) {
+    @media (min-width: ${breakpoints.mobileL}) {
         width: 331px;
 
         .information-card-content {
