@@ -1,23 +1,18 @@
-import React from "react";
-import Navbar from "../../components/Header";
 import Hero from "../../components/Hero";
-import heroImage from "../../assets/hero/About_Backgound.png";
-import { HeroContainer } from "./styles";
+import { Container } from "./styles";
+import { Images } from "../../assets/";
+import { useTranslate } from "../../hooks/useTranslate";
 
 export default function About() {
+  const { text } = useTranslate();
+
   return (
-    <>
-      <Navbar />
-      <HeroContainer>
-        <Hero
-          imageUrl={heroImage}
-          title="SAIBA MAIS SOBRE NÓS"
-          text={`O Instituto Granada é uma Organização da 
-            Sociedade Civil localizada na Vila Granada, 
-            em Mairinque/SP. \n\n Conheça abaixo um pouco 
-            mais da nossa história.`}
-        />
-      </HeroContainer>
-    </>
+    <Container>
+      <Hero
+        imageUrl={Images.backgroundAbout}
+        title={text.about.hero.title}
+        text={text.about.hero.text}
+      />
+    </Container>
   );
 }
