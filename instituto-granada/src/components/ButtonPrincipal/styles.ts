@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost";
+import { ButtonVariant } from "~/types/componentTypes";
 
 interface StyledButtonProps {
   $variant: ButtonVariant;

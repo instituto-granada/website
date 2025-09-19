@@ -5,7 +5,7 @@ interface HeroContainerProps {
   isHome?: boolean;
 }
 
-export const HeroContainer = styled.section<HeroContainerProps>`
+export const Container = styled.section<HeroContainerProps>`
   position: relative;
   display: flex;
   align-items: center;
@@ -51,20 +51,21 @@ export const ContentColumn = styled.div`
   }
 `;
 
-export const HeroTitle = styled.h1`
+export const Title = styled.h1`
   color: #ffffff;
   font-size: ${(props) => props.theme.typography.sora.M};
   font-weight: 700;
   line-height: ${(props) => props.theme.lineHeight["1_1x"]};
   font-family: ${(props) => props.theme.font_family.sora};
   margin-bottom: 1rem;
+  text-transform: uppercase;
 `;
 
 export const HighlightedWord = styled.span`
   color: ${(props) => props.theme.colors.primary[400]};
 `;
 
-export const HeroText = styled.p`
+export const Text = styled.p`
   color: #f0f0f0;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: ${(props) => props.theme.lineHeight["1_1x"]};

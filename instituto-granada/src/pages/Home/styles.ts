@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
-export const HomerContainer = styled.div`
+export const Container = styled.div`
+  width: 100%;
   display: flex;
   flex: 1;
-  width: 100%;
   flex-direction: column;
-`;
-
-export const HeroContainer = styled.div`
-  margin-top: 64px;
 `;
 
 export const Text = styled.p`
