@@ -12,7 +12,7 @@ import {
   ContactUs,
   Container,
   Description,
-  ErrorMsg,
+  ErrorMessage,
   Field,
   FormStyled,
   Info,
@@ -22,6 +22,7 @@ import {
   ListItem,
   MaxLengthNotice,
   Menu,
+  Row,
   SectionTitle,
   StyledLink,
   Textarea,
@@ -78,7 +79,9 @@ const ContactForm: FC<FormTexts> = ({
           error={!!errors.email}
           placeholder={emailPlaceholder}
         />
-        {errors.email && <ErrorMsg>{errors.email.message}</ErrorMsg>}
+        <ErrorMessage error={!!errors.email}>
+          {errors.email?.message}
+        </ErrorMessage>
       </Field>
       <Field>
         <Label error={!!errors.message}>{messageLabel}</Label>
@@ -88,8 +91,12 @@ const ContactForm: FC<FormTexts> = ({
           maxLength={500}
           placeholder={messagePlaceholder}
         />
-        <MaxLengthNotice>{messageInputMaxLenght}</MaxLengthNotice>
-        {errors.message && <ErrorMsg>{errors.message.message}</ErrorMsg>}
+        <Row>
+          <ErrorMessage error={!!errors.message}>
+            {errors.message?.message}
+          </ErrorMessage>
+          <MaxLengthNotice>{messageInputMaxLenght}</MaxLengthNotice>
+        </Row>
       </Field>
       <ButtonPrincipal variant="primary">{buttonLabel}</ButtonPrincipal>
     </FormStyled>

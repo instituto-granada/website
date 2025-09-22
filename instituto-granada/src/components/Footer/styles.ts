@@ -189,18 +189,25 @@ export const Textarea = styled.textarea<{ error?: boolean }>`
   }
 `;
 
+export const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ErrorMessage = styled.p<{ error: boolean }>`
+  margin-top: ${({ theme }) => theme.spacing["3XS"]};
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.XS};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  color: ${({ theme }) => theme.colors.primary[400]};
+  visibility: ${({ error }) => (error ? "visible" : "hidden")};
+`;
+
 export const MaxLengthNotice = styled.span`
-  display: block;
-  text-align: right;
+  margin-top: ${({ theme }) => theme.spacing["3XS"]};
   font-family: ${({ theme }) => theme.fontFamily.outfit};
   font-size: ${({ theme }) => theme.typography.outfit.XS};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   color: ${({ theme }) => theme.colors.grayscale[600]};
-  margin-bottom: ${({ theme }) => theme.spacing["3XS"]};
-`;
-
-export const ErrorMsg = styled.p`
-  color: red;
-  font-size: 0.85rem;
-  margin: 0;
 `;
