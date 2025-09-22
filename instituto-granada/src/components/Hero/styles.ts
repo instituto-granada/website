@@ -56,7 +56,7 @@ export const Title = styled.h1`
   font-size: ${(props) => props.theme.typography.sora.M};
   font-weight: 700;
   line-height: ${(props) => props.theme.lineHeight["1_1x"]};
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   margin-bottom: 1rem;
   text-transform: uppercase;
 `;

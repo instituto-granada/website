@@ -1,6 +1,6 @@
 import { FC, ImgHTMLAttributes } from "react";
 
-import { Icons } from "~/assets";
+import { Icons } from "../../assets";
 
 type IconProps = ImgHTMLAttributes<HTMLImageElement> & {
   name: keyof typeof Icons;

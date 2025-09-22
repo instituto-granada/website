@@ -6,21 +6,22 @@ import { Container } from "./styles";
 
 export default function Projects() {
   const { text } = useTranslate();
+  const { hero } = text.projects;
 
   return (
     <Container>
       <Hero
         imageUrl={Images.backgroundProjects}
-        title={text.projects.hero.title}
-        text={text.projects.hero.text}
+        title={hero.title}
+        text={hero.text}
         buttons={[
           {
-            label: text.projects.hero.buttons.secondary.label,
+            label: hero.buttons.secondary.label,
             variant: "secondary",
             onClick: () => console.log("Clicou em Começar Agora!"),
           },
           {
-            label: text.projects.hero.buttons.primary.label,
+            label: hero.buttons.primary.label,
             variant: "primary",
             onClick: () => console.log("Clicou em Começar Agora!"),
           },

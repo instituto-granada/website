@@ -12,13 +12,13 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.secondary[700]};
 `;
 export const Title = styled.h1`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: 1.5rem;
   color: ${(props) => props.theme.colors.extra.orange};
   text-align: center;
 `;
 export const Subtitle = styled.p`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: 1rem;
   color: ${(props) => props.theme.colors.extra.white};
   margin-bottom: 32px;

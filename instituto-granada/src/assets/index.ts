@@ -4,10 +4,9 @@ import backgroundHome from "./images/backgroundHome.png";
 import backgroundProjects from "./images/backgroundProjects.png";
 import backgroundVolunteers from "./images/backgroundVolunteers.png";
 
-// import WhatsAppIcon from "./icons/whatsapp.svg";
-// import TwitterIcon from "./icons/twitter.svg";
-// import InstagramIcon from "./icons/instagram.svg";
-// import EmailIcon from "./icons/email.svg";
+import whatsapp from "./icons/whatsapp.svg";
+import instagram from "./icons/instagram.svg";
+import facebook from "./icons/facebook.svg";
 
 export const Images = {
   logo,
@@ -18,5 +17,7 @@ export const Images = {
 };
 
 export const Icons = {
-  logo,
+  facebook,
+  instagram,
+  whatsapp,
 };
