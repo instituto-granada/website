@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { breakpoints } from "../../styles/breakpoints";
 
 interface ButtonProps {
   active?: boolean;
@@ -20,7 +21,7 @@ export const Container = styled.header`
   gap: 16px;
   height: 64px;
   width: 100%;
-  padding: 0 48px;
+  padding: 0 ${({ theme }) => theme.spacing.S};
   position: fixed;
   top: 0;
   left: 0;
@@ -29,8 +30,8 @@ export const Container = styled.header`
   z-index: 1000;
   border-bottom: 1px solid #e0e0e0;
 
-  @media (max-width: 768px) {
-    padding: 0 16px;
+  @media (min-width: ${breakpoints.tablet}) {
+    padding: 0 ${({ theme }) => theme.spacing.XL};
   }
 `;
 

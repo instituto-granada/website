@@ -1,23 +1,20 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Projects from "../pages/Projects";
-import Donations from "../pages/Donations";
-import Volunteers from "../pages/Volunteers";
+
+import { routesMap } from "./routesMap";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const AppRoutes: React.FC = () => {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/donations" element={<Donations />} />
-        <Route path="/volunteers" element={<Volunteers />} />
+        {Object.values(routesMap).map(({ path, component: Component }) => (
+          <Route key={path} path={path} element={<Component />} />
+        ))}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

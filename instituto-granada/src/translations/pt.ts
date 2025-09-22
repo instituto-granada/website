@@ -5,6 +5,30 @@ export const pt = {
       text: "O Instituto Granada é uma Organização da  Sociedade Civil localizada na Vila Granada, em Mairinque/SP.\n\nConheça abaixo um pouco mais da nossa história.",
     },
   },
+  footer: {
+    description:
+      "Organização da Sociedade Civil dedicada a reduzir desigualdades e apoiar crianças, adolescentes e famílias.",
+    address:
+      "Rua Moisés José de Camargo, em frente ao 140.\nVila Granada, Mairinque. São Paulo.",
+    formSection: {
+      buttonLabel: "Enviar mensagem",
+      emailLabel: "E-mail",
+      emailPlaceholder: "Insira seu email",
+      messageLabel: "Mensagem",
+      messageInputMaxLenght: "max. 500",
+      messagePlaceholder: "Digite sua mensagem",
+      title: "Fale conosco",
+    },
+    siteMapSection: {
+      title: "Mapa do site",
+      routesList: [
+        { routeTitle: "Projetos" },
+        { routeTitle: "Doações" },
+        { routeTitle: "Voluntários" },
+        { routeTitle: "Contato" },
+      ],
+    },
+  },
   home: {
     hero: {
       title: "Transforme a realidade de crianças e famílias",
