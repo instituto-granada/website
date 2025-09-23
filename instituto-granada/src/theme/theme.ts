@@ -30,7 +30,7 @@ export const theme = {
     },
     extra: {
       orange: "#f3821f",
-      white: "#ffffff",
+      white: "#F5F3EF",
     },
   },
   font_family: {
@@ -72,9 +72,16 @@ export const theme = {
     "1_1x": 1.1,
   },
   shadows: {
-    "highlight":"0px 4px 16px 0px rgba(0, 0, 0, 0.08)",
-    "depth":"0px 4px 16px 0px rgba(0, 0, 0, 0.24)"
-  }
+    highlight: "0px 4px 16px 0px rgba(0, 0, 0, 0.08)",
+    depth: "0px 4px 16px 0px rgba(0, 0, 0, 0.24)",
+  },
+  breakpoints: {
+    mobileS: "320px",
+    mobileM: "375px",
+    mobileL: "425px",
+    tablet: "768px",
+    laptop: "1024px",
+  },
 };
 
 export default theme;
