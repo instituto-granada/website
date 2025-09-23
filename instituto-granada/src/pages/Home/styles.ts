@@ -59,7 +59,7 @@ export const RightColumn = styled.div`
 `;
 
 export const Title = styled.p`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.XS};
   text-align: center;
   font-weight: bold;
@@ -111,7 +111,7 @@ export const SectionParticipate = styled.div`
 `;
 
 export const TitleParticipate = styled.h1`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.M};
   font-weight: bold;
   margin: 0 0 12px 0;
@@ -120,7 +120,7 @@ export const TitleParticipate = styled.h1`
 `;
 
 export const SubtitleParticipate = styled.p`
-  font-family: ${(props) => props.theme.font_family.outfit};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-size: ${(props) => props.theme.typography.outfit.M};
   font-weight: normal;
   color: ${(props) => props.theme.colors.grayscale[600]};
@@ -156,7 +156,7 @@ export const SectionTestimonials = styled.div`
 export const TextSectionTestimonials = styled.p`
   margin-bottom: 12px;
   font-weight: bolder;
-  font-family: ${(props) => props.theme.font_family.outfit};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-size: ${(props) => props.theme.typography.outfit.M};
   color: ${(props) => props.theme.colors.grayscale[700]};
 `;

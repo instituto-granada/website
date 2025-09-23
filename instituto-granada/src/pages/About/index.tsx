@@ -5,13 +5,14 @@ import { useTranslate } from "../../hooks/useTranslate";
 
 export default function About() {
   const { text } = useTranslate();
+  const { hero } = text.about;
 
   return (
     <Container>
       <Hero
         imageUrl={Images.backgroundAbout}
-        title={text.about.hero.title}
-        text={text.about.hero.text}
+        title={hero.title}
+        text={hero.text}
       />
     </Container>
   );

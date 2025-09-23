@@ -22,20 +22,22 @@ import ButtonPrincipal from "../../components/ButtonPrincipal";
 import Card from "../../components/Card";
 import StatistPanel from "../../components/StatistPanel";
 import Testimonials from "../../components/Testimonials";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   const { text } = useTranslate();
+  const { hero } = text.home;
 
   return (
     <Container>
       <Hero
         isHome={true}
         imageUrl={Images.backgroundHome}
-        title={text.home.hero.title}
-        text={text.home.hero.text}
+        title={hero.title}
+        text={hero.text}
         buttons={[
           {
-            label: text.home.hero.buttons.primary.label,
+            label: hero.buttons.primary.label,
             variant: "primary",
             onClick: () => console.log("Clicou em Quero doar agora!"),
           },
@@ -113,6 +115,7 @@ export default function Home() {
           </ButtonPrincipal>
         </div>
       </SectionTestimonials>
+      <Footer />
     </Container>
   );
 }

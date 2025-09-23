@@ -5,13 +5,14 @@ import { Container } from "./styles";
 
 export default function Volunteers() {
   const { text } = useTranslate();
+  const { hero } = text.volunteers;
 
   return (
     <Container>
       <Hero
         imageUrl={Images.backgroundVolunteers}
-        title={text.volunteers.hero.title}
-        text={text.volunteers.hero.text}
+        title={hero.title}
+        text={hero.text}
       />
     </Container>
   );

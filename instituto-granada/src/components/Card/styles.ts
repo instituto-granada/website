@@ -31,7 +31,7 @@ export const CardHeader = styled.div`
 `;
 export const Title = styled.h1`
   width: 50%;
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-weight: bold;
   font-size: ${(props) => props.theme.typography.sora.XS};
   color: ${(props) => props.theme.colors.primary[500]};

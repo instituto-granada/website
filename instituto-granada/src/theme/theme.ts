@@ -33,9 +33,20 @@ export const theme = {
       white: "#F5F3EF",
     },
   },
-  font_family: {
+  fontFamily: {
     sora: '"Sora", "sans-serif"',
     outfit: '"Outfit", "sans-serif"',
+  },
+  fontWeight: {
+    thin: 100,
+    extraLight: 200,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    extraBold: 800,
+    black: 900,
   },
   typography: {
     sora: {

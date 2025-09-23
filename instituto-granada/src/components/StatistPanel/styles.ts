@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.M};
   font-weight: bold;
   color: ${(props) => props.theme.colors.extra.orange};
@@ -22,7 +22,7 @@ export const Title = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.XXS};
 
   color: ${(props) => props.theme.colors.extra.white};
@@ -60,7 +60,7 @@ export const TextContainer = styled.div`
 `;
 
 export const Numbers = styled.h1`
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-weight: bold;
   font-size: ${(props) => props.theme.typography.sora.M};
   margin: 0;
@@ -69,7 +69,7 @@ export const Numbers = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-family: ${(props) => props.theme.font_family.outfit};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-size: ${(props) => props.theme.typography.outfit.M};
   color: ${(props) => props.theme.colors.extra.white};
   font-weight: normal;

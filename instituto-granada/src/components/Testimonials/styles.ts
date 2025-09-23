@@ -95,14 +95,14 @@ export const TextContainer = styled.div`
 export const Title = styled.h3`
   margin-top: 12px;
   text-align: center;
-  font-family: ${(props) => props.theme.font_family.sora};
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.S};
   font-weight: bold;
   color: ${(props) => props.theme.colors.primary[500]};
 `;
 
 export const Text = styled.p`
-  font-family: ${(props) => props.theme.font_family.outfit};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-size: ${(props) => props.theme.typography.outfit.S};
   font-weight: normal;
   line-height: ${(props) => props.theme.lineHeight["1_5x"]};
@@ -111,7 +111,7 @@ export const Text = styled.p`
 `;
 
 export const Describer = styled.p`
-  font-family: ${(props) => props.theme.font_family.outfit};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-size: ${(props) => props.theme.typography.outfit.S};
   font-weight: bolder;
   color: ${(props) => props.theme.colors.primary[700]};
