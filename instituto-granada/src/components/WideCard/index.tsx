@@ -5,17 +5,17 @@ export interface WideCardProps {
     image: string;
     title: string;
     body: string;
-    imagePostion?: 'left' | 'right' 
+    imagePosition?: 'left' | 'right' 
 }
 
 export default function WideCard({
     image,
     title,
     body,
-    imagePostion = 'left'
+    imagePosition = 'left'
 }: WideCardProps) {
     return (
-        <StyledWideCard $imagePosition={imagePostion}>
+        <StyledWideCard $imagePosition={imagePosition}>
             <CardImage
                     src={image}
                     alt={title || 'Card Information Image'}
