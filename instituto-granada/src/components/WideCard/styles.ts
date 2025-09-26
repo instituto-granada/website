@@ -2,11 +2,6 @@ import styled, { css } from "styled-components";
 import { theme } from "~/theme/theme";
 import { breakpoints } from "../../styles/breakpoints";
 
-const colors = {
-    black: "#2D2B29",
-    white: "#F5F3EF"
-}
-
 interface StyledWideCardProps {
     $imagePosition: 'left' | 'right'
 }
@@ -66,5 +61,5 @@ export const CardBody = styled.p`
     font-size: ${({ theme }) => theme.typography.outfit.M};
     font-weight: ${({ theme }) => theme.fontWeight.regular};
     line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
-    color: ${colors.black};
+    color: ${({ theme }) => theme.colors.extra.black};
 `;
