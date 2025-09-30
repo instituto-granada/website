@@ -31,6 +31,7 @@ export const theme = {
     extra: {
       orange: "#f3821f",
       white: "#F5F3EF",
+      black: "#2D2B29",
     },
   },
   fontFamily: {
