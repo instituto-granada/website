@@ -22,7 +22,7 @@ export const StyledWideCard = styled.div<StyledWideCardProps>`
 
     @media (min-width: ${breakpoints.tablet}) {
         flex-direction: row;
-        padding: ${(props) => props.theme.spacing.S} ${(props) => props.theme.spacing["4XL"]} ${(props) => props.theme.spacing.S} ${(props) => props.theme.spacing["4XL"]};
+        padding: ${(props) => props.theme.spacing.S} ${(props) => props.theme.spacing["4XL"]};
 
         .wide-card-image {
             order: ${(props) => (props.$imagePosition === 'left' ? 1 : 2)}
