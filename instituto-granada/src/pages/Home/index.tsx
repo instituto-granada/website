@@ -115,7 +115,6 @@ export default function Home() {
           </ButtonPrincipal>
         </div>
       </SectionTestimonials>
-      <Footer />
     </Container>
   );
 }
