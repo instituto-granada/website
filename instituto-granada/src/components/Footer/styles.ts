@@ -11,7 +11,7 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-wrap: wrap;
   background-color: ${({ backgroundColor, theme }) =>
-    backgroundColor || theme.colors.extra.white};
+    backgroundColor || theme.colors.grayscale[100]};
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
 
   @media (min-width: ${breakpoints.tablet}) {
