@@ -21,6 +21,10 @@ import Testimonials4 from "./images/reports/depoimento4.png";
 import Testimonials5 from "./images/reports/depoimento5.png";
 import Testimonials6 from "./images/reports/depoimento6.png";
 
+import projectByteAcao from "./images/projects/projectByteAcao.png";
+import projectEmpoderaAdolescente from "./images/projects/projectEmpoderaAdolescente.png";
+import projectVidaFeliz from "./images/projects/projectVidaFeliz.png"
+
 import whatsapp from "./icons/whatsapp.svg";
 import instagram from "./icons/instagram.svg";
 import facebook from "./icons/facebook.svg";
@@ -38,6 +42,10 @@ export const Images = {
   Testimonials4,
   Testimonials5,
   Testimonials6,
+  //imagens de projetos
+  projectByteAcao,
+  projectEmpoderaAdolescente,
+  projectVidaFeliz
 };
 
 export const Icons = {
