@@ -22,7 +22,6 @@ import ButtonPrincipal from "../../components/ButtonPrincipal";
 import Card from "../../components/Card";
 import StatistPanel from "../../components/StatistPanel";
 import Testimonials from "../../components/Testimonials";
-import Footer from "../../components/Footer";
 
 export default function Home() {
   const { text } = useTranslate();

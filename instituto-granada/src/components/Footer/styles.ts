@@ -102,11 +102,12 @@ export const Menu = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   text-align: left;
   padding: ${({ theme }) => theme.spacing.XL} 0;
 
   @media (min-width: ${breakpoints.tablet}) {
+    align-items: center;
     justify-content: flex-start;
     width: 35%;
     padding: 0;
@@ -115,6 +116,7 @@ export const Menu = styled.div`
 
 export const List = styled.ul`
   text-align: left;
+  padding: 0 ${({ theme }) => theme.spacing.S};
 `;
 
 export const StyledLink = styled(Link)`
@@ -162,7 +164,9 @@ export const Label = styled.label<{ error?: boolean }>`
 export const Input = styled.input<{ error?: boolean }>`
   width: 100%;
   padding: 8px;
-  border: 1px solid ${(props) => (props.error ? "red" : "#ccc")};
+  border: 1px solid
+    ${({ error, theme }) =>
+      error ? theme.colors.primary[400] : theme.colors.grayscale[300]};
   border-radius: 4px;
 
   &::placeholder {
@@ -177,7 +181,9 @@ export const Textarea = styled.textarea<{ error?: boolean }>`
   width: 100%;
   height: 120px;
   padding: 8px;
-  border: 1px solid ${(props) => (props.error ? "red" : "#ccc")};
+  border: 1px solid
+    ${({ error, theme }) =>
+      error ? theme.colors.primary[400] : theme.colors.grayscale[300]};
   border-radius: 4px;
   resize: vertical;
 

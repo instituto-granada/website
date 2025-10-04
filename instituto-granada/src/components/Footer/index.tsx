@@ -121,10 +121,10 @@ const Footer: FC = () => {
           <Touchable href="#">
             <Icon name="whatsapp" width={20} height={20} />
           </Touchable>
-          <Touchable href="#">
+          <Touchable href="https://www.facebook.com/www.institutogranada.com.br">
             <Icon name="facebook" width={20} height={20} />
           </Touchable>
-          <Touchable href="#">
+          <Touchable href="https://www.instagram.com/institutogranada/">
             <Icon name="instagram" width={20} height={20} />
           </Touchable>
         </WrapperIcons>

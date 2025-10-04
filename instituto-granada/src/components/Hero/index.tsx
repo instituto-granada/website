@@ -40,8 +40,7 @@ export default function Hero({
         <Title>
           <HighlightedWord>{firstWord}</HighlightedWord> {restOfTitle}
         </Title>
-        <Text style={{ whiteSpace: "pre-line" }}>{text}</Text>
-
+        <Text>{text}</Text>
         {buttons && buttons.length > 0 && (
           <ButtonsContainer>
             {buttons.map(({ label, onClick, variant }, index) => (
