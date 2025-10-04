@@ -59,6 +59,18 @@ export const pt = {
       title: "Seja voluntário",
       text: "Contribua com nossa organização e ajude a transformar a vida de crianças e adolescentes!\n\nToda ajuda é bem-vinda e gera um impacto positivo. Confira abaixo as áreas em que mais precisamos de apoio neste momento",
     },
+    formSection: {
+      buttonLabel: "Enviar formulário",
+      emailLabel: "E-mail",
+      emailPlaceholder: "Insira seu email",
+      nameLabel: "Nome completo",
+      namePlaceholder: "Insira seu nome",
+      messageLabel: "Mensagem",
+      messageInputMaxLenght: "max. 500",
+      messagePlaceholder: "Digite sua mensagem",
+      subtitle: "Venha fazer parte da nossa comunidade",
+      title: "Se interessou? Entre em contato",
+    },
     positionsSectionTitle: "Nossas vagas:",
     positions: [
       {
