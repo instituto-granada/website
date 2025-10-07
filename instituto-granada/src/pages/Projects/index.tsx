@@ -59,6 +59,13 @@ export default function Projects() {
           />
         ))}
 
+        <ContributePanel 
+          title="Quer apoiar nossos projetos?" 
+          subTitle="Sua contribuição pode transformar vidas"
+          buttonLabel="Faça parte dessa transformação"
+          onButtonClick={() => console.log("Clicou em um botão primário.")}
+        />
+
         {gallery02?.list.map((project) => (
           <WideCard
             image={imageIndex[project.imageKey as keyof typeof imageIndex]}
@@ -67,6 +74,13 @@ export default function Projects() {
             imagePosition={project.imagePosition}
           />
         ))}
+
+        <ContributePanel 
+          title="Vamos juntos?" 
+          subTitle="Sua participação faz a diferença. Entre em contato e descubra como apoiar ou se engajar nos projetos"
+          buttonLabel="Falar no WhatsApp"
+          onButtonClick={() => console.log("Clicou em um botão primário.")}
+        />
       </ProjectGallery>
     </Container>
   );
