@@ -1,32 +1,36 @@
-import React from "react";
-import { StyledInformationCard } from "./styles";
+import {
+  Body,
+  Container,
+  Content,
+  Title,
+  WrapperImage,
+  WrapperText,
+} from "./styles";
+import Image from "../Image";
+import { Images } from "../../assets";
 
 export interface InformationCardProps {
-    image: string;
-    title: string;
-    body: string;
+  image: keyof typeof Images;
+  title: string;
+  body: string;
 }
 
 export default function InformationCard({
-    image,
-    title,
-    body,
+  image,
+  title,
+  body,
 }: InformationCardProps) {
-    return (
-        <StyledInformationCard>
-            <div className="information-card-content">
-                {image && (
-                    <img 
-                        src={image}
-                        alt={title || 'Card Information Image'}
-                        className="information-card-image"
-                    />
-                )}
-                <div className="information-card-text">
-                    {title && (<p className="information-card-title">{title}</p>)}
-                    {body && (<p className="information-card-body">{body}</p>)}
-                </div>
-            </div>
-        </StyledInformationCard>
-    )
+  return (
+    <Container>
+      <Content>
+        <WrapperImage>
+          <Image name={image} width={150} />
+        </WrapperImage>
+        <WrapperText>
+          {title && <Title>{title}</Title>}
+          {body && <Body>{body}</Body>}
+        </WrapperText>
+      </Content>
+    </Container>
+  );
 }

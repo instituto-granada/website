@@ -57,7 +57,50 @@ export const pt = {
   volunteers: {
     hero: {
       title: "Seja voluntário",
-      text: "Contribua com nossa organização e ajude a transformar a vida de crianças e adolescentes! Toda ajuda é bem-vinda e gera um impacto positivo. Confira abaixo as áreas em que mais precisamos de apoio neste momento",
+      text: "Contribua com nossa organização e ajude a transformar a vida de crianças e adolescentes!\n\nToda ajuda é bem-vinda e gera um impacto positivo. Confira abaixo as áreas em que mais precisamos de apoio neste momento",
     },
+    formSection: {
+      buttonLabel: "Enviar formulário",
+      emailLabel: "E-mail",
+      emailPlaceholder: "Insira seu email",
+      nameLabel: "Nome completo",
+      namePlaceholder: "Insira seu nome",
+      messageLabel: "Mensagem",
+      messageInputMaxLenght: "max. 500",
+      messagePlaceholder: "Digite sua mensagem",
+      subtitle: "Venha fazer parte da nossa comunidade",
+      title: "Se interessou? Entre em contato",
+    },
+    positionsSectionTitle: "Nossas vagas:",
+    positions: [
+      {
+        body: "Apoio para publicações eficazes e constantes no site, Instagram e Facebook",
+        title: "Marketing digital",
+      },
+      {
+        title: "Captação",
+        body: "Pessoas voluntárias que vão buscar captar doações recorrentes por telefone",
+      },
+      {
+        title: "Psicólogo / psicanalista",
+        body: "Conduzir rodas de conversa e atividades de promoção de saúde mental",
+      },
+      {
+        title: "Professor / assistente",
+        body: "Irá promover projetos de esportes junto a comunidade",
+      },
+      {
+        title: "Psicopedagogos",
+        body: "Apoio para crianças com dificuldade de aprendizagem",
+      },
+      {
+        title: "Fonoaudiólogo",
+        body: "Atendimento para crianças com dificuldade na fala",
+      },
+      {
+        title: "Ajudante geral",
+        body: "Pedreiros, encanadores e pintores para pequenas manutenções locais",
+      },
+    ],
   },
 };

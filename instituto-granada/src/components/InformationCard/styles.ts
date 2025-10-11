@@ -1,88 +1,62 @@
 import styled from "styled-components";
 
-const colors = {
-  black: "#2D2B29",
-  white: "#F5F3EF",
-};
+import { breakpoints } from "../../styles/breakpoints";
 
-export const StyledInformationCard = styled.div`
-  /* Mobile - Base (320px+) */
-  display: flex;
-  flex-grow: 0;
-
-  box-sizing: border-box;
-
+export const Container = styled.div`
+  width: 288px;
   height: auto;
-  min-height: 406px;
-  width: 300px;
-  padding: ${(props) => props.theme.spacing.S};
-  padding-bottom: ${(props) => props.theme.spacing.M};
-  border-radius: 28px;
-  box-shadow: ${(props) => props.theme.shadows.highlight};
-  background-color: ${colors.white};
-
-  justify-content: center;
+  min-height: 288px;
+  display: flex;
   align-items: flex-start;
+  background-color: ${({ theme }) => theme.colors.extra.white};
+  padding: ${({ theme }) => theme.spacing.S};
+  border-radius: 32px;
+  box-shadow: ${({ theme }) => theme.shadows.highlight};
+  margin-bottom: ${({ theme }) => theme.spacing.XL};
 
-  .information-card-content {
+  @media (min-width: ${breakpoints.tablet}) {
+    margin-bottom: ${({ theme }) => theme.spacing.XL};
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const WrapperImage = styled.div`
+  width: 100%;
+  min-height: 194px;
+  border-radius: 32px;
+  object-fit: cover;
+  flex-shrink: 1;
+
+  img {
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    .information-card-image {
-      height: 150px;
-      width: 272px;
-      border-radius: 20px;
-      object-fit: cover;
-      flex-shrink: 1;
-    }
-
-    .information-card-text {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: ${(props) => props.theme.spacing.M};
-      color: ${colors.black};
-
-      .information-card-title {
-        width: 100%;
-        font-size: ${(props) => props.theme.typography.sora.XXS};
-        font-weight: 700;
-        line-height: ${(props) => props.theme.lineHeight["1_1x"]};
-        margin: 0;
-        text-align: left;
-      }
-
-      .information-card-body {
-        width: 100%;
-        font-size: ${(props) => props.theme.typography.outfit.XS};
-        font-weight: 400;
-        line-height: ${(props) => props.theme.lineHeight["1_5x"]};
-        margin: 0;
-        text-align: left;
-      }
-    }
+    height: 100%;
   }
+`;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.mobileL}) {
-    width: 331px;
+export const WrapperText = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 
-    .information-card-content {
-      .information-card-image {
-        height: 167px;
-        width: 303px;
-      }
+export const Title = styled.h1`
+  font-size: ${({ theme }) => theme.typography.sora.S};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+  text-align: left;
+  margin-bottom: ${({ theme }) => theme.spacing.S};
+`;
 
-      .information-card-title {
-        font-size: ${(props) => props.theme.typography.sora.XS};
-      }
-
-      .information-card-body {
-        font-size: ${(props) => props.theme.typography.outfit.S};
-      }
-    }
-  }
+export const Body = styled.p`
+  font-size: ${({ theme }) => theme.typography.outfit.XS};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[700]};
+  text-align: left;
 `;
