@@ -26,6 +26,7 @@ import {
 } from "./styles";
 import { formSchema, FormData } from "../../schema";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
+import Select from "../../components/Select";
 
 const imageNames: (keyof typeof Images)[] = [
   "marketingPosition",
@@ -37,6 +38,16 @@ const imageNames: (keyof typeof Images)[] = [
   "generalAssistantPosition",
 ];
 
+const positionOptions = [
+  { value: "ajudante-geral", label: "Ajudante Geral" },
+  { value: "captacao", label: "Captação" },
+  { value: "fonoaudiologo", label: "Fonoaudiólogo" },
+  { value: "marketing-digital", label: "Marketing Digital" },
+  { value: "professor-assistente", label: "Professor/Assistente" },
+  { value: "psicologo-psicanalista", label: "Psicólogo/Psicanalista" },
+  { value: "psicopedagogo", label: "Psicopedagogo" },
+];
+
 type FormTexts = {
   buttonLabel: string;
   emailLabel: string;
@@ -46,6 +57,8 @@ type FormTexts = {
   messageLabel: string;
   messageInputMaxLenght: string;
   messagePlaceholder: string;
+  positionLabel: string;
+  positionPlaceholder: string;
   subtitle: string;
   title: string;
 };
@@ -59,6 +72,8 @@ const ContactForm: FC<FormTexts> = ({
   messageLabel,
   messageInputMaxLenght,
   messagePlaceholder,
+  positionLabel,
+  positionPlaceholder,
   subtitle,
   title,
 }) => {
@@ -103,6 +118,13 @@ const ContactForm: FC<FormTexts> = ({
           {errors.email?.message}
         </ErrorMessage>
       </Field>
+      <Select
+        errorMessage={errors.position?.message}
+        label={positionLabel}
+        options={positionOptions}
+        placeholder={positionPlaceholder}
+        {...register("position")}
+      />
       <Field>
         <Label error={!!errors.message}>{messageLabel}</Label>
         <Textarea
@@ -160,6 +182,8 @@ export default function Volunteers() {
           messageLabel={formSection.messageLabel}
           messageInputMaxLenght={formSection.messageInputMaxLenght}
           messagePlaceholder={formSection.messagePlaceholder}
+          positionLabel={formSection.positionLabel}
+          positionPlaceholder={formSection.positionPlaceholder}
           subtitle={formSection.subtitle}
           title={formSection.title}
         />
