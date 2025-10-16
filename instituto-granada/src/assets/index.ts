@@ -27,6 +27,9 @@ import projectVidaFeliz from "./images/projects/projectVidaFeliz.png";
 import projectChama from "./images/projects/projectChama.png";
 import projectMelhorToque from "./images/projects/projectMelhorToque.png";
 import projectMulheresCapazes from "./images/projects/projectMulheresCapazes.png";
+import projectNatal from "./images/projects/projectNatal.png";
+import projectPascoa from "./images/projects/projectPascoa.png";
+import projectFerias from "./images/projects/projectFerias.png";
 
 import whatsapp from "./icons/whatsapp.svg";
 import instagram from "./icons/instagram.svg";
@@ -51,7 +54,10 @@ export const Images = {
   projectVidaFeliz,
   projectChama,
   projectMelhorToque,
-  projectMulheresCapazes
+  projectMulheresCapazes,
+  projectNatal,
+  projectPascoa,
+  projectFerias
 };
 
 export const Icons = {
