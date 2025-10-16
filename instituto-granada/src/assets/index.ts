@@ -3,6 +3,13 @@ import backgroundAbout from "./images/backgroundAbout.png";
 import backgroundHome from "./images/backgroundHome.png";
 import backgroundProjects from "./images/backgroundProjects.png";
 import backgroundVolunteers from "./images/backgroundVolunteers.png";
+import educationalPsychologistPosition from "./images/educationalPsychologistPosition.png";
+import fundraiserPosition from "./images/fundraiserPosition.png";
+import generalAssistantPosition from "./images/generalAssistantPosition.png";
+import marketingPosition from "./images/marketingPosition.png";
+import psychologistPosition from "./images/psychologistPosition.png";
+import speechTherapistPosition from "./images/speechTherapistPosition.png";
+import teacherPosition from "./images/teacherPosition.png";
 
 import World_people from "./icons/World_people.svg";
 import Gift from "./icons/Gift.svg";
@@ -41,13 +48,19 @@ export const Images = {
   backgroundHome,
   backgroundProjects,
   backgroundVolunteers,
-  //imagens de pessoas que deram depoimento
   Testimonials1,
   Testimonials2,
   Testimonials3,
   Testimonials4,
   Testimonials5,
   Testimonials6,
+  educationalPsychologistPosition,
+  fundraiserPosition,
+  generalAssistantPosition,
+  marketingPosition,
+  psychologistPosition,
+  speechTherapistPosition,
+  teacherPosition,
   //imagens de projetos
   projectByteAcao,
   projectEmpoderaAdolescente,

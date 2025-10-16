@@ -11,8 +11,7 @@ export const Container = styled.section<HeroContainerProps>`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: ${(props) => (props.isHome ? "110vh" : "80vh")};
-  padding: 0 5%;
+  height: ${(props) => (props.isHome ? "110vh" : "440px")};
   overflow: hidden;
   background-image: url(${(props) => props.imageUrl});
   background-size: cover;
@@ -35,19 +34,19 @@ export const Container = styled.section<HeroContainerProps>`
 `;
 
 export const ContentColumn = styled.div`
-  position: relative;
-  z-index: 2;
+  width: 90%;
   display: flex;
   flex-direction: column;
+  position: relative;
   align-items: flex-start;
+  justify-content: center;
   text-align: left;
-  width: 45%;
-  max-width: 650px;
+  z-index: 2;
+  padding: 0 ${({ theme }) => theme.spacing.S};
 
-  @media (max-width: 768px) {
-    width: 90%;
-    align-items: center;
-    text-align: center;
+  @media (min-width: 768px) {
+    width: 45%;
+    padding: 0 ${({ theme }) => theme.spacing["2XL"]};
   }
 `;
 
@@ -71,6 +70,7 @@ export const Text = styled.p`
   line-height: ${(props) => props.theme.lineHeight["1_1x"]};
   margin-bottom: 2rem;
   max-width: 600px;
+  white-space: pre-line;
 `;
 
 export const HeroButtonWrapper = styled.div`
