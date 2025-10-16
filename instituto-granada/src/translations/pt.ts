@@ -53,6 +53,32 @@ export const pt = {
         },
       },
     },
+    carousel: {
+      header: "PRINCIPAIS PROJETOS",
+      projects: [
+        {
+          key: "pascoa",
+          title: "PÁSCOA DO BEM E ESPERANÇA",
+          body: "Reunimos cerca de 530 crianças e adolescentes da comunidade, em uma divertida festa de páscoa com bolo, lanches, brincadeiras, teatro e muita diversão. Ao final as crianças recebem deliciosos ovos de chocolate, captados de doadores e empresas.",
+          image: "projectPascoa",
+          onButtonClick: () => alert("Botão primário clicado!")
+        },
+        {
+          key: "ferias",
+          title: "FÉRIAS DA ALEGRIA",
+          body: "Na nossa região, as crianças não têm muitos lugares seguros para brincar e se divertir. Por isso, durante as férias, criamos este projeto para proporcionar a elas momentos de lazer e cultura. O objetivo é ajudar a criar lembranças felizes e positivas na infância, oferecendo atividades que tragam diversão, aprendizado e convivência em um ambiente seguro e acolhedor.",
+          image: "projectFerias",
+          onButtonClick: () => alert("Botão primário clicado!")
+        },
+        {
+          key: "natal",
+          title: "APADRINHE COM AMOR",
+          body: "O apadrinhamento é uma forma simples e poderosa de espalhar amor neste natal. Você escolhe uma criança ou adolescente e a presenteia com um kit de roupa, calçado e brinquedo. Saiba mais e participe agora!",
+          image: "projectNatal",
+          onButtonClick: () => alert("Botão primário clicado!")
+        }
+      ]
+    },
     galleries: [
       {
         key: "gallery01",
