@@ -4,10 +4,11 @@ import { Images } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
 import { Container, ProjectGallery } from "./styles";
 import WideCard from "../../components/WideCard";
+import ProjectCarousel from "../../components/ProjectCarousel";
 
 export default function Projects() {
   const { text } = useTranslate();
-  const { hero, galleries } = text.projects;
+  const { hero, galleries, carousel } = text.projects;
   
   interface ImageIndex {
     projectVidaFeliz: string;
@@ -26,6 +27,17 @@ export default function Projects() {
     "projectMelhorToque": Images.projectMelhorToque,
     "projectMulheresCapazes": Images.projectMulheresCapazes
   }
+
+  const mainProjectsImages = {
+    "projectPascoa": Images.projectPascoa,
+    "projectNatal": Images.projectNatal,
+    "projectFerias": Images.projectFerias
+  }
+
+  const carouselProjects = carousel.projects.map(project => ({
+    ...project,
+    image: mainProjectsImages[project.image as keyof typeof mainProjectsImages],
+  }))
 
   const gallery01 = galleries.find(g => g.key === "gallery01");
   const gallery02 = galleries.find(g => g.key === "gallery02");
@@ -49,6 +61,12 @@ export default function Projects() {
           },
         ]}
       />
+
+      <ProjectCarousel
+        projects={carouselProjects}
+        header="PRINCIPAIS PROJETOS"
+      />
+
       <ProjectGallery>
         {gallery01?.list.map((project) => (
           <WideCard
