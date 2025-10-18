@@ -68,6 +68,8 @@ export const pt = {
       messageLabel: "Mensagem",
       messageInputMaxLenght: "max. 500",
       messagePlaceholder: "Digite sua mensagem",
+      positionLabel: "Interesse",
+      positionPlaceholder: "Selecione",
       subtitle: "Venha fazer parte da nossa comunidade",
       title: "Se interessou? Entre em contato",
     },

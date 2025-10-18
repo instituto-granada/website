@@ -61,8 +61,9 @@ export const ContactUs = styled.div`
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.secondary[700]};
   padding: ${({ theme }) => theme.spacing.S};
+
   @media (min-width: ${breakpoints.tablet}) {
-    padding: ${({ theme }) => `${theme.spacing.S} ${theme.spacing.XL}`};
+    padding: ${({ theme }) => `${theme.spacing.L} ${theme.spacing.XL}`};
   }
 `;
 
@@ -94,6 +95,11 @@ export const Label = styled.label<{ error?: boolean }>`
   color: ${({ theme, error }) =>
     error ? theme.colors.primary[400] : theme.colors.extra.white};
   margin-bottom: ${({ theme }) => theme.spacing["3XS"]};
+
+  &::after {
+    content: "*";
+    color: ${({ theme }) => theme.colors.primary[400]};
+  }
 `;
 
 export const Input = styled.input<{ error?: boolean }>`
