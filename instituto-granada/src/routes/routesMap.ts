@@ -11,22 +11,27 @@ export const routesMap = {
   home: { title: "Home", path: "/", component: Home },
   about: { title: "Sobre", path: "/sobre", component: About },
   projects: { title: "Projetos", path: "/projetos", component: Projects },
-  donations: { title: "Doações", path: "/doacoes", component: Donations },
+  donations: {
+    title: "Doações",
+    path: "/doacoes",
+    component: Donations,
+    showInNav: false,
+  },
   christmas: {
     title: "Projeto especial - Natal",
-    path: "/christmas",
+    path: "/natal",
     component: Christmas,
     showInNav: false,
   },
-  Vocation: {
-    title: "Projeto especial - Ferías",
-    path: "/vocation",
+  vacation: {
+    title: "Projeto especial - Férias",
+    path: "/ferias",
     component: Vocation,
     showInNav: false,
   },
-  Easter: {
+  easter: {
     title: "Projeto especial - Páscoa",
-    path: "/easter",
+    path: "/pascoa",
     component: Easter,
     showInNav: false,
   },

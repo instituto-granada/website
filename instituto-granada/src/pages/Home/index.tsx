@@ -30,6 +30,7 @@ export default function Home() {
   return (
     <Container>
       <Hero
+        emphasizeWordIndex={0}
         isHome={true}
         imageUrl={Images.backgroundHome}
         title={hero.title}
