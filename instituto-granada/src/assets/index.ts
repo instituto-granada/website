@@ -28,6 +28,16 @@ import Testimonials4 from "./images/reports/depoimento4.png";
 import Testimonials5 from "./images/reports/depoimento5.png";
 import Testimonials6 from "./images/reports/depoimento6.png";
 
+import projectByteAcao from "./images/projects/projectByteAcao.png";
+import projectEmpoderaAdolescente from "./images/projects/projectEmpoderaAdolescente.png";
+import projectVidaFeliz from "./images/projects/projectVidaFeliz.png";
+import projectChama from "./images/projects/projectChama.png";
+import projectMelhorToque from "./images/projects/projectMelhorToque.png";
+import projectMulheresCapazes from "./images/projects/projectMulheresCapazes.png";
+import projectNatal from "./images/projects/projectNatal.png";
+import projectPascoa from "./images/projects/projectPascoa.png";
+import projectFerias from "./images/projects/projectFerias.png";
+
 import whatsapp from "./icons/whatsapp.svg";
 import instagram from "./icons/instagram.svg";
 import facebook from "./icons/facebook.svg";
@@ -51,6 +61,16 @@ export const Images = {
   psychologistPosition,
   speechTherapistPosition,
   teacherPosition,
+  //imagens de projetos
+  projectByteAcao,
+  projectEmpoderaAdolescente,
+  projectVidaFeliz,
+  projectChama,
+  projectMelhorToque,
+  projectMulheresCapazes,
+  projectNatal,
+  projectPascoa,
+  projectFerias
 };
 
 export const Icons = {
