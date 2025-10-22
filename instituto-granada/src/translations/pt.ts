@@ -54,6 +54,61 @@ export const pt = {
       },
     },
   },
+  Christmas: {
+    hero: {
+      title: "APADRINHE COM AMOR",
+      text: "Neste Natal, apadrinhe uma criança ou adolescente e faça parte do nosso evento natalino, transformando vidas com um gesto de amor.",
+      buttons: {
+        primary: {
+          label: "Quero apadrinhar",
+        },
+      },
+    },
+    learnMore: {
+      title: "Saiba mais",
+      text: `O apadrinhamento é uma forma simples e poderosa de espalhar amor. Você escolhe uma criança ou adolescente e a presenteia com um kit de roupa, calçado e brinquedo.
+\n
+Em troca, eles se dedicam a preparar apresentações e lembranças especiais como forma de gratidão. Junte-se a nós e faça parte dessa corrente do bem!`,
+    },
+    howItWorks: {
+      title: "Como Funciona?",
+      text: "O projeto começa em setembro com o cadastro das crianças e adolescentes e os ensaios das apresentações de Natal, que vão até dezembro. Durante esse período, você pode entrar em contato pelo WhatsApp, escolher uma criança para apadrinhar e fazer o Natal dela mais feliz",
+    },
+  },
+
+  Vocation: {
+    hero: {
+      title: "APADRINHE COM AMOR",
+      text: "Neste Natal, apadrinhe uma criança ou adolescente e faça parte do nosso evento natalino, transformando vidas com um gesto de amor.",
+      buttons: {
+        primary: {
+          label: "Quero apadrinhar",
+        },
+      },
+    },
+    howItWorks: {
+      title: "Como Funciona?",
+      text: "O projeto começa em setembro com o cadastro das crianças e adolescentes e os ensaios das apresentações de Natal, que vão até dezembro. Durante esse período, você pode entrar em contato pelo WhatsApp, escolher uma criança para apadrinhar e fazer o Natal dela mais feliz",
+    },
+  },
+
+  Easter: {
+    hero: {
+      title: "APADRINHE COM AMOR",
+      text: "Neste Natal, apadrinhe uma criança ou adolescente e faça parte do nosso evento natalino, transformando vidas com um gesto de amor.",
+      buttons: {
+        primary: {
+          label: "Quero apadrinhar",
+        },
+      },
+    },
+    howItWorks: {
+      title: "Como Funciona?",
+      text: `Como as crianças da região são desprovidas de áreas seguras para lazer e cultura, oferecemos nas férias, este projeto que visa gerar memórias agradáveis, na infância.
+      \nSão períodos diários onde participam de atividades lúdicas e artísticas como: Gincanas, artesanato, contação de histórias, cantam músicas, dançam e tomam lanchinho.`,
+    },
+  },
+
   volunteers: {
     hero: {
       title: "Seja voluntário",
