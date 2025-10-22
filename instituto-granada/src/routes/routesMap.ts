@@ -3,12 +3,33 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Donations from "../pages/Donations";
 import Volunteers from "../pages/Volunteers";
+import Christmas from "../pages/Christmas";
+import Vocation from "../pages/Vacation";
+import Easter from "../pages/Easter";
 
 export const routesMap = {
   home: { title: "Home", path: "/", component: Home },
   about: { title: "Sobre", path: "/sobre", component: About },
   projects: { title: "Projetos", path: "/projetos", component: Projects },
   donations: { title: "Doações", path: "/doacoes", component: Donations },
+  christmas: {
+    title: "Projeto especial - Natal",
+    path: "/christmas",
+    component: Christmas,
+    showInNav: false,
+  },
+  Vocation: {
+    title: "Projeto especial - Ferías",
+    path: "/vocation",
+    component: Vocation,
+    showInNav: false,
+  },
+  Easter: {
+    title: "Projeto especial - Páscoa",
+    path: "/easter",
+    component: Easter,
+    showInNav: false,
+  },
   volunteers: {
     title: "Voluntários",
     path: "/voluntarios",

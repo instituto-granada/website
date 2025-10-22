@@ -79,7 +79,9 @@ export default function Header() {
         {/* Menu Desktop */}
         {!isMobile && (
           <ButtonGroup>
-            {Object.values(routesMap).map(({ title, path }) => (
+            {Object.values(routesMap)
+            .filter((route) => ('showInNav' in route ? route.showInNav !== false : true))
+            .map(({ title, path }) => (
               <Link key={path} to={path}>
                 <Button active={location.pathname === path}>{title}</Button>
               </Link>
