@@ -123,6 +123,8 @@ Em troca, eles se dedicam a preparar apresentações e lembranças especiais com
       messageLabel: "Mensagem",
       messageInputMaxLenght: "max. 500",
       messagePlaceholder: "Digite sua mensagem",
+      positionLabel: "Interesse",
+      positionPlaceholder: "Selecione",
       subtitle: "Venha fazer parte da nossa comunidade",
       title: "Se interessou? Entre em contato",
     },
