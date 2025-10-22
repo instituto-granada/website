@@ -1,35 +1,27 @@
-import React from "react";
-import { Container } from "./styles";
 import Hero from "../../components/Hero";
-import { Images, ProjectsCards } from "../../assets/";
+import { ProjectsCards } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
-
 import HowItWorks from "../../components/HowItWorks";
+import PageStructure from "../../components/PageStructure";
 
 export default function Vocation() {
   const { text } = useTranslate();
-  const { hero, howItWorks } = text.Vocation;
+  const { hero, howItWorks } = text.vacation;
 
   return (
-    <Container>
+    <PageStructure>
       <Hero
+        emphasizeWordIndex={0}
         isHome={false}
-        imageUrl={ProjectsCards.backgroundVocation}
+        imageUrl={ProjectsCards.backgroundVacation}
         title={hero.title}
         text={hero.text}
-        buttons={[
-          {
-            label: hero.buttons.primary.label,
-            variant: "primary",
-            onClick: () => console.log("Quero apadrinhar"),
-          },
-        ]}
       />
       <HowItWorks
-        imageUrl={ProjectsCards.cardVocation}
+        imageUrl={ProjectsCards.cardVacation}
         title={howItWorks.title}
         text={howItWorks.text}
       />
-    </Container>
+    </PageStructure>
   );
 }

@@ -10,6 +10,7 @@ import marketingPosition from "./images/marketingPosition.png";
 import psychologistPosition from "./images/psychologistPosition.png";
 import speechTherapistPosition from "./images/speechTherapistPosition.png";
 import teacherPosition from "./images/teacherPosition.png";
+import aboutUsSection from "./images/aboutUsSection.png";
 
 import World_people from "./icons/World_people.svg";
 import Gift from "./icons/Gift.svg";
@@ -45,10 +46,10 @@ import facebook from "./icons/facebook.svg";
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
 import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
-import backgroundVocation from "./images/projectsCards/backgroundVocation.png";
+import backgroundVacation from "./images/projectsCards/backgroundVacation.png";
 import cardChristmas from "./images/projectsCards/cardChristmas.png";
 import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristmas.png";
-import cardVocation from "./images/projectsCards/cardVocation.png";
+import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
 
 export const Images = {
@@ -79,7 +80,8 @@ export const Images = {
   projectMulheresCapazes,
   projectNatal,
   projectPascoa,
-  projectFerias
+  projectFerias,
+  aboutUsSection,
 };
 
 export const Icons = {
@@ -99,9 +101,9 @@ export const Icons = {
 export const ProjectsCards = {
   backgroundChristmas,
   backgroundEaster,
-  backgroundVocation,
+  backgroundVacation,
   cardChristmas,
   cardLearnMoreChristmas,
-  cardVocation,
+  cardVacation,
   cardEaster,
 };

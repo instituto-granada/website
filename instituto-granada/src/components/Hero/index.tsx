@@ -1,5 +1,4 @@
 import ButtonPrincipal from "../ButtonPrincipal";
-import { ButtonVariant } from "~/types/componentTypes";
 import {
   Container,
   ContentColumn,
@@ -8,20 +7,7 @@ import {
   ButtonsContainer,
   HighlightedWord,
 } from "./styles";
-
-interface ButtonAction {
-  label: string;
-  variant: ButtonVariant;
-  onClick?: () => void;
-}
-
-interface HeroProps {
-  imageUrl: string;
-  title: string;
-  text: string;
-  isHome?: boolean;
-  buttons?: ButtonAction[];
-}
+import { HeroProps } from "./types";
 
 export default function Hero({
   imageUrl,
@@ -29,17 +15,32 @@ export default function Hero({
   text,
   isHome,
   buttons,
+  emphasizeWordIndex,
 }: HeroProps) {
-  const words = title.split(" ");
-  const firstWord = words.shift();
-  const restOfTitle = words.join(" ");
+  const renderTitle = () => {
+    const words = title.split(" ");
+
+    return (
+      <Title>
+        {words.map((word, i) => {
+          const isHighlighted = emphasizeWordIndex === i;
+          const Element = isHighlighted ? HighlightedWord : "span";
+
+          return (
+            <Element key={i}>
+              {word}
+              {i < words.length - 1 && " "}
+            </Element>
+          );
+        })}
+      </Title>
+    );
+  };
 
   return (
     <Container imageUrl={imageUrl} isHome={isHome}>
       <ContentColumn>
-        <Title>
-          <HighlightedWord>{firstWord}</HighlightedWord> {restOfTitle}
-        </Title>
+        {renderTitle()}
         <Text>{text}</Text>
         {buttons && buttons.length > 0 && (
           <ButtonsContainer>

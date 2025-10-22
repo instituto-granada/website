@@ -2,14 +2,15 @@ import ContributePanel from "../../components/ContributePanel";
 import Hero from "../../components/Hero";
 import { Images } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
-import { Container, ProjectGallery } from "./styles";
+import { ProjectGallery } from "./styles";
 import WideCard from "../../components/WideCard";
 import ProjectCarousel from "../../components/ProjectCarousel";
+import PageStructure from "../../components/PageStructure";
 
 export default function Projects() {
   const { text } = useTranslate();
   const { hero, galleries, carousel } = text.projects;
-  
+
   interface ImageIndex {
     projectVidaFeliz: string;
     projectByteAcao: string;
@@ -20,31 +21,32 @@ export default function Projects() {
   }
 
   const imageIndex = {
-    "projectVidaFeliz": Images.projectVidaFeliz,
-    "projectByteAcao": Images.projectByteAcao,
-    "projectEmpoderaAdolescente": Images.projectEmpoderaAdolescente,
-    "projectChama": Images.projectChama,
-    "projectMelhorToque": Images.projectMelhorToque,
-    "projectMulheresCapazes": Images.projectMulheresCapazes
-  }
+    projectVidaFeliz: Images.projectVidaFeliz,
+    projectByteAcao: Images.projectByteAcao,
+    projectEmpoderaAdolescente: Images.projectEmpoderaAdolescente,
+    projectChama: Images.projectChama,
+    projectMelhorToque: Images.projectMelhorToque,
+    projectMulheresCapazes: Images.projectMulheresCapazes,
+  };
 
   const mainProjectsImages = {
-    "projectPascoa": Images.projectPascoa,
-    "projectNatal": Images.projectNatal,
-    "projectFerias": Images.projectFerias
-  }
+    projectPascoa: Images.projectPascoa,
+    projectNatal: Images.projectNatal,
+    projectFerias: Images.projectFerias,
+  };
 
-  const carouselProjects = carousel.projects.map(project => ({
+  const carouselProjects = carousel.projects.map((project) => ({
     ...project,
     image: mainProjectsImages[project.image as keyof typeof mainProjectsImages],
-  }))
+  }));
 
-  const gallery01 = galleries.find(g => g.key === "gallery01");
-  const gallery02 = galleries.find(g => g.key === "gallery02");
+  const gallery01 = galleries.find((g) => g.key === "gallery01");
+  const gallery02 = galleries.find((g) => g.key === "gallery02");
 
   return (
-    <Container>
+    <PageStructure>
       <Hero
+        emphasizeWordIndex={0}
         imageUrl={Images.backgroundProjects}
         title={hero.title}
         text={hero.text}
@@ -77,8 +79,8 @@ export default function Projects() {
           />
         ))}
 
-        <ContributePanel 
-          title="Quer apoiar nossos projetos?" 
+        <ContributePanel
+          title="Quer apoiar nossos projetos?"
           subTitle="Sua contribuição pode transformar vidas"
           buttonLabel="Faça parte dessa transformação"
           onButtonClick={() => console.log("Clicou em um botão primário.")}
@@ -93,13 +95,13 @@ export default function Projects() {
           />
         ))}
 
-        <ContributePanel 
-          title="Vamos juntos?" 
+        <ContributePanel
+          title="Vamos juntos?"
           subTitle="Sua participação faz a diferença. Entre em contato e descubra como apoiar ou se engajar nos projetos"
           buttonLabel="Falar no WhatsApp"
           onButtonClick={() => console.log("Clicou em um botão primário.")}
         />
       </ProjectGallery>
-    </Container>
+    </PageStructure>
   );
 }
