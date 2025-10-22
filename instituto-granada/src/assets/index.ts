@@ -42,6 +42,15 @@ import whatsapp from "./icons/whatsapp.svg";
 import instagram from "./icons/instagram.svg";
 import facebook from "./icons/facebook.svg";
 
+//projectsCards
+import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
+import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
+import backgroundVocation from "./images/projectsCards/backgroundVocation.png";
+import cardChristmas from "./images/projectsCards/cardChristmas.png";
+import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristmas.png";
+import cardVocation from "./images/projectsCards/cardVocation.png";
+import cardEaster from "./images/projectsCards/cardEaster.png";
+
 export const Images = {
   logo,
   backgroundAbout,
@@ -85,4 +94,14 @@ export const Icons = {
   facebook,
   instagram,
   whatsapp,
+};
+
+export const ProjectsCards = {
+  backgroundChristmas,
+  backgroundEaster,
+  backgroundVocation,
+  cardChristmas,
+  cardLearnMoreChristmas,
+  cardVocation,
+  cardEaster,
 };

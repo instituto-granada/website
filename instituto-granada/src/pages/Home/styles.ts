@@ -146,7 +146,8 @@ export const CardContainer = styled.div`
 
 export const SectionTestimonials = styled.div`
   display: flex;
-  height: 100vh;
+  padding: 0 8px 64px 8px;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
