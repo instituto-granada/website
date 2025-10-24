@@ -4,18 +4,18 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: ${(props) => props.theme.colors.extra.white};
 `;
 
 export const SectionAbout = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   max-width: 1279px;
   margin: 32px auto;
   padding: 40px;
   box-sizing: border-box;
-
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;

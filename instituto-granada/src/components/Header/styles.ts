@@ -31,7 +31,7 @@ export const Container = styled.header`
   border-bottom: 1px solid #e0e0e0;
 
   @media (min-width: ${breakpoints.tablet}) {
-    padding: 0 ${({ theme }) => theme.spacing.XL};
+    padding: 0 ${({ theme }) => theme.spacing["4XL"]};
   }
 `;
 

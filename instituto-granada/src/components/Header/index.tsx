@@ -73,7 +73,9 @@ export default function Header() {
     <>
       <Container>
         <SvgWrapper>
+            <Link to="/">
           <Image name="logo" width={150} />
+           </Link>
         </SvgWrapper>
 
         {/* Menu Desktop */}

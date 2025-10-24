@@ -14,9 +14,12 @@ export const Positions = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  @media (min-width: ${breakpoints.tablet}) {
-    justify-content: space-between;
+  justify-items: center;
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
   }
 `;
 
@@ -32,6 +35,7 @@ export const PositionsSectionTitle = styled.h1`
 
   @media (min-width: ${breakpoints.tablet}) {
     margin-bottom: ${({ theme }) => theme.spacing.XL};
+  }
 `;
 
 export const ContactUsSectionTitle = styled.h1`

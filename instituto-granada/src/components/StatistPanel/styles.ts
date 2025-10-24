@@ -44,9 +44,24 @@ export const InformationContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
-
   flex-basis: 200px;
   flex-grow: 1;
+  position: relative;
+
+  @media (min-width: 992px) {
+    &:not(:first-child)::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -8px;
+
+      top: 10%;
+      bottom: 10%;
+
+      width: 1px;
+      background-color: ${(props) => props.theme.colors.grayscale[400]};
+    }
+  }
 `;
 
 export const Icone = styled.img`

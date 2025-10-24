@@ -8,7 +8,8 @@ import Vocation from "../pages/Vacation";
 import Easter from "../pages/Easter";
 
 export const routesMap = {
-  home: { title: "Home", path: "/", component: Home },
+  home: { title: "Home", path: "/", component: Home, showInNav: false },
+  contact: { title: "Contato", path: "/contato", component: Home },
   about: { title: "Sobre", path: "/sobre", component: About },
   projects: { title: "Projetos", path: "/projetos", component: Projects },
   donations: {

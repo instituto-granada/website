@@ -45,8 +45,8 @@ export const ContentColumn = styled.div`
   padding: 0 ${({ theme }) => theme.spacing.S};
 
   @media (min-width: 768px) {
-    width: 45%;
-    padding: 0 ${({ theme }) => theme.spacing["2XL"]};
+    width: 60%;
+    padding: 0 ${({ theme }) => theme.spacing["4XL"]};
   }
 `;
 
