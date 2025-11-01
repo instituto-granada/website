@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 import { breakpoints } from "../../styles/breakpoints";
+import {
+  ContentBoxProps,
+  ParagraphProps,
+  TextWrapperProps,
+  TitleProps,
+} from "./types";
 
 export const AboutUsSection = styled.div`
   display: flex;
@@ -10,17 +16,25 @@ export const AboutUsSection = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: stretch;
-    padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing["2XL"]}`};
+    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
   }
 `;
 
-export const ContentBox = styled.div<{ grow?: boolean }>`
+export const ContentBox = styled.div<ContentBoxProps>`
   display: flex;
   flex-direction: column;
   flex: ${({ grow }) => (grow ? 1 : "0 0 auto")};
+  align-items: ${({ alignCenter }) => alignCenter && "center"};
 `;
 
-export const WrapperImage = styled.div`
+export const TextWrapper = styled.div<TextWrapperProps>`
+  @media (min-width: ${breakpoints.tablet}) {
+    margin-left: ${({ withLeftPadding, theme }) =>
+      withLeftPadding ? theme.spacing.XL : 0};
+  }
+`;
+
+export const ImageWrapper = styled.div`
   width: 288px;
 
   img {
@@ -38,27 +52,77 @@ export const WrapperImage = styled.div`
   }
 `;
 
-export const AboutUsSectionTitle = styled.h1`
+export const Title = styled.h1<TitleProps>`
   font-size: ${({ theme }) => theme.typography.sora.M};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
-  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
   color: ${({ theme }) => theme.colors.primary[400]};
-  text-align: left;
+  text-align: ${({ alignCenter }) => (alignCenter ? "center" : "left")};
   text-transform: uppercase;
-  margin-left: ${({ theme }) => theme.spacing.XL};
-  
+  margin-top: ${({ theme }) => theme.spacing.XL};
+  margin-bottom: ${({ theme }) => theme.spacing.XL};
+
   @media (min-width: ${breakpoints.tablet}) {
-    margin-bottom: ${({ theme }) => theme.spacing.XL};
+    margin-top: 0;
+  }
 `;
 
-export const AboutUsSectionMessage = styled.p`
+export const Paragraph = styled.p<ParagraphProps>`
   font-size: ${({ theme }) => theme.typography.outfit.L};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
+  font-weight: ${({ bold, theme }) =>
+    bold ? theme.fontWeight.bold : theme.fontWeight.regular};
   color: ${({ theme }) => theme.colors.extra.black};
+  text-indent: ${({ indented }) => (indented ? "2rem" : "0")};
   text-align: left;
-  margin-left: ${({ theme }) => theme.spacing.XL};
+  white-space: pre-line;
 
   @media (min-width: ${breakpoints.tablet}) {
-    margin-bottom: ${({ theme }) => theme.spacing.XL};
+    margin-bottom: ${({ theme, withMarginBottom }) =>
+      withMarginBottom ? theme.spacing.XL : "0"};
+  }
+`;
+
+export const HighlightedParagraph = styled.p`
+  font-size: ${({ theme }) => theme.typography.sora.S};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.secondary[700]};
+  line-height: ${(props) => props.theme.lineHeight["1_1x"]};
+  text-align: center;
+  margin-top: ${({ theme }) => theme.spacing.XL};
+  margin-bottom: ${({ theme }) => theme.spacing.XL};
+`;
+
+export const AboutUsButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.XS};
+  margin-top: ${({ theme }) => theme.spacing.XL};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    margin-top: 0;
+    margin-left: ${({ theme }) => theme.spacing.XL};
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    flex-direction: row;
+  }
+`;
+
+export const OutFutureSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+
+  @media (min-width: 768px) {
+    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+  }
+`;
+
+export const OutFutureButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 343px;
+  }
 `;

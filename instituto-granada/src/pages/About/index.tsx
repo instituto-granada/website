@@ -4,16 +4,22 @@ import Image from "../../components/Image";
 import { useTranslate } from "../../hooks/useTranslate";
 import PageStructure from "../../components/PageStructure";
 import {
+  AboutUsButtonWrapper,
   AboutUsSection,
-  AboutUsSectionMessage,
-  AboutUsSectionTitle,
   ContentBox,
-  WrapperImage,
+  HighlightedParagraph,
+  ImageWrapper,
+  OutFutureButtonWrapper,
+  OutFutureSection,
+  Paragraph,
+  TextWrapper,
+  Title,
 } from "./styles";
+import ButtonPrincipal from "../../components/ButtonPrincipal";
 
 export default function About() {
   const { text } = useTranslate();
-  const { hero, aboutUsSection } = text.about;
+  const { aboutUsSection, hero, outFutureSection } = text.about;
 
   return (
     <PageStructure>
@@ -23,16 +29,50 @@ export default function About() {
         text={hero.text}
       />
       <AboutUsSection>
-        <ContentBox>
-          <WrapperImage>
+        <ContentBox alignCenter>
+          <ImageWrapper>
             <Image name="aboutUsSection" />
-          </WrapperImage>
+          </ImageWrapper>
         </ContentBox>
         <ContentBox grow>
-          <AboutUsSectionTitle>{aboutUsSection.title}</AboutUsSectionTitle>
-          <AboutUsSectionMessage>{aboutUsSection.text}</AboutUsSectionMessage>
+          <TextWrapper withLeftPadding>
+            <Title>{aboutUsSection.title}</Title>
+            {aboutUsSection.text.map((paragraph, index) => (
+              <Paragraph key={index} bold={index % 2 !== 0} withMarginBottom>
+                {paragraph}
+              </Paragraph>
+            ))}
+          </TextWrapper>
+          <AboutUsButtonWrapper>
+            <ButtonPrincipal
+              key="secondary"
+              variant="secondary"
+              onClick={() => {}}
+            >
+              {aboutUsSection.buttons.secondary.label}
+            </ButtonPrincipal>
+            <ButtonPrincipal key="primary" variant="primary" onClick={() => {}}>
+              {aboutUsSection.buttons.primary.label}
+            </ButtonPrincipal>
+          </AboutUsButtonWrapper>
         </ContentBox>
       </AboutUsSection>
+      <OutFutureSection>
+        <Title alignCenter>{outFutureSection.title}</Title>
+        {outFutureSection.text.map((paragraph, index) => (
+          <Paragraph key={index} indented={index % 2 !== 0}>
+            {paragraph}
+          </Paragraph>
+        ))}
+        <HighlightedParagraph>
+          {outFutureSection.highlightText}
+        </HighlightedParagraph>
+        <OutFutureButtonWrapper>
+          <ButtonPrincipal key="primary" variant="primary" onClick={() => {}}>
+            {outFutureSection.button.primary.label}
+          </ButtonPrincipal>
+        </OutFutureButtonWrapper>
+      </OutFutureSection>
     </PageStructure>
   );
 }

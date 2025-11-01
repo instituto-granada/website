@@ -1,14 +1,41 @@
-import { AboutUsSection } from "~/pages/About/styles";
+import { AboutUsSection, OutFutureSection } from "~/pages/About/styles";
 
 export const pt = {
   about: {
+    aboutUsSection: {
+      buttons: {
+        primary: {
+          label: "Quero doar",
+        },
+        secondary: {
+          label: "Quero ser voluntário",
+        },
+      },
+      title: "Quem somos?",
+      text: [
+        "O Instituto Granada nasceu para apoiar famílias em situação de vulnerabilidade, crianças e adolescentes na zona leste de Mairinque/SP, na resistência e combate às desigualdades sociais.",
+        "Desde 2008, o Instituto oferece diversas oficinas e cursos a fim de inserir crianças e adolescentes no mundo das artes, cultura, esporte, lazer e educação.",
+        "Atuamos para conquistar os Objetivos de Desenvolvimento Sustentáveis – ODS Fome Zero e Agricultura Sustentável; Saúde e Bem Estar; Educação de Qualidade; Trabalho Decente e Crescimento Econômico.; Redução das Desigualdades e Paz, Justiça e Instituições Eficazes.",
+      ],
+    },
     hero: {
       title: "Saiba mais sobre nós",
       text: "O Instituto Granada é uma Organização da  Sociedade Civil localizada na Vila Granada, em Mairinque/SP.\n\nConheça abaixo um pouco mais da nossa história.",
     },
-    aboutUsSection: {
-      title: "Quem somos?",
-      text: "O Instituto Granada nasceu para apoiar famílias em situação de vulnerabilidade, crianças e adolescentes na zona leste de Mairinque/SP, na resistência e combate às desigualdades sociais.\n\nDesde 2008, o Instituto oferece diversas oficinas e cursos a fim de inserir crianças e adolescentes no mundo das artes, cultura, esporte, lazer e educação.\n\nAtuamos para conquistar os Objetivos de Desenvolvimento Sustentáveis – ODS Fome Zero e Agricultura Sustentável; Saúde e Bem Estar; Educação de Qualidade; Trabalho Decente e Crescimento Econômico.; Redução das Desigualdades e Paz, Justiça e Instituições Eficazes",
+    outFutureSection: {
+      button: {
+        primary: {
+          label: "Faça parte dessa transformação",
+        },
+      },
+      highlightText:
+        "Seguiremos  apoiando famílias com orientações para prevenção e combate a fome, pobreza, dores emocionais e subempregos, e ofertando roupas , alimentos e cursos de capacitação profissional",
+      text: [
+        "Desejamos ampliar o atendimento com a abertura de polos do Instituto Granada em outros pontos da cidade, proporcionando àqueles que sonham com dias melhores oportunidades e ferramentas para conquistá-los.",
+        "Recentes levantamentos de dados deram conta de que os adolescentes estão em risco psicossocial. Precisamos investir na saúde mental de toda a comunidade por meio de ações multidisciplinares que contam com psicopedagogos, psicólogos, psicanalistas, fonoaudiólogos, terapeutas ocupacionais e assistentes sociais.",
+        "É preciso continuar ofertando, para crianças e adolescentes, o incentivo à prática de esportes e apoio para participações em competições, acesso a atividades culturais e artísticas, a participação em cursos de informática e idiomas, cursos preparatórios para o primeiro emprego e parcerias com empresas para inserir jovens no mercado de trabalho.",
+      ],
+      title: "Nosso futuro",
     },
   },
   footer: {
