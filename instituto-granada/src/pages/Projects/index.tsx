@@ -64,12 +64,12 @@ export default function Projects() {
         ]}
       />
 
-      <ProjectCarousel
-        projects={carouselProjects}
-        header="PRINCIPAIS PROJETOS"
-      />
-
       <ProjectGallery>
+        <ProjectCarousel
+          projects={carouselProjects}
+          header="PRINCIPAIS PROJETOS"
+        />
+
         {gallery01?.list.map((project) => (
           <WideCard
             image={imageIndex[project.imageKey as keyof typeof imageIndex]}
