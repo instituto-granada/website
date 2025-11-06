@@ -10,20 +10,23 @@ export const StyledMissionSection = styled.section`
 `
 
 export const MissionContent = styled.div`
+    max-height: 218px;
     display: flex;
     flex-direction: column;
     padding: ${props => props.theme.spacing["4XL"]} ${props => props.theme.spacing.XL};
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 32px;
 `
 
 export const MissionTitle = styled.h2`
+    width: 100%;
     font-family: ${props => props.theme.fontFamily.sora};
     font-size: ${props => props.theme.typography.sora.M};
     line-height: ${props => props.theme.lineHeight["1_1x"]};
     font-weight: ${props => props.theme.fontWeight.bold};
     color: ${props => props.theme.colors.primary[400]};
+    text-align: left;
 `
 
 export const MissionBody = styled.p`
