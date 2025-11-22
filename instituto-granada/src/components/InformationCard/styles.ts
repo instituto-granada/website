@@ -44,13 +44,14 @@ export const WrapperText = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h1<{ uppercase: boolean }>`
   font-size: ${({ theme }) => theme.typography.sora.S};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
   color: ${({ theme }) => theme.colors.extra.black};
   text-align: left;
   margin-bottom: ${({ theme }) => theme.spacing.S};
+  text-transform: ${({ uppercase }) => (uppercase ? "uppercase" : "none")};
 `;
 
 export const Body = styled.p`

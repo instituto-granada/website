@@ -11,6 +11,9 @@ import psychologistPosition from "./images/psychologistPosition.png";
 import speechTherapistPosition from "./images/speechTherapistPosition.png";
 import teacherPosition from "./images/teacherPosition.png";
 import aboutUsSection from "./images/aboutUsSection.png";
+import academicSupport from "./images/academicSupport.png";
+import familySupport from "./images/familySupport.png";
+import freeMeals from "./images/freeMeals.png";
 
 import World_people from "./icons/World_people.svg";
 import Gift from "./icons/Gift.svg";
@@ -82,6 +85,9 @@ export const Images = {
   projectPascoa,
   projectFerias,
   aboutUsSection,
+  academicSupport,
+  familySupport,
+  freeMeals,
 };
 
 export const Icons = {
