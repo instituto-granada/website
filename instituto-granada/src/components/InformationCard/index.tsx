@@ -13,12 +13,14 @@ export interface InformationCardProps {
   image: keyof typeof Images;
   title: string;
   body: string;
+  uppercaseTitle?: boolean;
 }
 
 export default function InformationCard({
   image,
   title,
   body,
+  uppercaseTitle = false,
 }: InformationCardProps) {
   return (
     <Container>
@@ -27,7 +29,7 @@ export default function InformationCard({
           <Image name={image} width={150} />
         </WrapperImage>
         <WrapperText>
-          {title && <Title>{title}</Title>}
+          {title && <Title uppercase={uppercaseTitle}>{title}</Title>}
           {body && <Body>{body}</Body>}
         </WrapperText>
       </Content>

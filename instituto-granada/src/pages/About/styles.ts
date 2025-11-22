@@ -107,6 +107,22 @@ export const AboutUsButtonWrapper = styled.div`
   }
 `;
 
+export const CardsSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
+  background: ${({ theme }) => theme.colors.secondary[700]};
+  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+  }
+`;
 export const OutFutureSection = styled.div`
   display: flex;
   flex-direction: column;

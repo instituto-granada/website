@@ -3,9 +3,11 @@ import { Images } from "../../assets/";
 import Image from "../../components/Image";
 import { useTranslate } from "../../hooks/useTranslate";
 import PageStructure from "../../components/PageStructure";
+import InformationCard from "../../components/InformationCard";
 import {
   AboutUsButtonWrapper,
   AboutUsSection,
+  CardsSection,
   ContentBox,
   HighlightedParagraph,
   ImageWrapper,
@@ -17,9 +19,15 @@ import {
 } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
 
+const imageNames: (keyof typeof Images)[] = [
+  "familySupport",
+  "freeMeals",
+  "academicSupport",
+];
+
 export default function About() {
   const { text } = useTranslate();
-  const { aboutUsSection, hero, outFutureSection } = text.about;
+  const { aboutUsSection, cardsSection, hero, outFutureSection } = text.about;
 
   return (
     <PageStructure>
@@ -57,6 +65,17 @@ export default function About() {
           </AboutUsButtonWrapper>
         </ContentBox>
       </AboutUsSection>
+      <CardsSection>
+        {cardsSection.cardsContent.map((card, index) => (
+          <InformationCard
+            key={index}
+            image={imageNames[index]}
+            title={card.title}
+            body={card.message}
+            uppercaseTitle
+          />
+        ))}
+      </CardsSection>
       <OutFutureSection>
         <Title alignCenter>{outFutureSection.title}</Title>
         {outFutureSection.text.map((paragraph, index) => (
