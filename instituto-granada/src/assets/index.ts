@@ -55,6 +55,8 @@ import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristma
 import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
 
+import mission from "./images/mission.png"
+
 export const Images = {
   logo,
   backgroundAbout,
@@ -88,6 +90,9 @@ export const Images = {
   academicSupport,
   familySupport,
   freeMeals,
+
+  //página sobre
+  mission
 };
 
 export const Icons = {
