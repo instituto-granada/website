@@ -18,6 +18,25 @@ export const pt = {
         "Atuamos para conquistar os Objetivos de Desenvolvimento Sustentáveis – ODS Fome Zero e Agricultura Sustentável; Saúde e Bem Estar; Educação de Qualidade; Trabalho Decente e Crescimento Econômico.; Redução das Desigualdades e Paz, Justiça e Instituições Eficazes.",
       ],
     },
+    cardsSection: {
+      cardsContent: [
+        {
+          message:
+            "Essencial para a construção de uma sociedade mais justa ofertamos atividades variadas e suporte psicoemocional que ajudam a romper ciclos de pobreza, exclusão e violência.",
+          title: "Apoio às famílias",
+        },
+        {
+          message:
+            "Nos projetos, crianças e adolescentes recebem refeições balanceadas, muitas vezes a única do dia, garantindo cuidado essencial para sua saúde e bem-estar.",
+          title: "Alimentação gratuita",
+        },
+        {
+          message:
+            "Promovemos uma educação equitativa onde crianças e adolescentes tenham as mesmas oportunidades de aprender e se desenvolver para que possam atingir seu potencial máximo.",
+          title: "Reforço escolar",
+        },
+      ],
+    },
     hero: {
       title: "Saiba mais sobre nós",
       text: "O Instituto Granada é uma Organização da  Sociedade Civil localizada na Vila Granada, em Mairinque/SP.\n\nConheça abaixo um pouco mais da nossa história.",
