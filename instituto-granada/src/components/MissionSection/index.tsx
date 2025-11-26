@@ -1,5 +1,5 @@
 import React from "react";
-import { MissionBody, MissionContent, MissionImageContainer, MissionTitle, StyledMissionSection } from "./styles";
+import { GradientEffect, MissionBody, MissionContent, MissionImageContainer, MissionTitle, StyledMissionSection } from "./styles";
 
 export interface MissionSectionProps {
     title: string
@@ -18,7 +18,9 @@ export default function MissionSection ({
                 <MissionTitle> {title} </MissionTitle>
                 <MissionBody> {body} </MissionBody>
             </MissionContent>
-            <MissionImageContainer backgroundImage={image}/>
+            <MissionImageContainer backgroundImage={image}>
+                <GradientEffect/>
+            </MissionImageContainer>
         </StyledMissionSection>
     )
 }

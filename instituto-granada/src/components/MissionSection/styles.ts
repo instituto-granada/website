@@ -39,13 +39,25 @@ export const MissionBody = styled.p`
 `
 
 export const MissionImageContainer = styled.div<{backgroundImage: string}>`
-    display: inline-block;
+    position: relative;
+    display: flex;
+    height: 680px;
     max-height: 680px;
     width: 100%;
+    background-image: url(${props => props.backgroundImage});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+`
 
-    // Efeito de gradiente na imagem
-    background-image: 
-    linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, ${props => props.theme.colors.extra.white} 100%),
-    url(${props => props.backgroundImage});
-    background-size: cover
+export const GradientEffect = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 132px;
+    width: 100%; 
+    background: #ffffff;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
+
+    pointer-events: none;
 `
