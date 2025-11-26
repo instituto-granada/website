@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { theme } from "~/theme/theme";
 import { breakpoints } from "../../styles/breakpoints";
+import { Images } from "~/assets";
 
 export const StyledMissionSection = styled.section`
     display: flex;
@@ -37,7 +38,14 @@ export const MissionBody = styled.p`
     color: ${props => props.theme.colors.extra.black};
 `
 
-export const MissionImage = styled.img`
+export const MissionImageContainer = styled.div<{backgroundImage: string}>`
+    display: inline-block;
     max-height: 680px;
     width: 100%;
+
+    // Efeito de gradiente na imagem
+    background-image: 
+    linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, ${props => props.theme.colors.extra.white} 100%),
+    url(${props => props.backgroundImage});
+    background-size: cover
 `

@@ -1,5 +1,5 @@
 import React from "react";
-import { MissionBody, MissionContent, MissionImage, MissionTitle, StyledMissionSection } from "./styles";
+import { MissionBody, MissionContent, MissionImageContainer, MissionTitle, StyledMissionSection } from "./styles";
 
 export interface MissionSectionProps {
     title: string
@@ -18,10 +18,7 @@ export default function MissionSection ({
                 <MissionTitle> {title} </MissionTitle>
                 <MissionBody> {body} </MissionBody>
             </MissionContent>
-            <MissionImage
-                src={image}
-                alt={title || "Mission Section Image"}
-            />
+            <MissionImageContainer backgroundImage={image}/>
         </StyledMissionSection>
     )
 }
