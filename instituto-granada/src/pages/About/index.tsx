@@ -11,14 +11,15 @@ import {
   ContentBox,
   HighlightedParagraph,
   ImageWrapper,
-  OutFutureButtonWrapper,
-  OutFutureSection,
+  OurFutureButtonWrapper,
+  OurFutureSection,
   Paragraph,
   TextWrapper,
-  Title,
+  Title
 } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
 import YearlyStatsPanel, { YearlyStatItem } from "../../components/YearlyStatsPanel";
+import MissionSection from "../../components/MissionSection";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -28,7 +29,7 @@ const imageNames: (keyof typeof Images)[] = [
 
 export default function About() {
   const { text } = useTranslate();
-  const { aboutUsSection, cardsSection, hero, outFutureSection } = text.about;
+  const { aboutUsSection, cardsSection, hero, ourFutureSection, missionSection } = text.about;
   
   const rawStats = text.about.yearlyStats.stats[0];
 
@@ -85,26 +86,33 @@ export default function About() {
           />
         ))}
       </CardsSection>
+      <MissionSection
+        title={missionSection.title}
+        body={missionSection.text}
+        image={Images.mission}
+      />
       <YearlyStatsPanel 
         title={text.about.yearlyStats.title}
         items={items}
       />
-      <OutFutureSection>
-        <Title alignCenter>{outFutureSection.title}</Title>
-        {outFutureSection.text.map((paragraph, index) => (
+      <OurFutureSection>
+        <Title alignCenter>{ourFutureSection.title}</Title>
+        {ourFutureSection.text.map((paragraph, index) => (
           <Paragraph key={index} indented={index % 2 !== 0}>
             {paragraph}
           </Paragraph>
         ))}
         <HighlightedParagraph>
-          {outFutureSection.highlightText}
+          {ourFutureSection.highlightText}
         </HighlightedParagraph>
-        <OutFutureButtonWrapper>
+        <OurFutureButtonWrapper>
           <ButtonPrincipal key="primary" variant="primary" onClick={() => {}}>
-            {outFutureSection.button.primary.label}
+            {ourFutureSection.button.primary.label}
           </ButtonPrincipal>
-        </OutFutureButtonWrapper>
-      </OutFutureSection>
+        </OurFutureButtonWrapper>
+      </OurFutureSection>
     </PageStructure>
   );
 }
+
+export {}
