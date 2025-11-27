@@ -123,7 +123,7 @@ export const CardsSection = styled.div`
     padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
   }
 `;
-export const OutFutureSection = styled.div`
+export const OurFutureSection = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
@@ -133,7 +133,7 @@ export const OutFutureSection = styled.div`
   }
 `;
 
-export const OutFutureButtonWrapper = styled.div`
+export const OurFutureButtonWrapper = styled.div`
   width: 100%;
   display: flex;
   margin: 0 auto;
