@@ -1,4 +1,3 @@
-import React from "react";
 import { GradientEffect, MissionBody, MissionContent, MissionImageContainer, MissionTitle, StyledMissionSection } from "./styles";
 
 export interface MissionSectionProps {
@@ -21,6 +20,6 @@ export default function MissionSection ({
             <MissionImageContainer backgroundImage={image}>
                 <GradientEffect/>
             </MissionImageContainer>
-        </StyledMissionSection>
+        </StyledMissionSection>       
     )
 }

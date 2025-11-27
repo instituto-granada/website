@@ -15,9 +15,10 @@ import {
   OurFutureSection,
   Paragraph,
   TextWrapper,
-  Title,
+  Title
 } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
+import MissionSection from "../../components/MissionSection";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -76,6 +77,11 @@ export default function About() {
           />
         ))}
       </CardsSection>
+      <MissionSection
+        title={missionSection.title}
+        body={missionSection.text}
+        image={Images.mission}
+      />
       <OurFutureSection>
         <Title alignCenter>{ourFutureSection.title}</Title>
         {ourFutureSection.text.map((paragraph, index) => (
@@ -95,3 +101,5 @@ export default function About() {
     </PageStructure>
   );
 }
+
+export {}

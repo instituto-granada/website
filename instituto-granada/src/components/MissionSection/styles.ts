@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "~/theme/theme";
 import { breakpoints } from "../../styles/breakpoints";
-import { Images } from "~/assets";
 
 export const StyledMissionSection = styled.section`
     display: flex;
@@ -11,13 +9,16 @@ export const StyledMissionSection = styled.section`
 `
 
 export const MissionContent = styled.div`
-    max-height: 218px;
     display: flex;
     flex-direction: column;
-    padding: ${props => props.theme.spacing["4XL"]} ${props => props.theme.spacing.XL};
+    padding: 1rem;
     align-items: center;
     justify-content: center;
     gap: 32px;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        padding: ${props => props.theme.spacing.XL} ${props => props.theme.spacing["4XL"]};
+    }
 `
 
 export const MissionTitle = styled.h2`
