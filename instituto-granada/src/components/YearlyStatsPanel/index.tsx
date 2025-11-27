@@ -22,7 +22,8 @@ export default function YearlyStatsPanel ({
                 <Title> {title} </Title>
                 <StatsContainer>
                 {items.map((item, index) => (
-                    <StatsContent>
+                    // Gera borda de acordo com o items da lista
+                    <StatsContent isMiddle={index > 0 && index < items.length - 1}>
                         <StatIcon src={item.icon} alt={item.description}/>
                         <TextContainer>
                             <StatValue> {item.value} </StatValue>
