@@ -17,10 +17,12 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: ${props => props.theme.spacing.L}
+    gap: ${props => props.theme.spacing.L};
 `;
 
 export const Title = styled.h2`
+    width: 100%;
+    text-align: center;
     font-family: ${props => props.theme.fontFamily.sora};
     font-size: ${props => props.theme.typography.sora.M};
     line-height: ${props => props.theme.lineHeight["1_1x"]};
@@ -31,6 +33,7 @@ export const Title = styled.h2`
 export const StatsContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     @media(min-width: ${props => props.theme.breakpoints.tablet}) {
         flex-direction: row;
@@ -73,8 +76,8 @@ export const StatIcon = styled.img`
 
 export const TextContainer = styled.div`
     display: flex;
-    flex-direction: column
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const StatValue = styled.h2`

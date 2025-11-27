@@ -111,6 +111,8 @@ export const Icons = {
   Pencil,
 };
 
+export type IconName = keyof typeof Icons;
+
 export const ProjectsCards = {
   backgroundChristmas,
   backgroundEaster,
