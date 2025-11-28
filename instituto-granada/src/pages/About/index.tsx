@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero";
-import { Images } from "../../assets/";
+import { IconName, Icons, Images } from "../../assets/";
 import Image from "../../components/Image";
 import { useTranslate } from "../../hooks/useTranslate";
 import PageStructure from "../../components/PageStructure";
@@ -18,6 +18,7 @@ import {
   Title
 } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
+import YearlyStatsPanel, { YearlyStatItem } from "../../components/YearlyStatsPanel";
 import MissionSection from "../../components/MissionSection";
 
 const imageNames: (keyof typeof Images)[] = [
@@ -29,6 +30,14 @@ const imageNames: (keyof typeof Images)[] = [
 export default function About() {
   const { text } = useTranslate();
   const { aboutUsSection, cardsSection, hero, ourFutureSection, missionSection } = text.about;
+  
+  const rawStats = text.about.yearlyStats.stats[0];
+
+  const items: YearlyStatItem[] = Object.values(rawStats).map(stat => ({
+    icon: Icons[stat.icon as IconName],
+    value: stat.value,
+    description: stat.description 
+  }));
 
   return (
     <PageStructure>
@@ -81,6 +90,10 @@ export default function About() {
         title={missionSection.title}
         body={missionSection.text}
         image={Images.mission}
+      />
+      <YearlyStatsPanel 
+        title={text.about.yearlyStats.title}
+        items={items}
       />
       <OurFutureSection>
         <Title alignCenter>{ourFutureSection.title}</Title>

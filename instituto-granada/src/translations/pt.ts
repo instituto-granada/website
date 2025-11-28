@@ -41,6 +41,26 @@ export const pt = {
       title: "MISSÃO",
       text: "Oferecer possibilidades de vivências que permitam  aos indivíduos, serem motivados a buscarem um mundo melhor, através do apoio mútuo, da solidariedade e do conhecimento."
     },
+    yearlyStats: {
+      title: "SOMENTE NO ANO DE 2024",
+      stats: [{
+        meals: {
+          value: "19.326",
+          description: "Refeições servidas no local",
+          icon: "Dish"
+        },
+        schoolMaterial: {
+          value: "4.582",
+          description: "Kits de material escolar com 116 mochilas",
+          icon: "Pencil"
+        },
+        breakfast: {
+          value: "4.897",
+          description: "Cafés da manhã e da tarde servidos",
+          icon: "Coffee"
+        }
+      }]
+    },
     hero: {
       title: "Saiba mais sobre nós",
       text: "O Instituto Granada é uma Organização da  Sociedade Civil localizada na Vila Granada, em Mairinque/SP.\n\nConheça abaixo um pouco mais da nossa história.",

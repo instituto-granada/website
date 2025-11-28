@@ -25,6 +25,10 @@ import Kid from "./icons/Kid.svg";
 import Person from "./icons/Person.svg";
 import Shirt from "./icons/Shirt.svg";
 
+import Dish from "./icons/Dish.svg";
+import Coffee from "./icons/Coffee.svg";
+import Pencil from "./icons/Pencil.svg";
+
 import Testimonials1 from "./images/reports/depoimento1.png";
 import Testimonials2 from "./images/reports/depoimento2.png";
 import Testimonials3 from "./images/reports/depoimento3.png";
@@ -107,7 +111,12 @@ export const Icons = {
   facebook,
   instagram,
   whatsapp,
+  Dish,
+  Coffee,
+  Pencil,
 };
+
+export type IconName = keyof typeof Icons;
 
 export const ProjectsCards = {
   backgroundChristmas,
