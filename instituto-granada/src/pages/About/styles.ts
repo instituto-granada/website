@@ -16,7 +16,9 @@ export const AboutUsSection = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: stretch;
-    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["4XL"]}`};
+    padding-top:  ${({ theme }) => `${theme.spacing.XL}`};
+    padding-left: ${({ theme }) => `${theme.spacing["4XL"]}`};
+    padding-right: ${({ theme }) => `${theme.spacing["4XL"]}`};
   }
 `;
 
