@@ -18,6 +18,34 @@ export const pt = {
         "Atuamos comprometidos e em alinhamento com os ODS-Objetivos de Desenvolvimento Sustentável.",
       ],
     },
+    odsObjectives: {
+      objectives: [
+        {
+          description: "Erradicação da pobreza",
+          icon: "OdsPoverty"
+        },
+        {
+          description: "Fome zero e agricultura sustentável",
+          icon: "OdsZeroHunger"
+        },
+        {
+          description: "Saúde e bem-estar",
+          icon: "OdsHealth"
+        },
+        {
+          description: "Educação de qualidade",
+          icon: "OdsEducation"
+        },
+        {
+          description: "Trabalho decente e crescimento econômico",
+          icon: "OdsWork"
+        },
+        {
+          description: "Redução das desigualdades",
+          icon: "OdsEquality"
+        },
+      ]
+    },
     cardsSection: {
       cardsContent: [
         {
