@@ -21,22 +21,19 @@ const testimonialsData = [
     image: Images.Testimonials1,
     title: "Vozes que inspiram",
     text: "A parceria entre o Instituto Tortuga, braço social da dsm-firmenich Brasil e o Instituto Granada é um exemplo de quando propósitos se encontram, vidas mudam. Oferecemos alimentação de qualidade, apoiamos a inclusão digital e realizamos doações e campanhas solidárias ao longo do ano. Nossa parceria é sólida e reforça o compromisso de inspirar, capacitar e criar oportunidades reais para crianças e jovens.",
-    describer:
-      "Cristina Rodrigues, Coordenadora de Ações Sociais, Instituto Tortuga",
+    describer: "Cristina, Coordenadora de Ações Sociais, Instituto Tortuga",
   },
   {
     image: Images.Testimonials2,
     title: "Vozes que inspiram",
     text: "Agradeço demais por ter participado deste instituto! As aulas de artesanato foram incríveis! Adorei criar coisas novas e aprender técnicas diferentes. As aulas de artes me fizeram sentir super criativo! E as gincanas foram muito divertidas! Uma ótima forma de conhecer melhor os colegas. O ambiente era super acolhedor e as tias do projeto eram muito legais. Muito obrigado por tudo. Foi uma experiência incrível!",
-    describer:
-      "José Antonio de Oliveira, atendido pelo Instituto de 2017 a 2022",
+    describer: "José Antonio, atendido pelo Instituto de 2017 a 2022",
   },
   {
     image: Images.Testimonials3,
     title: "Vozes que inspiram",
     text: "Quero expressar minha mais sincera gratidão a todos que tornaram possível este projeto incrível de apoio às crianças carentes da região leste de Mairinque. Dos 9 aos 16 anos participei do projeto, com refeições, estudos, aulas e momentos inesquecíveis que mudaram minha vida. A dedicação dos voluntários abriu portas para um futuro melhor e nenhuma palavra expressa isso melhor do que GRATIDÃO.",
-    describer:
-      "Raiane Rodrigues de Morais, atendida pelo Instituto de 2011 a 2016",
+    describer: "Raiane, atendida pelo Instituto de 2011 a 2016",
   },
   {
     image: Images.Testimonials4,

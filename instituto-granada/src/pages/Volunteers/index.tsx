@@ -155,7 +155,7 @@ export default function Volunteers() {
   return (
     <PageStructure>
       <Hero
-        emphasizeWordIndex={1}
+        emphasizeWordsIndex={[1]}
         imageUrl={Images.backgroundVolunteers}
         title={hero.title}
         text={hero.text}

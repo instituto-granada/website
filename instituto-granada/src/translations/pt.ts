@@ -102,11 +102,13 @@ export const pt = {
   },
   home: {
     hero: {
-      title: "Transforme a realidade de crianças e famílias",
-      text: "Desde 2008, o Instituto Granada oferece aprendizagem, alimentação gratuita, apoio às famílias, saúde emocional e capacitação profissional em Mairinque/SP",
+      caption:
+        "Sua doação garante refeições, cursos e apoio direto às famílias.",
+      title: "Transformando a realidade de crianças e famílias",
+      text: "Desde 2008, o Instituto Granada oferece reçorco escolar, segurança alimentar e apoio às famílias carentes em Mairinque/SP.",
       buttons: {
         primary: {
-          label: "Quero doar agora",
+          label: "Quero doar",
         },
       },
     },

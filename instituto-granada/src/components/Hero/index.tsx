@@ -1,5 +1,6 @@
 import ButtonPrincipal from "../ButtonPrincipal";
 import {
+  Caption,
   Container,
   ContentColumn,
   Title,
@@ -10,12 +11,13 @@ import {
 import { HeroProps } from "./types";
 
 export default function Hero({
+  caption,
   imageUrl,
   title,
   text,
   isHome,
   buttons,
-  emphasizeWordIndex,
+  emphasizeWordsIndex,
 }: HeroProps) {
   const renderTitle = () => {
     const words = title.split(" ");
@@ -23,7 +25,7 @@ export default function Hero({
     return (
       <Title>
         {words.map((word, i) => {
-          const isHighlighted = emphasizeWordIndex === i;
+          const isHighlighted = emphasizeWordsIndex?.includes(i);
           const Element = isHighlighted ? HighlightedWord : "span";
 
           return (
@@ -51,6 +53,7 @@ export default function Hero({
             ))}
           </ButtonsContainer>
         )}
+        <Caption>{caption}</Caption>
       </ContentColumn>
     </Container>
   );

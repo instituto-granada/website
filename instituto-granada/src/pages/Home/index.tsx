@@ -30,11 +30,12 @@ export default function Home() {
   return (
     <Container>
       <Hero
-        emphasizeWordIndex={0}
+        emphasizeWordsIndex={[0]}
         isHome={true}
         imageUrl={Images.backgroundHome}
         title={hero.title}
         text={hero.text}
+        caption={hero.caption}
         buttons={[
           {
             label: hero.buttons.primary.label,

@@ -19,7 +19,7 @@ export default function Christmas() {
   return (
     <PageStructure>
       <Hero
-        emphasizeWordIndex={0}
+        emphasizeWordsIndex={[0]}
         isHome={false}
         imageUrl={ProjectsCards.backgroundChristmas}
         title={hero.title}
