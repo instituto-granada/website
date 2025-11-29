@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: flex-start;
   background-color: ${({ theme }) => theme.colors.extra.white};
   padding: ${({ theme }) => theme.spacing.S};
-  border-radius: 32px;
+  border-radius: 27px;
   box-shadow: ${({ theme }) => theme.shadows.highlight};
   margin-bottom: ${({ theme }) => theme.spacing.XL};
 
