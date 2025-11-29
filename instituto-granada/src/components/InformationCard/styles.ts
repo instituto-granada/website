@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { breakpoints } from "../../styles/breakpoints";
 
 export const Container = styled.div`
-  width: 288px;
+  width: 331px;
   height: auto;
   min-height: 288px;
   display: flex;
@@ -23,6 +23,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: ${({ theme }) => theme.spacing.S};
 `;
 
 export const WrapperImage = styled.div`
