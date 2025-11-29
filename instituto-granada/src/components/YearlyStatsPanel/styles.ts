@@ -46,15 +46,7 @@ export const StatsContent = styled.div<{ isMiddle?: boolean }>`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: ${({ theme }) => theme.spacing["2XS"]};
-
-    ${({ isMiddle, theme }) =>
-        isMiddle &&
-        `
-            border-top: 1px solid ${theme.colors.extra.white};
-            border-bottom: 1px solid ${theme.colors.extra.white};
-        `
-    }
+    gap: ${({ theme }) => theme.spacing.S};
 
     @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
         ${({ isMiddle, theme }) =>
