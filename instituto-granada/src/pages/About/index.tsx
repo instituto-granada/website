@@ -15,10 +15,12 @@ import {
   OurFutureSection,
   Paragraph,
   TextWrapper,
-  Title
+  Title,
 } from "./styles";
 import ButtonPrincipal from "../../components/ButtonPrincipal";
-import YearlyStatsPanel, { YearlyStatItem } from "../../components/YearlyStatsPanel";
+import YearlyStatsPanel, {
+  YearlyStatItem,
+} from "../../components/YearlyStatsPanel";
 import MissionSection from "../../components/MissionSection";
 
 const imageNames: (keyof typeof Images)[] = [
@@ -29,14 +31,20 @@ const imageNames: (keyof typeof Images)[] = [
 
 export default function About() {
   const { text } = useTranslate();
-  const { aboutUsSection, cardsSection, hero, ourFutureSection, missionSection } = text.about;
-  
+  const {
+    aboutUsSection,
+    cardsSection,
+    hero,
+    ourFutureSection,
+    missionSection,
+  } = text.about;
+
   const rawStats = text.about.yearlyStats.stats[0];
 
-  const items: YearlyStatItem[] = Object.values(rawStats).map(stat => ({
+  const items: YearlyStatItem[] = Object.values(rawStats).map((stat) => ({
     icon: Icons[stat.icon as IconName],
     value: stat.value,
-    description: stat.description 
+    description: stat.description,
   }));
 
   return (
@@ -91,10 +99,7 @@ export default function About() {
         body={missionSection.text}
         image={Images.mission}
       />
-      <YearlyStatsPanel 
-        title={text.about.yearlyStats.title}
-        items={items}
-      />
+      <YearlyStatsPanel title={text.about.yearlyStats.title} items={items} />
       <OurFutureSection>
         <Title alignCenter>{ourFutureSection.title}</Title>
         {ourFutureSection.text.map((paragraph, index) => (
@@ -115,4 +120,4 @@ export default function About() {
   );
 }
 
-export {}
+export {};
