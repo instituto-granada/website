@@ -7,10 +7,11 @@ interface ButtonAction {
 }
 
 export interface HeroProps {
+  caption?: string;
   imageUrl: string;
   title: string;
   text: string;
   isHome?: boolean;
-  emphasizeWordIndex?: number;
+  emphasizeWordsIndex?: number[];
   buttons?: ButtonAction[];
 }

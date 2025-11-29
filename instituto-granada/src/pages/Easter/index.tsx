@@ -12,7 +12,7 @@ export default function Easter() {
   return (
     <PageStructure>
       <Hero
-        emphasizeWordIndex={0}
+        emphasizeWordsIndex={[0]}
         isHome={false}
         imageUrl={ProjectsCards.backgroundEaster}
         title={hero.title}

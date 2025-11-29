@@ -11,7 +11,7 @@ export default function Vocation() {
   return (
     <PageStructure>
       <Hero
-        emphasizeWordIndex={0}
+        emphasizeWordsIndex={[0]}
         isHome={false}
         imageUrl={ProjectsCards.backgroundVacation}
         title={hero.title}

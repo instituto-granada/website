@@ -46,7 +46,7 @@ export default function Projects() {
   return (
     <PageStructure>
       <Hero
-        emphasizeWordIndex={0}
+        emphasizeWordsIndex={[0]}
         imageUrl={Images.backgroundProjects}
         title={hero.title}
         text={hero.text}

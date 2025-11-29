@@ -6,6 +6,7 @@ import { useTranslate } from "../../hooks/useTranslate";
 import { routesMap } from "../../routes/routesMap";
 import {
   Container,
+  Copyright,
   Description,
   Info,
   List,

@@ -157,3 +157,5 @@ export const ListItem = styled.li`
     margin-left: 0;
   }
 `;
+
+export const Copyright = styled.div``;

@@ -101,3 +101,12 @@ export const ButtonsContainer = styled.div`
     }
   }
 `;
+
+export const Caption = styled.p`
+  color: ${({ theme }) => theme.colors.extra.white};
+  font-size: ${(props) => props.theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${(props) => props.theme.lineHeight["1_5x"]};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  text-align: center;
+`;

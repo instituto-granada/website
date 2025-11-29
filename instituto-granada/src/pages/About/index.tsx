@@ -53,6 +53,7 @@ export default function About() {
         imageUrl={Images.backgroundAbout}
         title={hero.title}
         text={hero.text}
+        emphasizeWordsIndex={[0, 1]}
       />
       <AboutUsSection>
         <ContentBox alignCenter>
