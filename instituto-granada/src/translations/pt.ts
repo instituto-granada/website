@@ -39,27 +39,29 @@ export const pt = {
     },
     missionSection: {
       title: "MISSÃO",
-      text: "Oferecer possibilidades de vivências que permitam  aos indivíduos, serem motivados a buscarem um mundo melhor, através do apoio mútuo, da solidariedade e do conhecimento."
+      text: "Oferecer possibilidades de vivências que permitam  aos indivíduos, serem motivados a buscarem um mundo melhor, através do apoio mútuo, da solidariedade e do conhecimento.",
     },
     yearlyStats: {
       title: "SOMENTE NO ANO DE 2024",
-      stats: [{
-        meals: {
-          value: "19.326",
-          description: "Refeições servidas no local",
-          icon: "Dish"
+      stats: [
+        {
+          meals: {
+            value: "19.326",
+            description: "Refeições servidas no local",
+            icon: "Dish",
+          },
+          schoolMaterial: {
+            value: "4.582",
+            description: "Kits de material escolar com 116 mochilas",
+            icon: "Pencil",
+          },
+          breakfast: {
+            value: "4.897",
+            description: "Cafés da manhã e da tarde servidos",
+            icon: "Coffee",
+          },
         },
-        schoolMaterial: {
-          value: "4.582",
-          description: "Kits de material escolar com 116 mochilas",
-          icon: "Pencil"
-        },
-        breakfast: {
-          value: "4.897",
-          description: "Cafés da manhã e da tarde servidos",
-          icon: "Coffee"
-        }
-      }]
+      ],
     },
     hero: {
       title: "Saiba mais sobre nós",
@@ -84,25 +86,18 @@ export const pt = {
   footer: {
     description:
       "Organização da Sociedade Civil dedicada a reduzir desigualdades e apoiar crianças, adolescentes e famílias.",
-    address:
-      "Rua Moisés José de Camargo, em frente ao 140.\nVila Granada, Mairinque. São Paulo.",
-    formSection: {
-      buttonLabel: "Enviar mensagem",
-      emailLabel: "E-mail",
-      emailPlaceholder: "Insira seu email",
-      messageLabel: "Mensagem",
-      messageInputMaxLenght: "max. 500",
-      messagePlaceholder: "Digite sua mensagem",
-      title: "Fale conosco",
-    },
     siteMapSection: {
       title: "Mapa do site",
       routesList: [
+        { routeTitle: "Sobre" },
         { routeTitle: "Projetos" },
-        { routeTitle: "Doações" },
         { routeTitle: "Voluntários" },
         { routeTitle: "Contato" },
+        { routeTitle: "Doações" },
       ],
+    },
+    socialMedia: {
+      title: "Acompanhe nossas redes",
     },
   },
   home: {

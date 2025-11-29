@@ -15,39 +15,36 @@ export const Container = styled.div<ContainerProps>`
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
 
   @media (min-width: ${breakpoints.tablet}) {
-    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["4XL"]}`};
   
 `;
 
 export const Info = styled.div`
   width: 100%;
+  overflow: hidden;
   text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   @media (min-width: ${breakpoints.tablet}) {
-    width: 32.5%;
+    width: 40%;
   }
 `;
 
 export const WrapperImage = styled.div`
   width: 250px;
-  height: 58px;
 
   img {
     width: 100%;
-    height: 100%;
   }
 
   @media (min-width: ${breakpoints.tablet}) {
     width: 210px;
-    height: 49px;
   }
 
   @media (min-width: ${breakpoints.laptop}) {
     width: 250px;
-    height: 58px;
   }
 `;
 
@@ -61,22 +58,37 @@ export const Description = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.outfit};
   font-size: ${({ theme }) => theme.typography.outfit.M};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  color: ${({ theme }) => theme.colors.grayscale[800]};
   padding-bottom: ${({ theme }) => theme.spacing.M};
 `;
 
-export const Address = styled.p`
-  font-family: ${({ theme }) => theme.fontFamily.outfit};
-  font-size: ${({ theme }) => theme.typography.outfit.S};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  white-space: pre-line;
+export const SocialMedia = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 30%;
+    text-align: center;
+    align-items: center;
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    width: 40%;
+    text-align: left;
+    align-items: flex-start;
+    padding-left: ${({ theme }) => theme.spacing.L};
+  }
 `;
 
 export const WrapperIcons = styled.div`
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 
   & > *:nth-child(2) {
-    margin: 0 ${({ theme }) => theme.spacing.XS};
+    margin: 0 ${({ theme }) => theme.spacing.S};
   }
 `;
 
@@ -95,11 +107,13 @@ export const SectionTitle = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.sora};
   font-size: ${({ theme }) => theme.typography.sora.XS};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+  color: ${({ theme }) => theme.colors.grayscale[800]};
   margin-bottom: ${({ theme }) => theme.spacing["2XS"]};
 `;
 
 export const Menu = styled.div`
   width: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -107,16 +121,23 @@ export const Menu = styled.div`
   padding: ${({ theme }) => theme.spacing.XL} 0;
 
   @media (min-width: ${breakpoints.tablet}) {
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
-    width: 35%;
+    width: 30%;
     padding: 0;
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    width: 20%;
   }
 `;
 
 export const List = styled.ul`
   text-align: left;
-  padding: 0 ${({ theme }) => theme.spacing.S};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    padding-right: ${({ theme }) => theme.spacing.L};
+  }
 `;
 
 export const StyledLink = styled(Link)`
@@ -128,92 +149,11 @@ export const ListItem = styled.li`
   font-family: ${({ theme }) => theme.fontFamily.outfit};
   font-size: ${({ theme }) => theme.typography.outfit.M};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
-  margin-bottom: ${({ theme }) => theme.spacing["2XS"]};
-`;
-
-export const ContactUs = styled.div`
-  width: 100%;
-  align-items: flex-end;
-  text-align: left;
+  color: ${({ theme }) => theme.colors.grayscale[800]};
+  margin-bottom: ${({ theme }) => theme.spacing.S};
+  margin-left: ${({ theme }) => theme.spacing.M};
 
   @media (min-width: ${breakpoints.tablet}) {
-    width: 32.5%;
+    margin-left: 0;
   }
-`;
-
-export const FormStyled = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-export const Field = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: ${({ theme }) => theme.spacing["2XS"]};
-`;
-
-export const Label = styled.label<{ error?: boolean }>`
-  font-family: ${({ theme }) => theme.fontFamily.outfit};
-  font-size: ${({ theme }) => theme.typography.outfit.S};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme, error }) =>
-    error ? theme.colors.primary[400] : theme.colors.grayscale[600]};
-  margin-bottom: ${({ theme }) => theme.spacing["3XS"]};
-`;
-
-export const Input = styled.input<{ error?: boolean }>`
-  width: 100%;
-  padding: 8px;
-  border: 1px solid
-    ${({ error, theme }) =>
-      error ? theme.colors.primary[400] : theme.colors.grayscale[300]};
-  border-radius: 4px;
-
-  &::placeholder {
-    font-family: ${({ theme }) => theme.fontFamily.outfit};
-    font-size: ${({ theme }) => theme.typography.outfit.M};
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
-    color: ${({ theme }) => theme.colors.grayscale[300]};
-  }
-`;
-
-export const Textarea = styled.textarea<{ error?: boolean }>`
-  width: 100%;
-  height: 120px;
-  padding: 8px;
-  border: 1px solid
-    ${({ error, theme }) =>
-      error ? theme.colors.primary[400] : theme.colors.grayscale[300]};
-  border-radius: 4px;
-  resize: vertical;
-
-  &::placeholder {
-    font-family: ${({ theme }) => theme.fontFamily.outfit};
-    font-size: ${({ theme }) => theme.typography.outfit.M};
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
-    color: ${({ theme }) => theme.colors.grayscale[300]};
-  }
-`;
-
-export const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const ErrorMessage = styled.p<{ error: boolean }>`
-  margin-top: ${({ theme }) => theme.spacing["3XS"]};
-  font-family: ${({ theme }) => theme.fontFamily.outfit};
-  font-size: ${({ theme }) => theme.typography.outfit.XS};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.colors.primary[400]};
-  visibility: ${({ error }) => (error ? "visible" : "hidden")};
-`;
-
-export const MaxLengthNotice = styled.span`
-  margin-top: ${({ theme }) => theme.spacing["3XS"]};
-  font-family: ${({ theme }) => theme.fontFamily.outfit};
-  font-size: ${({ theme }) => theme.typography.outfit.XS};
-  font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme }) => theme.colors.grayscale[600]};
 `;
