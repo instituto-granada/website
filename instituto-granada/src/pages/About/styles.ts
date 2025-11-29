@@ -75,6 +75,9 @@ export const Paragraph = styled.p<ParagraphProps>`
   text-align: left;
   white-space: pre-line;
 
+  margin-bottom: ${({ theme, withMarginBottom }) =>
+    withMarginBottom ? theme.spacing.M : "0"};
+
   @media (min-width: ${breakpoints.tablet}) {
     margin-bottom: ${({ theme, withMarginBottom }) =>
       withMarginBottom ? theme.spacing.XL : "0"};
