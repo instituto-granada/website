@@ -13,10 +13,38 @@ export const pt = {
       },
       title: "Quem somos?",
       text: [
-        "O Instituto Granada nasceu para apoiar famílias em situação de vulnerabilidade, crianças e adolescentes na zona leste de Mairinque/SP, na resistência e combate às desigualdades sociais.",
-        "Desde 2008, o Instituto oferece diversas oficinas e cursos a fim de inserir crianças e adolescentes no mundo das artes, cultura, esporte, lazer e educação.",
-        "Atuamos para conquistar os Objetivos de Desenvolvimento Sustentáveis – ODS Fome Zero e Agricultura Sustentável; Saúde e Bem Estar; Educação de Qualidade; Trabalho Decente e Crescimento Econômico.; Redução das Desigualdades e Paz, Justiça e Instituições Eficazes.",
+        "O Instituto Granada nasceu para apoiar pessoas em situação de vulnerabilidade, na zona leste de Mairinque/SP, contribuindo para a redução das desigualdades sociais.",
+        "Desde 2008, oferece, além do apoio às famílias, diversas atividades que possibilitam a inserção de crianças e adolescentes no mundo das artes e cultura, do esporte e lazer, e apoio na construção de uma base sólida para o aprendizado escolar. Tudo isso com a oferta diária de refeições nutritivas garantindo segurança alimentar.",
+        "Atuamos comprometidos e em alinhamento com os ODS-Objetivos de Desenvolvimento Sustentável.",
       ],
+    },
+    odsObjectives: {
+      objectives: [
+        {
+          description: "Erradicação da pobreza",
+          icon: "OdsPoverty"
+        },
+        {
+          description: "Fome zero e agricultura sustentável",
+          icon: "OdsZeroHunger"
+        },
+        {
+          description: "Saúde e bem-estar",
+          icon: "OdsHealth"
+        },
+        {
+          description: "Educação de qualidade",
+          icon: "OdsEducation"
+        },
+        {
+          description: "Trabalho decente e crescimento econômico",
+          icon: "OdsWork"
+        },
+        {
+          description: "Redução das desigualdades",
+          icon: "OdsEquality"
+        },
+      ]
     },
     cardsSection: {
       cardsContent: [

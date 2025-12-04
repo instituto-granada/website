@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { breakpoints } from "../../styles/breakpoints";
 
 export const Container = styled.div`
-  width: 288px;
+  width: 331px;
   height: auto;
   min-height: 288px;
   display: flex;
   align-items: flex-start;
   background-color: ${({ theme }) => theme.colors.extra.white};
   padding: ${({ theme }) => theme.spacing.S};
-  border-radius: 32px;
+  border-radius: 27px;
   box-shadow: ${({ theme }) => theme.shadows.highlight};
   margin-bottom: ${({ theme }) => theme.spacing.XL};
 
@@ -23,6 +23,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: ${({ theme }) => theme.spacing.S};
 `;
 
 export const WrapperImage = styled.div`

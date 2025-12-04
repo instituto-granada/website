@@ -50,6 +50,13 @@ import whatsapp from "./icons/whatsapp.svg";
 import instagram from "./icons/instagram.svg";
 import facebook from "./icons/facebook.svg";
 
+import OdsEducation from "./icons/OdsEducation.svg";
+import OdsEquality from "./icons/OdsEquality.svg";
+import OdsHealth from "./icons/OdsHealth.svg";
+import OdsPoverty from "./icons/OdsPoverty.svg";
+import OdsWork from "./icons/OdsWork.svg";
+import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
+
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
 import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
@@ -114,6 +121,12 @@ export const Icons = {
   Dish,
   Coffee,
   Pencil,
+  OdsEducation,
+  OdsEquality,
+  OdsHealth,
+  OdsPoverty,
+  OdsWork,
+  OdsZeroHunger
 };
 
 export type IconName = keyof typeof Icons;

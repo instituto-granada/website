@@ -16,7 +16,9 @@ export const AboutUsSection = styled.div`
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: stretch;
-    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+    padding-top:  ${({ theme }) => `${theme.spacing.XL}`};
+    padding-left: ${({ theme }) => `${theme.spacing["4XL"]}`};
+    padding-right: ${({ theme }) => `${theme.spacing["4XL"]}`};
   }
 `;
 
@@ -74,6 +76,9 @@ export const Paragraph = styled.p<ParagraphProps>`
   text-indent: ${({ indented }) => (indented ? "2rem" : "0")};
   text-align: left;
   white-space: pre-line;
+
+  margin-bottom: ${({ theme, withMarginBottom }) =>
+    withMarginBottom ? theme.spacing.M : "0"};
 
   @media (min-width: ${breakpoints.tablet}) {
     margin-bottom: ${({ theme, withMarginBottom }) =>

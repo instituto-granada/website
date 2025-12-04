@@ -22,6 +22,7 @@ import YearlyStatsPanel, {
   YearlyStatItem,
 } from "../../components/YearlyStatsPanel";
 import MissionSection from "../../components/MissionSection";
+import OdsObjectives, { OdsObjective } from "../../components/OdsObjectives";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -46,6 +47,11 @@ export default function About() {
     value: stat.value,
     description: stat.description,
   }));
+
+  const objectives: OdsObjective[] = Object.values(text.about.odsObjectives.objectives).map(ojective => ({
+    icon: Icons[ojective.icon as IconName],
+    description: ojective.description
+  }))
 
   return (
     <PageStructure>
@@ -84,6 +90,9 @@ export default function About() {
           </AboutUsButtonWrapper>
         </ContentBox>
       </AboutUsSection>
+      <OdsObjectives
+        items={objectives}
+      />
       <CardsSection>
         {cardsSection.cardsContent.map((card, index) => (
           <InformationCard
