@@ -23,6 +23,7 @@ import YearlyStatsPanel, {
 } from "../../components/YearlyStatsPanel";
 import MissionSection from "../../components/MissionSection";
 import OdsObjectives, { OdsObjective } from "../../components/OdsObjectives";
+import { useNavigate } from "react-router-dom";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -52,6 +53,8 @@ export default function About() {
     icon: Icons[ojective.icon as IconName],
     description: ojective.description
   }))
+  
+  const navigate = useNavigate();
 
   return (
     <PageStructure>
@@ -80,11 +83,11 @@ export default function About() {
             <ButtonPrincipal
               key="secondary"
               variant="secondary"
-              onClick={() => {}}
+              onClick={() => navigate("/voluntarios")}
             >
               {aboutUsSection.buttons.secondary.label}
             </ButtonPrincipal>
-            <ButtonPrincipal key="primary" variant="primary" onClick={() => {}}>
+            <ButtonPrincipal key="primary" variant="primary" onClick={() => navigate("/doacoes")}>
               {aboutUsSection.buttons.primary.label}
             </ButtonPrincipal>
           </AboutUsButtonWrapper>
@@ -121,7 +124,7 @@ export default function About() {
           {ourFutureSection.highlightText}
         </HighlightedParagraph>
         <OurFutureButtonWrapper>
-          <ButtonPrincipal key="primary" variant="primary" onClick={() => {}}>
+          <ButtonPrincipal key="primary" variant="primary" onClick={() => navigate("/doacoes")}>
             {ourFutureSection.button.primary.label}
           </ButtonPrincipal>
         </OurFutureButtonWrapper>
