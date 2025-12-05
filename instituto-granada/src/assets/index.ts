@@ -3,6 +3,7 @@ import backgroundAbout from "./images/backgroundAbout.png";
 import backgroundHome from "./images/backgroundHome.png";
 import backgroundProjects from "./images/backgroundProjects.png";
 import backgroundVolunteers from "./images/backgroundVolunteers.png";
+import backgroundDonation from "./images/backgroundDonations.png";
 import educationalPsychologistPosition from "./images/educationalPsychologistPosition.png";
 import fundraiserPosition from "./images/fundraiserPosition.png";
 import generalAssistantPosition from "./images/generalAssistantPosition.png";
@@ -74,6 +75,7 @@ export const Images = {
   backgroundHome,
   backgroundProjects,
   backgroundVolunteers,
+  backgroundDonation,
   Testimonials1,
   Testimonials2,
   Testimonials3,
