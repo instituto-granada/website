@@ -58,6 +58,8 @@ import OdsPoverty from "./icons/OdsPoverty.svg";
 import OdsWork from "./icons/OdsWork.svg";
 import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
 
+import Copy from "./icons/Copy.svg";
+
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
 import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
@@ -67,7 +69,9 @@ import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristma
 import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
 
-import mission from "./images/mission.png"
+import mission from "./images/mission.png";
+
+import qrCodePix from "./images/qrCodePix.png";
 
 export const Images = {
   logo,
@@ -105,7 +109,10 @@ export const Images = {
   freeMeals,
 
   //página sobre
-  mission
+  mission,
+
+  //página de doações
+  qrCodePix
 };
 
 export const Icons = {
@@ -128,7 +135,8 @@ export const Icons = {
   OdsHealth,
   OdsPoverty,
   OdsWork,
-  OdsZeroHunger
+  OdsZeroHunger,
+  Copy
 };
 
 export type IconName = keyof typeof Icons;

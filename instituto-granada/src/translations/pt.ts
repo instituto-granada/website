@@ -276,6 +276,20 @@ export const pt = {
       title: "Sua doação transforma vidas",
       text: "Faça sua contribuição via PIX de forma rápida, segura e prática. Cada real doado faz diferença!",
     },
+    pixSection: {
+      title: "Doe via PIX",
+      text: "Rápido, seguro e sem taxas",
+      chave: {
+        subtitle: "Chave PIX (e-mail)",
+        chavePix: "doeinstitutogranada@gmail.com",
+      },
+      howToDonate: {
+        text: "Como doar?",
+        stepOne: "1. Abra o app do seu banco e escolha PIX",
+        stepTwo: "2. Escaneie o QR Code ou copie a chave PIX",
+        stepThree: "3. Escolha o valor e confirme a doação"
+      }
+    }
   },
   volunteers: {
     hero: {
