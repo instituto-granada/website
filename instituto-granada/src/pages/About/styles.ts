@@ -13,7 +13,7 @@ export const AboutUsSection = styled.div`
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
     align-items: stretch;
     padding-top:  ${({ theme }) => `${theme.spacing.XL}`};
@@ -37,7 +37,24 @@ export const TextWrapper = styled.div<TextWrapperProps>`
 `;
 
 export const ImageWrapper = styled.div`
-  width: 288px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  aspect-ratio: 9 / 16; 
+  max-height: 700px;
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+
+  .react-player {
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   img {
     width: 100%;
