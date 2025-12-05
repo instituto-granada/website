@@ -24,6 +24,8 @@ import YearlyStatsPanel, {
 import MissionSection from "../../components/MissionSection";
 import OdsObjectives, { OdsObjective } from "../../components/OdsObjectives";
 import { useNavigate } from "react-router-dom";
+import ReactPlayer from "react-player";
+import { start } from "repl";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -67,7 +69,14 @@ export default function About() {
       <AboutUsSection>
         <ContentBox alignCenter>
           <ImageWrapper>
-            <Image name="aboutUsSection" />
+            <ReactPlayer
+              light={<Image name="aboutUsSection" />}
+              src="https://youtu.be/lWXgfvrTyUw?si=0PwKMnorkaP_iBQe"
+              width="100%"
+              height="100%"
+              controls={true}
+              playing={true}
+            />
           </ImageWrapper>
         </ContentBox>
         <ContentBox grow>
