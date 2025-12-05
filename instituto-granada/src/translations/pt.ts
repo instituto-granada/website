@@ -271,6 +271,12 @@ export const pt = {
       text: "Reunimos cerca de 530 crianças e adolescentes da comunidade, em uma divertida festa de páscoa com bolo, lanches, brincadeiras, teatro e muita diversão. Ao final as crianças recebem deliciosos ovos de chocolate, captados de doadores e empresas.",
     },
   },
+  donations: {
+    hero: {
+      title: "Sua doação transforma vidas",
+      text: "Faça sua contribuição via PIX de forma rápida, segura e prática. Cada real doado faz diferença!",
+    },
+  },
   volunteers: {
     hero: {
       title: "Seja voluntário",
