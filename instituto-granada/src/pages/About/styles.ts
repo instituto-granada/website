@@ -50,10 +50,10 @@ export const ImageWrapper = styled.div`
   border-radius: 22px;
 
   .react-player {
+    width: 100%;
     height: auto;
     position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
   }
 
   img {
