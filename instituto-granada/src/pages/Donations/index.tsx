@@ -2,6 +2,7 @@ import PageStructure from "../../components/PageStructure";
 import Hero from "../../components/Hero";
 import { IconName, Icons, Images } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
+import { useState } from "react";
 import {
   AsidePanel,
   CardContentWrapper,
@@ -17,9 +18,17 @@ import {
   DonationsSection, 
   DonationValue, 
   DonationValuesWrapper, 
+  Form, 
+  FormInput, 
+  FormLabel, 
   Header, 
   Hint, 
   HowToDonateSection, 
+  InputWrapper, 
+  PartnerSection, 
+  PartnerTextContainer, 
+  PartnerTextsSubtitle, 
+  PartnerTextTitle, 
   PixIcon, 
   QrCode, 
   Subtitle, 
@@ -27,6 +36,7 @@ import {
   Text, 
   Title 
 } from "./styles";
+import ButtonPrincipal from "../../components/ButtonPrincipal";
 
 const cardIcons = [
   Icons.ServiceLine,
@@ -40,6 +50,17 @@ export default function Donations() {
   const {
     hero,
   } = text.donations;
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyPix = async () => {
+    await navigator.clipboard.writeText(text.donations.pixCard.chave.chavePix);
+    setCopied(true);
+
+    setTimeout(() => {
+     setCopied(false);
+   }, 1000);
+  };
 
   return (
     <PageStructure>
@@ -63,11 +84,8 @@ export default function Donations() {
             <ChaveWrapper>
               <ChavePix> {text.donations.pixCard.chave.chavePix} </ChavePix>
               <PixIcon
-                src={Icons.Copy}
-                onClick={() => {
-                  navigator.clipboard
-                  .writeText(text.donations.pixCard.chave.chavePix)
-                }}
+                src={copied ? Icons.Check : Icons.Copy}
+                onClick={handleCopyPix}
               />
             </ChaveWrapper>
           </ChavePixSection>
@@ -106,6 +124,24 @@ export default function Donations() {
           )}
         </AsidePanel>
       </DonationsSection>
+      <PartnerSection>
+        <PartnerTextContainer>
+          <PartnerTextTitle> {text.donations.partners.title} </PartnerTextTitle>
+          <PartnerTextsSubtitle> {text.donations.partners.subtitle} </PartnerTextsSubtitle>
+        </PartnerTextContainer>
+        <Form>
+          {text.donations.partners.form.inputs.map((field, index) => (
+            <InputWrapper>
+              <FormLabel> {field.label} </FormLabel>
+              <FormInput
+                type={index === 1 ? "email" : "text"}
+                placeholder={field.placeholder}
+              />
+            </InputWrapper>
+          ))}
+          <ButtonPrincipal> {text.donations.partners.form.buttonLabel} </ButtonPrincipal>
+        </Form>
+      </PartnerSection>
     </PageStructure>
   );
 }

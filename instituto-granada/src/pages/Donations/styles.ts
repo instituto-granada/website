@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { breakpoints } from "../../styles/breakpoints";
+
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+`;
 
 export const DonationsSection = styled.div`
   display: flex;
@@ -118,6 +124,12 @@ export const PixIcon = styled.img`
   border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
   border-radius: 12px;
   cursor: pointer;
+  animation: ${fadeIn} 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+
+   &:active {
+    transform: scale(0.9);
+  }
 `;
 
 export const AsidePanel = styled.aside`
@@ -174,7 +186,8 @@ export const DonationValue = styled.p`
 export const DonationIconCard = styled.div`
   padding: 1rem;
   width: 100%;
-  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  max-width: 506px;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[300]}`};
   border-radius: 12px;
   background-color: #FFFFFF;
 
@@ -215,3 +228,77 @@ export const CardText = styled.h2`
   line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
   color: ${({ theme }) => theme.colors.grayscale[600]};
 `
+
+export const PartnerSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+  align-items: top;
+  justify-content: center;
+  gap: ${({ theme }) => `${theme.spacing["XL"]}`};
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.secondary[700]};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: stretch;
+    padding: ${({ theme }) => `${theme.spacing["3XL"]} ${theme.spacing["4XL"]}`};
+    gap: ${({ theme }) => `${theme.spacing["4XL"]}`};
+  }
+`;
+
+export const PartnerTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => `${theme.spacing.XS}`};
+`;
+
+export const PartnerTextTitle = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamily.sora};
+  font-size: ${({ theme }) => theme.typography.sora.L};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
+  color: ${({ theme }) => theme.colors.primary[400]};
+`;
+
+export const PartnerTextsSubtitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[100]};
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+  width: 360px;
+`
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: ${({ theme }) => `${theme.spacing["3XS"]}`};
+`
+
+export const FormLabel = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[100]};
+`;
+
+export const FormInput = styled.input`
+  width: 100%;
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+
+  background-color: ${({ theme }) => theme.colors.grayscale[100]};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.grayscale[400]};
+  }
+`;

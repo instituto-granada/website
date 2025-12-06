@@ -309,7 +309,24 @@ export const pt = {
         title: "Seja apoiador",
         text: "Ative a recorrência do seu PIX mensalmente"
       }
-    ]
+    ],
+    partners: {
+      title: "Seja uma empresa parceira na causa!",
+      subtitle: "Entre em contato e conheça os benefícios de ser um parceiro do Instituto Granada.",
+      form: {
+        inputs: [
+          {
+            label: "Nome da empresa",
+            placeholder: "Insira o nome da empresa"
+          },
+          {
+            label: "E-mail",
+            placeholder: "Insira seu email"
+          }
+        ],
+        buttonLabel: "Quero ser parceiro"
+      }
+    }
   },
   volunteers: {
     hero: {

@@ -59,6 +59,7 @@ import OdsWork from "./icons/OdsWork.svg";
 import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
 
 import Copy from "./icons/Copy.svg";
+import Check from "./icons/Check.svg";
 import ServiceLine from "./icons/ServiceLine.svg";
 import OpenArmLine from "./icons/OpenArmLine.svg";
 import UserStarLine from "./icons/UserStarLine.svg";
@@ -140,6 +141,7 @@ export const Icons = {
   OdsWork,
   OdsZeroHunger,
   Copy,
+  Check,
   ServiceLine,
   OpenArmLine,
   UserStarLine
