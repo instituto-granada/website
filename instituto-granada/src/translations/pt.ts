@@ -276,7 +276,7 @@ export const pt = {
       title: "Sua doação transforma vidas",
       text: "Faça sua contribuição via PIX de forma rápida, segura e prática. Cada real doado faz diferença!",
     },
-    pixSection: {
+    pixCard: {
       title: "Doe via PIX",
       text: "Rápido, seguro e sem taxas",
       chave: {
@@ -289,6 +289,12 @@ export const pt = {
         stepTwo: "2. Escaneie o QR Code ou copie a chave PIX",
         stepThree: "3. Escolha o valor e confirme a doação"
       }
+    },
+    suggestedValues: {
+      title: "Valores sugeridos",
+      text: "Todo valor é bem-vindo e faz a diferença!",
+      values: ["R$ 25,00", "R$ 50,00", "R$ 70,00", "R$ 100,00"],
+      hint: "*Por questão de segurança, lembre sempre de conferir o valor e destinatório do PIX para garantir que a sua doação chegue a quem realmente precisa."
     }
   },
   volunteers: {

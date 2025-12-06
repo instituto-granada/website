@@ -1,21 +1,12 @@
 import styled from "styled-components";
 import { breakpoints } from "../../styles/breakpoints";
 
-export const Container = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const HeroContainer = styled.div`
-  margin-top: 64px;
-`;
-
 export const DonationsSection = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
   background-color: ${({ theme }) => `${theme.colors.extra.white}`};
+  gap: ${({ theme }) => `${theme.spacing.M}`};
 
   @media (min-width: ${breakpoints.tablet}) {
     flex-direction: row;
@@ -35,7 +26,7 @@ export const DonationCard = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 506px;
+  width: 100%;
 
   padding: ${({ theme }) => `${theme.spacing.M}`};
   gap: ${({ theme }) => `${theme.spacing.L}`};
@@ -80,7 +71,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
   font-family: ${({ theme }) => theme.fontFamily.outfit};
   font-size: ${({ theme }) => theme.typography.outfit.L};
-  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
   line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
   color: ${({ theme }) => theme.colors.grayscale[600]};
 `;
@@ -91,6 +82,14 @@ export const Text = styled.p`
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
   color: ${({ theme }) => theme.colors.extra.black};
+`;
+
+export const Hint = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[600]};
 `;
 
 export const ChaveWrapper = styled.div`
@@ -118,4 +117,42 @@ export const PixIcon = styled.img`
   border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
   border-radius: 12px;
   cursor: pointer;
+`;
+
+export const SuggestedValuesCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 506px;
+  max-height: 423px;
+
+  padding: ${({ theme }) => `${theme.spacing.M}`};
+  gap: 48px;
+
+  background-color: #FFFFFF;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[300]}`};
+  border-radius: 24px;
+`
+
+export const DonationValuesWrapper = styled.div`
+  width: 328px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+`;
+
+export const DonationValue = styled.p`
+  width: 100%;
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};
+
+  text-align: center;
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+  
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
 `;
