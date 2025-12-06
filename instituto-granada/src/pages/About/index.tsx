@@ -1,9 +1,18 @@
+import { useNavigate } from "react-router-dom";
+import ReactPlayer from "react-player";
+
 import Hero from "../../components/Hero";
 import { IconName, Icons, Images } from "../../assets/";
 import Image from "../../components/Image";
 import { useTranslate } from "../../hooks/useTranslate";
 import PageStructure from "../../components/PageStructure";
 import InformationCard from "../../components/InformationCard";
+import ButtonPrincipal from "../../components/ButtonPrincipal";
+import YearlyStatsPanel, {
+  YearlyStatItem,
+} from "../../components/YearlyStatsPanel";
+import MissionSection from "../../components/MissionSection";
+import OdsObjectives, { OdsObjective } from "../../components/OdsObjectives";
 import {
   AboutUsButtonWrapper,
   AboutUsSection,
@@ -17,15 +26,6 @@ import {
   TextWrapper,
   Title,
 } from "./styles";
-import ButtonPrincipal from "../../components/ButtonPrincipal";
-import YearlyStatsPanel, {
-  YearlyStatItem,
-} from "../../components/YearlyStatsPanel";
-import MissionSection from "../../components/MissionSection";
-import OdsObjectives, { OdsObjective } from "../../components/OdsObjectives";
-import { useNavigate } from "react-router-dom";
-import ReactPlayer from "react-player";
-import { start } from "repl";
 
 const imageNames: (keyof typeof Images)[] = [
   "familySupport",
@@ -51,11 +51,13 @@ export default function About() {
     description: stat.description,
   }));
 
-  const objectives: OdsObjective[] = Object.values(text.about.odsObjectives.objectives).map(ojective => ({
+  const objectives: OdsObjective[] = Object.values(
+    text.about.odsObjectives.objectives,
+  ).map((ojective) => ({
     icon: Icons[ojective.icon as IconName],
-    description: ojective.description
-  }))
-  
+    description: ojective.description,
+  }));
+
   const navigate = useNavigate();
 
   return (
@@ -96,15 +98,17 @@ export default function About() {
             >
               {aboutUsSection.buttons.secondary.label}
             </ButtonPrincipal>
-            <ButtonPrincipal key="primary" variant="primary" onClick={() => navigate("/doacoes")}>
+            <ButtonPrincipal
+              key="primary"
+              variant="primary"
+              onClick={() => navigate("/doacoes")}
+            >
               {aboutUsSection.buttons.primary.label}
             </ButtonPrincipal>
           </AboutUsButtonWrapper>
         </ContentBox>
       </AboutUsSection>
-      <OdsObjectives
-        items={objectives}
-      />
+      <OdsObjectives items={objectives} />
       <CardsSection>
         {cardsSection.cardsContent.map((card, index) => (
           <InformationCard
@@ -133,7 +137,11 @@ export default function About() {
           {ourFutureSection.highlightText}
         </HighlightedParagraph>
         <OurFutureButtonWrapper>
-          <ButtonPrincipal key="primary" variant="primary" onClick={() => navigate("/doacoes")}>
+          <ButtonPrincipal
+            key="primary"
+            variant="primary"
+            onClick={() => navigate("/doacoes")}
+          >
             {ourFutureSection.button.primary.label}
           </ButtonPrincipal>
         </OurFutureButtonWrapper>

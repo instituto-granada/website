@@ -3,11 +3,6 @@ import { breakpoints } from "../../styles/breakpoints";
 
 export const PositionsSection = styled.div`
   background-color: ${({ theme }) => theme.colors.extra.white};
-  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
-
-  @media (min-width: ${breakpoints.tablet}) {
-    padding: ${({ theme }) => theme.spacing.XL};
-  }
 `;
 
 export const Positions = styled.div`
@@ -15,11 +10,16 @@ export const Positions = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   justify-items: center;
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+
+  @media (min-width: ${breakpoints.tablet}) {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: ${({ theme }) => `0 ${theme.spacing.XS}`};
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    justify-items: center;
+    padding: ${({ theme }) => `0 ${theme.spacing.XL}`};
   }
 `;
 
@@ -78,18 +78,16 @@ export const FormStyled = styled.form`
   align-items: center;
 
   @media (min-width: ${breakpoints.tablet}) {
+    width: 60%;
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
     width: 40%;
   }
 
   & > * {
     width: 100%;
   }
-`;
-
-export const Field = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: ${({ theme }) => theme.spacing["2XS"]};
 `;
 
 export const Label = styled.label<{ error?: boolean }>`
@@ -103,22 +101,6 @@ export const Label = styled.label<{ error?: boolean }>`
   &::after {
     content: "*";
     color: ${({ theme }) => theme.colors.primary[400]};
-  }
-`;
-
-export const Input = styled.input<{ error?: boolean }>`
-  width: 100%;
-  padding: 8px;
-  border: 1px solid
-    ${({ error, theme }) =>
-      error ? theme.colors.primary[400] : theme.colors.grayscale[300]};
-  border-radius: 4px;
-
-  &::placeholder {
-    font-family: ${({ theme }) => theme.fontFamily.outfit};
-    font-size: ${({ theme }) => theme.typography.outfit.M};
-    font-weight: ${({ theme }) => theme.fontWeight.regular};
-    color: ${({ theme }) => theme.colors.grayscale[300]};
   }
 `;
 

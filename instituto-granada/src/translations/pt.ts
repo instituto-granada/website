@@ -1,5 +1,3 @@
-import { AboutUsSection, OurFutureSection } from "~/pages/About/styles";
-
 export const pt = {
   about: {
     aboutUsSection: {
@@ -22,29 +20,29 @@ export const pt = {
       objectives: [
         {
           description: "Erradicação da pobreza",
-          icon: "OdsPoverty"
+          icon: "OdsPoverty",
         },
         {
           description: "Fome zero e agricultura sustentável",
-          icon: "OdsZeroHunger"
+          icon: "OdsZeroHunger",
         },
         {
           description: "Saúde e bem-estar",
-          icon: "OdsHealth"
+          icon: "OdsHealth",
         },
         {
           description: "Educação de qualidade",
-          icon: "OdsEducation"
+          icon: "OdsEducation",
         },
         {
           description: "Trabalho decente e crescimento econômico",
-          icon: "OdsWork"
+          icon: "OdsWork",
         },
         {
           description: "Redução das desigualdades",
-          icon: "OdsEquality"
+          icon: "OdsEquality",
         },
-      ]
+      ],
     },
     cardsSection: {
       cardsContent: [
@@ -112,6 +110,7 @@ export const pt = {
     },
   },
   footer: {
+    copyright: "© 2025 Instituto Granada. Todos os direitos reservados.",
     description:
       "Organização da Sociedade Civil dedicada a reduzir desigualdades e apoiar crianças, adolescentes e famílias.",
     siteMapSection: {
@@ -155,7 +154,7 @@ export const pt = {
       },
     },
     carousel: {
-      header: "PRINCIPAIS PROJETOS",
+      header: "Ações que impactam",
       projects: [
         {
           key: "easter",
@@ -348,6 +347,7 @@ export const pt = {
       title: "Se interessou? Entre em contato",
     },
     positionsSectionTitle: "Nossas vagas para voluntariar:",
+    positionsBadgeText: "Vaga aberta",
     positions: [
       {
         body: "Apoio para publicações eficazes e constantes no site, Instagram e Facebook.",
@@ -372,6 +372,10 @@ export const pt = {
       {
         title: "Fonoaudiólogo",
         body: "Atendimento para crianças com dificuldade na fala.",
+      },
+      {
+        title: "Educador Físico",
+        body: "Irá promover atividades físicas junto à comunidade.",
       },
       {
         title: "Ajudante geral",

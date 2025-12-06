@@ -93,6 +93,7 @@ export const Header = styled.h1`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
   color: ${({ theme }) => theme.colors.extra.orange};
+  text-transform: uppercase;
 `;
 
 export const CarouselContent = styled.div`

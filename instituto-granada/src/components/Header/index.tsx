@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+
+import ButtonPrincipal from "../ButtonPrincipal";
+import Image from "../Image";
+import { routesMap } from "../../routes/routesMap";
+
 import {
   Container,
   ButtonGroup,
@@ -15,21 +21,16 @@ import {
   StyledLink,
   DonateButton,
 } from "./styles";
-import { Link, useLocation } from "react-router-dom";
-import ButtonPrincipal from "../ButtonPrincipal";
-import Image from "../Image";
-import { routesMap } from "../../routes/routesMap";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const useIsMobile = (breakpoint = 768) => {
+  const useIsMobile = (breakpoint = 1024) => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < breakpoint);
 
     useEffect(() => {
       const handleResize = () => {
         setIsMobile(window.innerWidth < breakpoint);
-        // Fecha o menu quando a tela ficar maior
         if (window.innerWidth >= breakpoint) {
           setIsMenuOpen(false);
         }
@@ -73,25 +74,24 @@ export default function Header() {
     <>
       <Container>
         <SvgWrapper>
-            <Link to="/">
-          <Image name="logo" width={150} />
-           </Link>
+          <Link to="/">
+            <Image name="logo" width={150} />
+          </Link>
         </SvgWrapper>
-
-        {/* Menu Desktop */}
         {!isMobile && (
           <ButtonGroup>
             {Object.values(routesMap)
-            .filter((route) => ('showInNav' in route ? route.showInNav !== false : true))
-            .map(({ title, path }) => (
-              <Link key={path} to={path}>
-                <Button active={location.pathname === path}>{title}</Button>
-              </Link>
-            ))}
+              .filter((route) =>
+                "showInNav" in route ? route.showInNav !== false : true,
+              )
+              .map(({ title, path }) => (
+                <Link key={path} to={path}>
+                  <Button active={location.pathname === path}>{title}</Button>
+                </Link>
+              ))}
           </ButtonGroup>
         )}
 
-        {/* Botão Hambúrguer Mobile */}
         {isMobile && (
           <HamburgerButton className="hamburger-button" onClick={toggleMenu}>
             <span></span>
@@ -103,29 +103,32 @@ export default function Header() {
         {!isMobile && <DonateButton>{"DOE AGORA"}</DonateButton>}
       </Container>
 
-      {/* Menu Mobile Lateral */}
       {isMobile && (
         <>
           <Overlay isOpen={isMenuOpen} onClick={closeMenu} />
           <MobileMenu className="mobile-menu" isOpen={isMenuOpen}>
             <MobileMenuHeader>
-              <Image name="logo" width={150} />
+              <Image name="logo" style={{ width: "130px" }} />
               <CloseButton onClick={closeMenu}>×</CloseButton>
             </MobileMenuHeader>
             <MobileMenuItems>
-              {Object.values(routesMap).map(({ path, title }) => (
-                <StyledLink key={path} to={path} onClick={closeMenu}>
-                  <MobileMenuItem active={location.pathname === path}>
-                    {title}
-                  </MobileMenuItem>
-                </StyledLink>
-              ))}
+              {Object.values(routesMap)
+                .filter((route) =>
+                  "showInNav" in route ? route.showInNav !== false : true,
+                )
+                .map(({ title, path }) => (
+                  <StyledLink key={path} to={path} onClick={closeMenu}>
+                    <MobileMenuItem active={location.pathname === path}>
+                      {title}
+                    </MobileMenuItem>
+                  </StyledLink>
+                ))}
               <MobileMenuButton>
                 <ButtonPrincipal
                   variant="primary"
                   onClick={() => alert("Botão Secundário Clicado!")}
                 >
-                  DOE AGORAA
+                  DOE AGORA
                 </ButtonPrincipal>
               </MobileMenuButton>
             </MobileMenuItems>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { breakpoints } from "../../styles/breakpoints";
+
 interface HeroContainerProps {
   imageUrl: string;
   isHome?: boolean;
@@ -44,7 +46,12 @@ export const ContentColumn = styled.div`
   z-index: 2;
   padding: 0 ${({ theme }) => theme.spacing.S};
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
+    width: 70%;
+    padding: 0 ${({ theme }) => theme.spacing["4XL"]};
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
     width: 60%;
     padding: 0 ${({ theme }) => theme.spacing["4XL"]};
   }
@@ -52,22 +59,22 @@ export const ContentColumn = styled.div`
 
 export const Title = styled.h1`
   color: #ffffff;
-  font-size: ${(props) => props.theme.typography.sora.M};
-  font-weight: 700;
-  line-height: ${(props) => props.theme.lineHeight["1_1x"]};
-  font-family: ${(props) => props.theme.fontFamily.sora};
+  font-size: ${({ theme }) => theme.typography.sora.M};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
+  font-family: ${({ theme }) => theme.fontFamily.sora};
   margin-bottom: 1rem;
   text-transform: uppercase;
 `;
 
 export const HighlightedWord = styled.span`
-  color: ${(props) => props.theme.colors.primary[400]};
+  color: ${({ theme }) => theme.colors.primary[400]};
 `;
 
 export const Text = styled.p`
   color: #f0f0f0;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  line-height: ${(props) => props.theme.lineHeight["1_1x"]};
+  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
   margin-bottom: 2rem;
   max-width: 600px;
   white-space: pre-line;
@@ -77,7 +84,7 @@ export const HeroButtonWrapper = styled.div`
   width: 100%;
   max-width: 300px;
 
-  @media (max-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
     max-width: 100%;
   }
 `;
@@ -87,7 +94,7 @@ export const ButtonsContainer = styled.div`
   gap: 1rem;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
     justify-content: center;
   }
 
@@ -104,9 +111,9 @@ export const ButtonsContainer = styled.div`
 
 export const Caption = styled.p`
   color: ${({ theme }) => theme.colors.extra.white};
-  font-size: ${(props) => props.theme.typography.outfit.M};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
-  line-height: ${(props) => props.theme.lineHeight["1_5x"]};
-  font-family: ${(props) => props.theme.fontFamily.outfit};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
   text-align: center;
 `;

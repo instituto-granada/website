@@ -28,15 +28,24 @@ export const Content = styled.div`
 
 export const WrapperImage = styled.div`
   width: 100%;
-  min-height: 194px;
+  height: 194px;
   border-radius: 32px;
-  object-fit: cover;
-  flex-shrink: 1;
+  overflow: hidden;
+  position: relative;
+`;
 
-  img {
-    width: 100%;
-    height: 100%;
-  }
+export const Badge = styled.div`
+  position: absolute;
+  top: ${({ theme }) => theme.spacing.S};
+  left: ${({ theme }) => theme.spacing.S};
+  background-color: ${({ theme }) => theme.colors.grayscale[700]};
+  padding: ${({ theme }) => `${theme.spacing["3XS"]} ${theme.spacing.XS}`};
+  border-radius: 12px;
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.inter.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_8x"]};
+  color: ${({ theme }) => theme.colors.extra.white};
 `;
 
 export const WrapperText = styled.div`
