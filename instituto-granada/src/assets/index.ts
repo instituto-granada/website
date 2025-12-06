@@ -3,6 +3,7 @@ import backgroundAbout from "./images/backgroundAbout.png";
 import backgroundHome from "./images/backgroundHome.png";
 import backgroundProjects from "./images/backgroundProjects.png";
 import backgroundVolunteers from "./images/backgroundVolunteers.png";
+import backgroundDonation from "./images/backgroundDonations.png";
 import educationalPsychologistPosition from "./images/educationalPsychologistPosition.png";
 import fundraiserPosition from "./images/fundraiserPosition.png";
 import generalAssistantPosition from "./images/generalAssistantPosition.png";
@@ -57,6 +58,12 @@ import OdsPoverty from "./icons/OdsPoverty.svg";
 import OdsWork from "./icons/OdsWork.svg";
 import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
 
+import Copy from "./icons/Copy.svg";
+import Check from "./icons/Check.svg";
+import ServiceLine from "./icons/ServiceLine.svg";
+import OpenArmLine from "./icons/OpenArmLine.svg";
+import UserStarLine from "./icons/UserStarLine.svg";
+
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
 import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
@@ -66,7 +73,9 @@ import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristma
 import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
 
-import mission from "./images/mission.png"
+import mission from "./images/mission.png";
+
+import qrCodePix from "./images/qrCodePix.png";
 
 export const Images = {
   logo,
@@ -74,6 +83,7 @@ export const Images = {
   backgroundHome,
   backgroundProjects,
   backgroundVolunteers,
+  backgroundDonation,
   Testimonials1,
   Testimonials2,
   Testimonials3,
@@ -103,7 +113,10 @@ export const Images = {
   freeMeals,
 
   //página sobre
-  mission
+  mission,
+
+  //página de doações
+  qrCodePix
 };
 
 export const Icons = {
@@ -126,7 +139,12 @@ export const Icons = {
   OdsHealth,
   OdsPoverty,
   OdsWork,
-  OdsZeroHunger
+  OdsZeroHunger,
+  Copy,
+  Check,
+  ServiceLine,
+  OpenArmLine,
+  UserStarLine
 };
 
 export type IconName = keyof typeof Icons;

@@ -271,6 +271,63 @@ export const pt = {
       text: "Reunimos cerca de 530 crianças e adolescentes da comunidade, em uma divertida festa de páscoa com bolo, lanches, brincadeiras, teatro e muita diversão. Ao final as crianças recebem deliciosos ovos de chocolate, captados de doadores e empresas.",
     },
   },
+  donations: {
+    hero: {
+      title: "Sua doação transforma vidas",
+      text: "Faça sua contribuição via PIX de forma rápida, segura e prática. Cada real doado faz diferença!",
+    },
+    pixCard: {
+      title: "Doe via PIX",
+      text: "Rápido, seguro e sem taxas",
+      chave: {
+        subtitle: "Chave PIX (e-mail)",
+        chavePix: "doeinstitutogranada@gmail.com",
+      },
+      howToDonate: {
+        text: "Como doar?",
+        stepOne: "1. Abra o app do seu banco e escolha PIX",
+        stepTwo: "2. Escaneie o QR Code ou copie a chave PIX",
+        stepThree: "3. Escolha o valor e confirme a doação"
+      }
+    },
+    suggestedValues: {
+      title: "Valores sugeridos",
+      text: "Todo valor é bem-vindo e faz a diferença!",
+      values: ["R$ 25,00", "R$ 50,00", "R$ 70,00", "R$ 100,00"],
+      hint: "*Por questão de segurança, lembre sempre de conferir o valor e destinatório do PIX para garantir que a sua doação chegue a quem realmente precisa."
+    },
+    cards: [
+      {
+        title: "Impacto direto",
+        text: "100% das doações vão para nossos projetos sociais"
+      },
+      {
+        title: "Transformação Real",
+        text: "Veja o resultado do seu apoio em nosso Instituto"
+      },
+      {
+        title: "Seja apoiador",
+        text: "Ative a recorrência do seu PIX mensalmente"
+      }
+    ],
+    partners: {
+      title: "Seja uma empresa parceira na causa!",
+      subtitle: "Entre em contato e conheça os benefícios de ser um parceiro do Instituto Granada.",
+      form: {
+        inputs: [
+          {
+            label: "Nome da empresa",
+            placeholder: "Insira o nome da empresa"
+          },
+          {
+            label: "E-mail",
+            placeholder: "Insira seu email"
+          }
+        ],
+        buttonLabel: "Quero ser parceiro"
+      }
+    }
+  },
   volunteers: {
     hero: {
       title: "Seja voluntário",

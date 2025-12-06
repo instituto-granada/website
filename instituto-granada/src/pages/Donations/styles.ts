@@ -1,11 +1,304 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { breakpoints } from "../../styles/breakpoints";
 
-export const Container = styled.header`
+
+const fadeIn = keyframes`
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+`;
+
+export const DonationsSection = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+  background-color: ${({ theme }) => `${theme.colors.extra.white}`};
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: stretch;
+    padding: ${({ theme }) => `${theme.spacing["3XL"]} ${theme.spacing["4XL"]}`};
+  }
+`;
+
+export const QrCode = styled.img`
+  width: 311px;
+  height: 314px;
+  object-fit: cover;
+`;
+
+export const DonationCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  padding: ${({ theme }) => `${theme.spacing.M}`};
+  gap: ${({ theme }) => `${theme.spacing.L}`};
+
+  background-color: #FFFFFF;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[300]}`};
+  border-radius: 24px;
+`;
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   align-items: center;
 `;
 
-export const HeroContainer = styled.div`
-  margin-top: 64px;
+export const ChavePixSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  gap: 10px;
+`;
+
+export const HowToDonateSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  gap: 10px;
+  padding: ${({ theme }) => `${theme.spacing.M}`};
+`;
+
+export const Title = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.L};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+`;
+
+export const Subtitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.L};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[600]};
+`;
+
+export const Text = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+`;
+
+export const Hint = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[600]};
+`;
+
+export const ChaveWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: ${({ theme }) => `${theme.spacing.XS}`}
+`;
+
+export const ChavePix = styled.p`
+  width: 100%;
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};
+
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+  
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+`;
+
+export const PixIcon = styled.img`
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};  
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+  cursor: pointer;
+  animation: ${fadeIn} 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+
+   &:active {
+    transform: scale(0.9);
+  }
+`;
+
+export const AsidePanel = styled.aside`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: ${({ theme }) => theme.spacing.L};  
+
+  @media (min-width: ${breakpoints.tablet}) {
+    justify-content: space-between;  
+    gap: 0; // opcional: remove o gap no desktop
+  }
+`;
+
+export const SuggestedValuesCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 506px;
+  max-height: 423px;
+
+  padding: ${({ theme }) => `${theme.spacing.M}`};
+  gap: 48px;
+
+  background-color: #FFFFFF;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[300]}`};
+  border-radius: 24px;
+`
+
+export const DonationValuesWrapper = styled.div`
+  width: 328px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+`;
+
+export const DonationValue = styled.p`
+  width: 100%;
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};
+
+  text-align: center;
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+  
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+`;
+
+export const DonationIconCard = styled.div`
+  padding: 1rem;
+  width: 100%;
+  max-width: 506px;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[300]}`};
+  border-radius: 12px;
+  background-color: #FFFFFF;
+
+  @media(min-width: ) {
+    padding: ${({ theme }) => `${theme.spacing.M}`};
+  }
+`;
+
+export const DonationIcon = styled.img`
+  height: 56px;
+  width: 56px;
+`;
+
+export const CardContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+`;
+
+export const CardTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CardTitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.L};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+`;
+
+export const CardText = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[600]};
+`
+
+export const PartnerSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+  align-items: top;
+  justify-content: center;
+  gap: ${({ theme }) => `${theme.spacing["XL"]}`};
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.secondary[700]};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: stretch;
+    padding: ${({ theme }) => `${theme.spacing["3XL"]} ${theme.spacing["4XL"]}`};
+    gap: ${({ theme }) => `${theme.spacing["4XL"]}`};
+  }
+`;
+
+export const PartnerTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => `${theme.spacing.XS}`};
+`;
+
+export const PartnerTextTitle = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamily.sora};
+  font-size: ${({ theme }) => theme.typography.sora.L};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
+  color: ${({ theme }) => theme.colors.primary[400]};
+`;
+
+export const PartnerTextsSubtitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[100]};
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+  width: 360px;
+`
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: ${({ theme }) => `${theme.spacing["3XS"]}`};
+`
+
+export const FormLabel = styled.p`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[100]};
+`;
+
+export const FormInput = styled.input`
+  width: 100%;
+  padding: ${({ theme }) => `${theme.spacing.XS} ${theme.spacing.S}`};
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+
+  background-color: ${({ theme }) => theme.colors.grayscale[100]};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.grayscale[400]};
+  }
 `;
