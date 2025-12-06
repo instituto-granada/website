@@ -1,5 +1,6 @@
 import logo from "./images/logo.svg";
 import backgroundAbout from "./images/backgroundAbout.png";
+import backgroundContact from "./images/backgroundContact.png";
 import backgroundHome from "./images/backgroundHome.png";
 import backgroundProjects from "./images/backgroundProjects.png";
 import backgroundVolunteers from "./images/backgroundVolunteers.png";
@@ -80,6 +81,7 @@ import qrCodePix from "./images/qrCodePix.png";
 export const Images = {
   logo,
   backgroundAbout,
+  backgroundContact,
   backgroundHome,
   backgroundProjects,
   backgroundVolunteers,

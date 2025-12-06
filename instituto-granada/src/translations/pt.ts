@@ -159,19 +159,19 @@ export const pt = {
         {
           key: "easter",
           title: "PÁSCOA DO BEM E ESPERANÇA",
-          body: "Reunimos cerca de 530 crianças e adolescentes da comunidade, em uma divertida festa de páscoa com bolo, lanches, brincadeiras, teatro e muita diversão. Ao final as crianças recebem deliciosos ovos de chocolate, captados de doadores e empresas.",
+          body: "Reunimos cerca de 530 crianças e adolescentes da comunidade em uma divertida festa de Páscoa com brincadeiras, teatro, muita alegria, com lanche , bebidas e bolo. Ao final as crianças recebem deliciosos ovos de chocolate recebidos por meio de doações de apoiadores e empresas parceiras.",
           image: "projectPascoa",
         },
         {
           key: "vacation",
           title: "FÉRIAS DA ALEGRIA",
-          body: "Na nossa região, as crianças não têm muitos lugares seguros para brincar e se divertir. Por isso, durante as férias, criamos este projeto para proporcionar a elas momentos de lazer e cultura. O objetivo é ajudar a criar lembranças felizes e positivas na infância, oferecendo atividades que tragam diversão, aprendizado e convivência em um ambiente seguro e acolhedor.",
+          body: "Lembranças felizes e positivas da infância ficam para sempre em nossos corações. Na nossa região as crianças não têm muitos lugares seguros para brincar e se divertir. Por isso, durante as férias, oferecemos atividades que trazem diversão, aprendizado e convivência social em um ambiente acolhedor e seguro.",
           image: "projectFerias",
         },
         {
           key: "christmas",
           title: "APADRINHE COM AMOR",
-          body: "O apadrinhamento é uma forma simples e poderosa de espalhar amor neste natal. Você escolhe uma criança ou adolescente e a presenteia com um kit de roupa, calçado e brinquedo. Saiba mais e participe agora!",
+          body: "O Apadrinhamento de Natal é uma forma simples e poderosa de espalhar amor. Ao se tornar padrinho, escolhendo uma criança ou adolescente, você conhece um pouco da sua história, e a presenteia com um kit de roupa, calçado e brinquedo.",
           image: "projectNatal",
         },
       ],
@@ -286,46 +286,47 @@ export const pt = {
         text: "Como doar?",
         stepOne: "1. Abra o app do seu banco e escolha PIX",
         stepTwo: "2. Escaneie o QR Code ou copie a chave PIX",
-        stepThree: "3. Escolha o valor e confirme a doação"
-      }
+        stepThree: "3. Escolha o valor e confirme a doação",
+      },
     },
     suggestedValues: {
       title: "Valores sugeridos",
       text: "Todo valor é bem-vindo e faz a diferença!",
       values: ["R$ 25,00", "R$ 50,00", "R$ 70,00", "R$ 100,00"],
-      hint: "*Por questão de segurança, lembre sempre de conferir o valor e destinatório do PIX para garantir que a sua doação chegue a quem realmente precisa."
+      hint: "*Por questão de segurança, lembre sempre de conferir o valor e destinatório do PIX para garantir que a sua doação chegue a quem realmente precisa.",
     },
     cards: [
       {
         title: "Impacto direto",
-        text: "100% das doações vão para nossos projetos sociais"
+        text: "100% das doações vão para nossos projetos sociais",
       },
       {
         title: "Transformação Real",
-        text: "Veja o resultado do seu apoio em nosso Instituto"
+        text: "Veja o resultado do seu apoio em nosso Instituto",
       },
       {
         title: "Seja apoiador",
-        text: "Ative a recorrência do seu PIX mensalmente"
-      }
+        text: "Ative a recorrência do seu PIX mensalmente",
+      },
     ],
     partners: {
       title: "Seja uma empresa parceira na causa!",
-      subtitle: "Entre em contato e conheça os benefícios de ser um parceiro do Instituto Granada.",
+      subtitle:
+        "Entre em contato e conheça os benefícios de ser um parceiro do Instituto Granada.",
       form: {
         inputs: [
           {
             label: "Nome da empresa",
-            placeholder: "Insira o nome da empresa"
+            placeholder: "Insira o nome da empresa",
           },
           {
             label: "E-mail",
-            placeholder: "Insira seu email"
-          }
+            placeholder: "Insira seu email",
+          },
         ],
-        buttonLabel: "Quero ser parceiro"
-      }
-    }
+        buttonLabel: "Quero ser parceiro",
+      },
+    },
   },
   volunteers: {
     hero: {
@@ -382,5 +383,22 @@ export const pt = {
         body: "Pedreiros, encanadores e pintores para pequenas manutenções locais.",
       },
     ],
+  },
+  contact: {
+    formSection: {
+      buttonLabel: "Enviar mensagem",
+      emailLabel: "E-mail",
+      emailPlaceholder: "Insira seu email",
+      nameLabel: "Nome completo",
+      namePlaceholder: "Insira seu nome",
+      messageLabel: "Mensagem",
+      messageInputMaxLenght: "max. 500",
+      messagePlaceholder: "Digite sua mensagem",
+      title: "Envie sua mensagem",
+    },
+    hero: {
+      title: "Entre em contato conosco",
+      text: " Entre em contato para esclarecer dúvidas, solicitar informações ou iniciar uma parceria!",
+    },
   },
 };

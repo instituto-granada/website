@@ -6,10 +6,11 @@ import Volunteers from "../pages/Volunteers";
 import Christmas from "../pages/Christmas";
 import Vocation from "../pages/Vacation";
 import Easter from "../pages/Easter";
+import Contact from "../pages/Contact";
 
 export const routesMap = {
   home: { title: "Home", path: "/", component: Home, showInNav: false },
-  contact: { title: "Contato", path: "/contato", component: Home },
+  contact: { title: "Contato", path: "/contato", component: Contact },
   about: { title: "Sobre", path: "/sobre", component: About },
   projects: { title: "Projetos", path: "/projetos", component: Projects },
   donations: {
