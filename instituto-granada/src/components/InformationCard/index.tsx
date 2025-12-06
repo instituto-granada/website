@@ -1,4 +1,5 @@
 import {
+  Badge,
   Body,
   Container,
   Content,
@@ -14,6 +15,7 @@ export interface InformationCardProps {
   title: string;
   body: string;
   uppercaseTitle?: boolean;
+  badgeText?: string;
 }
 
 export default function InformationCard({
@@ -21,12 +23,14 @@ export default function InformationCard({
   title,
   body,
   uppercaseTitle = false,
+  badgeText,
 }: InformationCardProps) {
   return (
     <Container>
       <Content>
         <WrapperImage>
-          <Image name={image} width={150} />
+          <Image name={image} />
+          {badgeText && <Badge>{badgeText}</Badge>}
         </WrapperImage>
         <WrapperText>
           {title && <Title uppercase={uppercaseTitle}>{title}</Title>}

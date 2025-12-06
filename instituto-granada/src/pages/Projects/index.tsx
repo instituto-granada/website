@@ -11,15 +11,6 @@ export default function Projects() {
   const { text } = useTranslate();
   const { hero, galleries, carousel } = text.projects;
 
-  interface ImageIndex {
-    projectVidaFeliz: string;
-    projectByteAcao: string;
-    projectEmpoderaAdolescente: string;
-    projectChama: string;
-    projectMelhorToque: string;
-    projectMulheresCapazes: string;
-  }
-
   const imageIndex = {
     projectVidaFeliz: Images.projectVidaFeliz,
     projectByteAcao: Images.projectByteAcao,
@@ -65,11 +56,7 @@ export default function Projects() {
       />
 
       <ProjectGallery>
-        <ProjectCarousel
-          projects={carouselProjects}
-          header="PRINCIPAIS PROJETOS"
-        />
-
+        <ProjectCarousel projects={carouselProjects} header={carousel.header} />
         {gallery01?.list.map((project) => (
           <WideCard
             image={imageIndex[project.imageKey as keyof typeof imageIndex]}

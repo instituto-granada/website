@@ -30,6 +30,10 @@ export const Info = styled.div`
   @media (min-width: ${breakpoints.tablet}) {
     width: 40%;
   }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    width: 46%;
+  }
 `;
 
 export const WrapperImage = styled.div`
@@ -40,10 +44,10 @@ export const WrapperImage = styled.div`
   }
 
   @media (min-width: ${breakpoints.tablet}) {
-    width: 210px;
+    width: 190px;
   }
 
-  @media (min-width: ${breakpoints.laptop}) {
+  @media (min-width: ${breakpoints.desktop}) {
     width: 250px;
   }
 `;
@@ -79,6 +83,11 @@ export const SocialMedia = styled.div`
     text-align: left;
     align-items: flex-start;
     padding-left: ${({ theme }) => theme.spacing.L};
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    width: 40%;
+    padding-left: ${({ theme }) => theme.spacing["3XL"]};
   }
 `;
 
@@ -130,6 +139,10 @@ export const Menu = styled.div`
   @media (min-width: ${breakpoints.laptop}) {
     width: 20%;
   }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    width: 14%;
+  }
 `;
 
 export const List = styled.ul`
@@ -157,5 +170,12 @@ export const ListItem = styled.li`
     margin-left: 0;
   }
 `;
-
-export const Copyright = styled.div``;
+export const Copyright = styled.div`
+  background-color: ${({ theme }) => theme.colors.extra.white};
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.S};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  color: ${({ theme }) => theme.colors.extra.black};
+  text-align: center;
+  padding: ${({ theme }) => theme.spacing.XS};
+`;

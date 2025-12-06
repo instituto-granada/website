@@ -35,6 +35,7 @@ export const theme = {
     },
   },
   fontFamily: {
+    inter: '"Inter", "sans-serif"',
     sora: '"Sora", "sans-serif"',
     outfit: '"Outfit", "sans-serif"',
   },
@@ -66,6 +67,9 @@ export const theme = {
       S: "14px",
       XS: "12px",
     },
+    inter: {
+      S: "14px",
+    },
   },
   spacing: {
     "3XS": "4px",
@@ -80,6 +84,7 @@ export const theme = {
     "4XL": "120px",
   },
   lineHeight: {
+    "1_8x": 1.8,
     "1_5x": 1.5,
     "1_1x": 1.1,
   },
@@ -93,6 +98,8 @@ export const theme = {
     mobileL: "425px",
     tablet: "768px",
     laptop: "1024px",
+    desktop: "1280px",
+    laptopL: "1440px",
   },
 };
 

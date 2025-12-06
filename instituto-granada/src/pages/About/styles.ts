@@ -13,10 +13,10 @@ export const AboutUsSection = styled.div`
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.laptop}) {
     flex-direction: row;
     align-items: stretch;
-    padding-top:  ${({ theme }) => `${theme.spacing.XL}`};
+    padding-top: ${({ theme }) => `${theme.spacing.XL}`};
     padding-left: ${({ theme }) => `${theme.spacing["4XL"]}`};
     padding-right: ${({ theme }) => `${theme.spacing["4XL"]}`};
   }
@@ -31,6 +31,11 @@ export const ContentBox = styled.div<ContentBoxProps>`
 
 export const TextWrapper = styled.div<TextWrapperProps>`
   @media (min-width: ${breakpoints.tablet}) {
+    padding: ${({ theme }) => `0 ${theme.spacing.M}`};
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    padding: 0;
     margin-left: ${({ withLeftPadding, theme }) =>
       withLeftPadding ? theme.spacing.XL : 0};
   }
@@ -42,7 +47,7 @@ export const ImageWrapper = styled.div`
   justify-content: center;
   width: 100%;
 
-  aspect-ratio: 9 / 16; 
+  aspect-ratio: 9 / 16;
   max-height: 700px;
 
   position: relative;
@@ -80,7 +85,7 @@ export const Title = styled.h1<TitleProps>`
   margin-top: ${({ theme }) => theme.spacing.XL};
   margin-bottom: ${({ theme }) => theme.spacing.XL};
 
-  @media (min-width: ${breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.laptop}) {
     margin-top: 0;
   }
 `;
@@ -120,12 +125,12 @@ export const AboutUsButtonWrapper = styled.div`
   margin-top: ${({ theme }) => theme.spacing.XL};
 
   @media (min-width: ${breakpoints.tablet}) {
-    margin-top: 0;
-    margin-left: ${({ theme }) => theme.spacing.XL};
+    padding: ${({ theme }) => `0 ${theme.spacing.M}`};
   }
 
   @media (min-width: ${breakpoints.laptop}) {
     flex-direction: row;
+    ṕadding: 0;
   }
 `;
 
@@ -136,13 +141,16 @@ export const CardsSection = styled.div`
   justify-items: center;
   background: ${({ theme }) => theme.colors.secondary[700]};
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
+  gap: ${({ theme }) => theme.spacing.M};
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  @media (min-width: ${breakpoints.tablet}) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
     padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 export const OurFutureSection = styled.div`
@@ -150,8 +158,12 @@ export const OurFutureSection = styled.div`
   flex-direction: column;
   padding: ${({ theme }) => `${theme.spacing.M} ${theme.spacing.S}`};
 
-  @media (min-width: 768px) {
+  @media (min-width: ${breakpoints.tablet}) {
     padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["2XL"]}`};
+  }
+
+  @media (min-width: ${breakpoints.laptop}) {
+    padding: ${({ theme }) => `${theme.spacing.XL} ${theme.spacing["4XL"]}`};
   }
 `;
 

@@ -7,26 +7,22 @@ import { Images } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
 import PageStructure from "../../components/PageStructure";
 import InformationCard from "../../components/InformationCard";
+import { formSchema, FormData } from "../../schema";
+import ButtonPrincipal from "../../components/ButtonPrincipal";
+import Select from "../../components/Select";
+import Input from "../../components/Input";
+import TextArea from "../../components/TextArea";
 import {
   ContactUs,
   ContactUsSectionSubtitle,
   ContactUsSectionTitle,
-  ErrorMessage,
-  Field,
   FormStyled,
-  Input,
-  Label,
-  MaxLengthNotice,
   Positions,
   PositionsSection,
   PositionsSectionTitle,
-  Row,
-  Textarea,
   WrapperButton,
 } from "./styles";
-import { formSchema, FormData } from "../../schema";
-import ButtonPrincipal from "../../components/ButtonPrincipal";
-import Select from "../../components/Select";
+import { FormTexts } from "./types";
 
 const imageNames: (keyof typeof Images)[] = [
   "marketingPosition",
@@ -35,6 +31,7 @@ const imageNames: (keyof typeof Images)[] = [
   "teacherPosition",
   "educationalPsychologistPosition",
   "speechTherapistPosition",
+  "physicalEducatorPosition",
   "generalAssistantPosition",
 ];
 
@@ -45,23 +42,9 @@ const positionOptions = [
   { value: "marketing-digital", label: "Marketing Digital" },
   { value: "professor-assistente", label: "Professor/Assistente" },
   { value: "psicologo-psicanalista", label: "Psicólogo/Psicanalista" },
+  { value: "educador-fisico", label: "Educador Físico" },
   { value: "psicopedagogo", label: "Psicopedagogo" },
 ];
-
-type FormTexts = {
-  buttonLabel: string;
-  emailLabel: string;
-  emailPlaceholder: string;
-  nameLabel: string;
-  namePlaceholder: string;
-  messageLabel: string;
-  messageInputMaxLenght: string;
-  messagePlaceholder: string;
-  positionLabel: string;
-  positionPlaceholder: string;
-  subtitle: string;
-  title: string;
-};
 
 const ContactForm: FC<FormTexts> = ({
   buttonLabel,
@@ -86,7 +69,6 @@ const ContactForm: FC<FormTexts> = ({
   });
 
   const onSubmit = (data: FormData) => {
-    console.log("Dados:", data);
     alert("Formulário enviado!");
   };
 
@@ -94,30 +76,18 @@ const ContactForm: FC<FormTexts> = ({
     <FormStyled onSubmit={handleSubmit(onSubmit)}>
       <ContactUsSectionTitle>{title}</ContactUsSectionTitle>
       <ContactUsSectionSubtitle>{subtitle}</ContactUsSectionSubtitle>
-      <Field>
-        <Label error={!!errors.name}>{nameLabel}</Label>
-        <Input
-          type="text"
-          {...register("name")}
-          error={!!errors.name}
-          placeholder={namePlaceholder}
-        />
-        <ErrorMessage error={!!errors.name}>
-          {errors.name?.message}
-        </ErrorMessage>
-      </Field>
-      <Field>
-        <Label error={!!errors.email}>{emailLabel}</Label>
-        <Input
-          type="email"
-          {...register("email")}
-          error={!!errors.email}
-          placeholder={emailPlaceholder}
-        />
-        <ErrorMessage error={!!errors.email}>
-          {errors.email?.message}
-        </ErrorMessage>
-      </Field>
+      <Input
+        label={nameLabel}
+        placeholder={namePlaceholder}
+        error={errors.name?.message}
+        {...register("name")}
+      />
+      <Input
+        label={emailLabel}
+        placeholder={emailPlaceholder}
+        error={errors.email?.message}
+        {...register("email")}
+      />
       <Select
         errorMessage={errors.position?.message}
         label={positionLabel}
@@ -125,21 +95,13 @@ const ContactForm: FC<FormTexts> = ({
         placeholder={positionPlaceholder}
         {...register("position")}
       />
-      <Field>
-        <Label error={!!errors.message}>{messageLabel}</Label>
-        <Textarea
-          {...register("message")}
-          error={!!errors.message}
-          maxLength={500}
-          placeholder={messagePlaceholder}
-        />
-        <Row>
-          <ErrorMessage error={!!errors.message}>
-            {errors.message?.message}
-          </ErrorMessage>
-          <MaxLengthNotice>{messageInputMaxLenght}</MaxLengthNotice>
-        </Row>
-      </Field>
+      <TextArea
+        label={messageLabel}
+        placeholder={messagePlaceholder}
+        maxLengthMessage={messageInputMaxLenght}
+        error={errors.message?.message}
+        {...register("message")}
+      />
       <WrapperButton>
         <ButtonPrincipal variant="primary">{buttonLabel}</ButtonPrincipal>
       </WrapperButton>
@@ -149,8 +111,13 @@ const ContactForm: FC<FormTexts> = ({
 
 export default function Volunteers() {
   const { text } = useTranslate();
-  const { formSection, hero, positions, positionsSectionTitle } =
-    text.volunteers;
+  const {
+    formSection,
+    hero,
+    positions,
+    positionsBadgeText,
+    positionsSectionTitle,
+  } = text.volunteers;
 
   return (
     <PageStructure>
@@ -169,6 +136,7 @@ export default function Volunteers() {
               image={imageNames[index]}
               title={position.title}
               body={position.body}
+              badgeText={positionsBadgeText}
             />
           ))}
         </Positions>

@@ -15,6 +15,7 @@ import aboutUsSection from "./images/aboutUsSection.png";
 import academicSupport from "./images/academicSupport.png";
 import familySupport from "./images/familySupport.png";
 import freeMeals from "./images/freeMeals.png";
+import physicalEducatorPosition from "./images/physicalEducatorPosition.png";
 
 import World_people from "./icons/World_people.svg";
 import Gift from "./icons/Gift.svg";
@@ -74,7 +75,6 @@ import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
 
 import mission from "./images/mission.png";
-
 import qrCodePix from "./images/qrCodePix.png";
 
 export const Images = {
@@ -111,12 +111,9 @@ export const Images = {
   academicSupport,
   familySupport,
   freeMeals,
-
-  //página sobre
+  physicalEducatorPosition,
   mission,
-
-  //página de doações
-  qrCodePix
+  qrCodePix,
 };
 
 export const Icons = {
@@ -144,7 +141,7 @@ export const Icons = {
   Check,
   ServiceLine,
   OpenArmLine,
-  UserStarLine
+  UserStarLine,
 };
 
 export type IconName = keyof typeof Icons;
