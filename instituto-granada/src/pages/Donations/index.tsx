@@ -3,10 +3,17 @@ import Hero from "../../components/Hero";
 import { IconName, Icons, Images } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
 import {
+  AsidePanel,
+  CardContentWrapper,
+  CardText,
+  CardTextContainer,
+  CardTitle,
   ChavePix, 
   ChavePixSection, 
   ChaveWrapper, 
   DonationCard, 
+  DonationIcon, 
+  DonationIconCard, 
   DonationsSection, 
   DonationValue, 
   DonationValuesWrapper, 
@@ -20,6 +27,12 @@ import {
   Text, 
   Title 
 } from "./styles";
+
+const cardIcons = [
+  Icons.ServiceLine,
+  Icons.OpenArmLine,
+  Icons.UserStarLine
+];
 
 export default function Donations() {
 
@@ -65,18 +78,33 @@ export default function Donations() {
             <Text> {text.donations.pixCard.howToDonate.stepThree} </Text>
           </HowToDonateSection>
         </DonationCard>
-        <SuggestedValuesCard>
-          <Header>
-            <Title> {text.donations.suggestedValues.title} </Title>
-            <Subtitle> {text.donations.suggestedValues.text} </Subtitle>
-          </Header>
-          <DonationValuesWrapper>
-            {text.donations.suggestedValues.values.map((value) => (
-              <DonationValue key={value}>{value}</DonationValue>
-            ))}
-          </DonationValuesWrapper>
-          <Hint> {text.donations.suggestedValues.hint} </Hint>
-        </SuggestedValuesCard>
+        <AsidePanel>
+          <SuggestedValuesCard>
+            <Header>
+              <Title> {text.donations.suggestedValues.title} </Title>
+              <Subtitle> {text.donations.suggestedValues.text} </Subtitle>
+            </Header>
+            <DonationValuesWrapper>
+              {text.donations.suggestedValues.values.map((value) => (
+                <DonationValue key={value}>{value}</DonationValue>
+              ))}
+            </DonationValuesWrapper>
+            <Hint> {text.donations.suggestedValues.hint} </Hint>
+          </SuggestedValuesCard>
+          {text.donations.cards.map((card, index) =>
+            <DonationIconCard>
+              <CardContentWrapper>
+                <DonationIcon
+                  src={cardIcons[index]}  
+                />
+                <CardTextContainer>
+                  <CardTitle> {card.title} </CardTitle>
+                  <CardText> {card.text} </CardText>
+                </CardTextContainer>
+              </CardContentWrapper>
+            </DonationIconCard>
+          )}
+        </AsidePanel>
       </DonationsSection>
     </PageStructure>
   );

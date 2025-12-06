@@ -27,6 +27,7 @@ export const DonationCard = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
 
   padding: ${({ theme }) => `${theme.spacing.M}`};
   gap: ${({ theme }) => `${theme.spacing.L}`};
@@ -119,6 +120,19 @@ export const PixIcon = styled.img`
   cursor: pointer;
 `;
 
+export const AsidePanel = styled.aside`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  gap: ${({ theme }) => theme.spacing.L};  
+
+  @media (min-width: ${breakpoints.tablet}) {
+    justify-content: space-between;  
+    gap: 0; // opcional: remove o gap no desktop
+  }
+`;
+
 export const SuggestedValuesCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -156,3 +170,48 @@ export const DonationValue = styled.p`
   border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
   border-radius: 12px;
 `;
+
+export const DonationIconCard = styled.div`
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid ${({ theme }) => `${theme.colors.grayscale[400]}`};
+  border-radius: 12px;
+  background-color: #FFFFFF;
+
+  @media(min-width: ) {
+    padding: ${({ theme }) => `${theme.spacing.M}`};
+  }
+`;
+
+export const DonationIcon = styled.img`
+  height: 56px;
+  width: 56px;
+`;
+
+export const CardContentWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ${({ theme }) => `${theme.spacing.M}`};
+`;
+
+export const CardTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const CardTitle = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.L};
+  font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.extra.black};
+`;
+
+export const CardText = styled.h2`
+  font-family: ${({ theme }) => theme.fontFamily.outfit};
+  font-size: ${({ theme }) => theme.typography.outfit.M};
+  font-weight: ${({ theme }) => theme.fontWeight.regular};
+  line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
+  color: ${({ theme }) => theme.colors.grayscale[600]};
+`

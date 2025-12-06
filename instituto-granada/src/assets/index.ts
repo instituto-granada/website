@@ -59,6 +59,9 @@ import OdsWork from "./icons/OdsWork.svg";
 import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
 
 import Copy from "./icons/Copy.svg";
+import ServiceLine from "./icons/ServiceLine.svg";
+import OpenArmLine from "./icons/OpenArmLine.svg";
+import UserStarLine from "./icons/UserStarLine.svg";
 
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
@@ -136,7 +139,10 @@ export const Icons = {
   OdsPoverty,
   OdsWork,
   OdsZeroHunger,
-  Copy
+  Copy,
+  ServiceLine,
+  OpenArmLine,
+  UserStarLine
 };
 
 export type IconName = keyof typeof Icons;

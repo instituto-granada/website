@@ -295,7 +295,21 @@ export const pt = {
       text: "Todo valor é bem-vindo e faz a diferença!",
       values: ["R$ 25,00", "R$ 50,00", "R$ 70,00", "R$ 100,00"],
       hint: "*Por questão de segurança, lembre sempre de conferir o valor e destinatório do PIX para garantir que a sua doação chegue a quem realmente precisa."
-    }
+    },
+    cards: [
+      {
+        title: "Impacto direto",
+        text: "100% das doações vão para nossos projetos sociais"
+      },
+      {
+        title: "Transformação Real",
+        text: "Veja o resultado do seu apoio em nosso Instituto"
+      },
+      {
+        title: "Seja apoiador",
+        text: "Ative a recorrência do seu PIX mensalmente"
+      }
+    ]
   },
   volunteers: {
     hero: {
