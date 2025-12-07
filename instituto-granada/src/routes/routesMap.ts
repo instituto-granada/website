@@ -10,9 +10,14 @@ import Contact from "../pages/Contact";
 
 export const routesMap = {
   home: { title: "Home", path: "/", component: Home, showInNav: false },
-  contact: { title: "Contato", path: "/contato", component: Contact },
   about: { title: "Sobre", path: "/sobre", component: About },
   projects: { title: "Projetos", path: "/projetos", component: Projects },
+  volunteers: {
+    title: "Voluntários",
+    path: "/voluntarios",
+    component: Volunteers,
+  },
+  contact: { title: "Contato", path: "/contato", component: Contact },
   donations: {
     title: "Doações",
     path: "/doacoes",
@@ -36,10 +41,5 @@ export const routesMap = {
     path: "/pascoa",
     component: Easter,
     showInNav: false,
-  },
-  volunteers: {
-    title: "Voluntários",
-    path: "/voluntarios",
-    component: Volunteers,
   },
 };
