@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import ButtonPrincipal from "../ButtonPrincipal";
 import Image from "../Image";
@@ -45,6 +45,7 @@ export default function Header() {
 
   const isMobile = useIsMobile();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -100,7 +101,7 @@ export default function Header() {
           </HamburgerButton>
         )}
 
-        {!isMobile && <DonateButton>{"Doe agora"}</DonateButton>}
+        {!isMobile && <DonateButton onClick={() => navigate("/doacoes")} >{"Doe agora"}</DonateButton>}
       </Container>
 
       {isMobile && (
@@ -126,7 +127,7 @@ export default function Header() {
               <MobileMenuButton>
                 <ButtonPrincipal
                   variant="primary"
-                  onClick={() => alert("Botão Secundário Clicado!")}
+                  onClick={() => navigate("/doacoes")}
                 >
                   Doe agora
                 </ButtonPrincipal>
