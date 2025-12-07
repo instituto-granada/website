@@ -71,7 +71,7 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s;
-  font-family: ${(props) => props.theme.fontWeight.regular};
+  font-family: ${(props) => props.theme.fontFamily.outfit};
   font-weight: ${(props) => props.theme.fontWeight.regular};
   background-color: white;
   flex-shrink: 0;
@@ -97,7 +97,8 @@ export const DonateButton = styled.button`
   border-radius: 80px;
   cursor: pointer;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  font-weight: ${(props) => props.theme.fontWeight.semiBold};
   color: white;
   background-color: ${(props) => props.theme.colors.primary[400]};
   transition: all 0.2s ease-in-out;

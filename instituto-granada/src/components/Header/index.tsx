@@ -100,7 +100,7 @@ export default function Header() {
           </HamburgerButton>
         )}
 
-        {!isMobile && <DonateButton>{"DOE AGORA"}</DonateButton>}
+        {!isMobile && <DonateButton>{"Doe agora"}</DonateButton>}
       </Container>
 
       {isMobile && (
@@ -128,7 +128,7 @@ export default function Header() {
                   variant="primary"
                   onClick={() => alert("Botão Secundário Clicado!")}
                 >
-                  DOE AGORA
+                  Doe agora
                 </ButtonPrincipal>
               </MobileMenuButton>
             </MobileMenuItems>
