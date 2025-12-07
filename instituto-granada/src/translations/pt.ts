@@ -146,7 +146,7 @@ export const pt = {
       text: "Conheça nossas iniciativas e descubra como elas transformam realidades",
       buttons: {
         primary: {
-          label: "Quero doar agora",
+          label: "Quero doar",
         },
         secondary: {
           label: "Quero ser voluntário",
