@@ -55,7 +55,8 @@ export const WrapperText = styled.div`
 `;
 
 export const Title = styled.h1<{ uppercase: boolean }>`
-  font-size: ${({ theme }) => theme.typography.sora.S};
+  font-family: ${({ theme }) => theme.fontFamily.sora}; 
+  font-size: ${({ theme }) => theme.typography.sora.XS};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: ${({ theme }) => theme.lineHeight["1_1x"]};
   color: ${({ theme }) => theme.colors.extra.black};
@@ -65,9 +66,10 @@ export const Title = styled.h1<{ uppercase: boolean }>`
 `;
 
 export const Body = styled.p`
-  font-size: ${({ theme }) => theme.typography.outfit.XS};
+  font-family: ${({ theme }) => theme.fontFamily.outfit}; 
+  font-size: ${({ theme }) => theme.typography.outfit.S};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
   line-height: ${({ theme }) => theme.lineHeight["1_5x"]};
-  color: ${({ theme }) => theme.colors.grayscale[700]};
+  color: ${({ theme }) => theme.colors.extra.black};
   text-align: left;
 `;
