@@ -1,6 +1,6 @@
 import React from "react";
 import ButtonPrincipal from "../ButtonPrincipal";
-import { ButtonContainer, Container, Subtitle, Title } from "./styles";
+import { ButtonContainer, Container, Subtitle, TextContainer, Title } from "./styles";
 
 interface ContributePanelProps {
   title: string;
@@ -16,8 +16,10 @@ export default function ContributePanel({
   onButtonClick} : ContributePanelProps) {
   return (
     <Container>
-      <Title>{ title }</Title>
-      <Subtitle>{ subTitle }</Subtitle>
+      <TextContainer>
+        <Title>{ title }</Title>
+        <Subtitle>{ subTitle }</Subtitle>
+      </TextContainer>
       <ButtonContainer>
         <ButtonPrincipal
           variant="primary"
