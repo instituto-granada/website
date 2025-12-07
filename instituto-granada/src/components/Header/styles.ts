@@ -71,7 +71,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s;
-  font-weight: 700;
+  font-family: ${(props) => props.theme.fontWeight.regular};
+  font-weight: ${(props) => props.theme.fontWeight.regular};
   background-color: white;
   flex-shrink: 0;
 
