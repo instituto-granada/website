@@ -17,7 +17,7 @@ export const routesMap = {
     path: "/voluntarios",
     component: Volunteers,
   },
-  contact: { title: "Contatos", path: "/contato", component: Contact },
+  contact: { title: "Contato", path: "/contato", component: Contact },
   donations: {
     title: "Doações",
     path: "/doacoes",
