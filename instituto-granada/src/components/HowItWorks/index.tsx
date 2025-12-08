@@ -10,19 +10,24 @@ import {
   ButtonContainer,
 } from './styles';
 import ButtonPrincipal from '../ButtonPrincipal';
+import { NavigateOptions, To, useNavigate } from 'react-router-dom';
 
 interface HowItWorksProps {
   imageUrl: string;
   title: string;
   text: React.ReactNode;
-  oneButton?: boolean; 
+  oneButton?: boolean;
 }
+
 export default function HowItWorks({
   imageUrl,
   title,
   text,
   oneButton = false, 
 }: HowItWorksProps) {
+
+  const navigate = useNavigate();
+  
   return (
     <Container>
       <ImageWrapper>
@@ -37,7 +42,7 @@ export default function HowItWorks({
 
             <ButtonPrincipal
               variant="primary"
-              onClick={() => alert("Botão Apadrinhar Clicado!")}
+              onClick={() => navigate("/doacoes")}
               >
               Quero apadrinhar
             </ButtonPrincipal>
@@ -46,13 +51,13 @@ export default function HowItWorks({
             <>
               <ButtonPrincipal
                 variant="secondary"
-                onClick={() => alert("Botão Secundário Clicado!")}
+                onClick={() => navigate("/voluntarios")}
               >
                 Quero ser voluntário
               </ButtonPrincipal>
               <ButtonPrincipal
                 variant="primary"
-                onClick={() => alert("Botão Primário Clicado!")}
+                onClick={() => navigate("/doacoes")}
               >
                 Quero doar
               </ButtonPrincipal>

@@ -11,10 +11,12 @@ import { ProjectsCards } from "../../assets/";
 import { useTranslate } from "../../hooks/useTranslate";
 import HowItWorks from "../../components/HowItWorks";
 import PageStructure from "../../components/PageStructure";
+import { useNavigate } from "react-router-dom";
 
 export default function Christmas() {
   const { text } = useTranslate();
   const { hero, learnMore } = text.christmas;
+  const navigate = useNavigate();
 
   return (
     <PageStructure>
@@ -28,7 +30,7 @@ export default function Christmas() {
           {
             label: hero.buttons.primary.label,
             variant: "primary",
-            onClick: () => console.log("Quero apadrinhar"),
+            onClick: () => navigate("/doacoes"),
           },
         ]}
       />
