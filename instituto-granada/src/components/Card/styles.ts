@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const StyledCard = styled.div`
   box-sizing: border-box;
 
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr; 
+  align-items: center;
+  justify-content: center;
+
   height: 270px;
   width: 296px;
   padding: ${(props) => props.theme.spacing.M};
@@ -11,12 +16,7 @@ export const StyledCard = styled.div`
   box-shadow: ${(props) => props.theme.shadows.highlight};
   background-color: ${(props) => props.theme.colors.grayscale[100]};
 
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  flex-grow: 0;
+  row-gap: ${(props) => props.theme.spacing.M};
 `;
 
 export const CardHeader = styled.div`
@@ -44,6 +44,7 @@ export const CardContent = styled.div`
   align-items: center;
 
   .card-text {
+    font-family: ${(props) => props.theme.fontFamily.outfit};
     font-size: ${(props) => props.theme.typography.outfit.M};
     font-weight: 400;
     line-height: ${(props) => props.theme.lineHeight["1_5x"]};

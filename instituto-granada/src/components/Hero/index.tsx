@@ -7,6 +7,7 @@ import {
   Text,
   ButtonsContainer,
   HighlightedWord,
+  ButtonAndCaptionContainer,
 } from "./styles";
 import { HeroProps } from "./types";
 
@@ -44,16 +45,18 @@ export default function Hero({
       <ContentColumn>
         {renderTitle()}
         <Text>{text}</Text>
-        {buttons && buttons.length > 0 && (
-          <ButtonsContainer>
-            {buttons.map(({ label, onClick, variant }, index) => (
-              <ButtonPrincipal key={index} variant={variant} onClick={onClick}>
-                {label}
-              </ButtonPrincipal>
-            ))}
-          </ButtonsContainer>
-        )}
-        <Caption>{caption}</Caption>
+        <ButtonAndCaptionContainer>
+          {buttons && buttons.length > 0 && (
+            <ButtonsContainer>
+              {buttons.map(({ label, onClick, variant }, index) => (
+                <ButtonPrincipal key={index} variant={variant} onClick={onClick}>
+                  {label}
+                </ButtonPrincipal>
+              ))}
+            </ButtonsContainer>
+          )}
+          <Caption>{caption}</Caption>
+        </ButtonAndCaptionContainer>
       </ContentColumn>
     </Container>
   );

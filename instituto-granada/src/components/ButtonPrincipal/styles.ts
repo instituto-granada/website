@@ -59,8 +59,9 @@ export const StyledButton = styled.button<StyledButtonProps>`
   border-radius: 50px;
   width: 100%;
   font-size: clamp(0.75rem, 4vw, 1rem);
+  font-family: ${(props) => props.theme.fontFamily.sora};
   font-size: ${(props) => props.theme.typography.sora.XXS};
-  font-weight: bold;
+  font-weight: ${(props) => props.theme.fontWeight.bold};
   cursor: pointer;
   text-align: center;
   text-decoration: none;

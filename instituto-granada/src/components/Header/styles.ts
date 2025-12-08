@@ -71,7 +71,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s;
-  font-weight: 700;
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  font-weight: ${(props) => props.theme.fontWeight.regular};
   background-color: white;
   flex-shrink: 0;
 
@@ -96,7 +97,8 @@ export const DonateButton = styled.button`
   border-radius: 80px;
   cursor: pointer;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  font-weight: ${(props) => props.theme.fontWeight.semiBold};
   color: white;
   background-color: ${(props) => props.theme.colors.primary[400]};
   transition: all 0.2s ease-in-out;
@@ -221,7 +223,7 @@ export const MobileMenuItems = styled.div`
 
 export const MobileMenuButton = styled.div`
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem;
   justify-content: center;
   align-items: center;
 `;
@@ -230,7 +232,8 @@ export const MobileMenuItem = styled.div<ButtonProps>`
   padding: 16px 20px;
   cursor: pointer;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-family: ${(props) => props.theme.fontFamily.outfit};
+  font-weight: ${(props) => props.theme.fontWeight.regular};
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
 

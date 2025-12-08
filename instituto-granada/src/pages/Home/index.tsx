@@ -22,10 +22,12 @@ import ButtonPrincipal from "../../components/ButtonPrincipal";
 import Card from "../../components/Card";
 import StatistPanel from "../../components/StatistPanel";
 import Testimonials from "../../components/Testimonials";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const { text } = useTranslate();
   const { hero } = text.home;
+  const navigate  = useNavigate();
 
   return (
     <Container>
@@ -40,7 +42,7 @@ export default function Home() {
           {
             label: hero.buttons.primary.label,
             variant: "primary",
-            onClick: () => console.log("Clicou em Quero doar agora!"),
+            onClick: () => navigate("/doacoes"),
           },
         ]}
       />
@@ -59,13 +61,13 @@ export default function Home() {
           <ButtonsContainer>
             <ButtonPrincipal
               variant="primary"
-              onClick={() => alert("Botão Secundário Clicado!")}
+              onClick={() => navigate("/sobre")}
             >
               Conheça nossa história
             </ButtonPrincipal>
             <ButtonPrincipal
               variant="secondary"
-              onClick={() => alert("Botão Secundário Clicado!")}
+              onClick={() => navigate("/projetos")}
             >
               Veja nossos projetos
             </ButtonPrincipal>
@@ -83,21 +85,21 @@ export default function Home() {
             image={Icons.Gift}
             text="Cada valor nos ajuda a manter oficinas, refeições e atendimentos."
             buttonLabel="Quero doar"
-            onButtonClick={() => alert("Botão do Card clicado!")}
+            onButtonClick={() => navigate("/doacoes")}
           />
           <Card
             title={"SEJA VOLUNTÁRIO"}
             image={Icons.Person}
             text="Doe seu tempo e habilidades para fortalecer a comunidade."
             buttonLabel="Inscreva-se"
-            onButtonClick={() => alert("Botão do Card clicado!")}
+            onButtonClick={() => navigate("/voluntarios")}
           />
           <Card
             title={"SEJA PARCEIRO"}
             image={Icons.Hands}
             text="Empresas e organizações podem ampliar nosso impacto."
             buttonLabel="Fale Conosco"
-            onButtonClick={() => alert("Botão do Card clicado!")}
+            onButtonClick={() => navigate("/contato")}
           />
         </CardContainer>
       </SectionParticipate>
@@ -110,7 +112,7 @@ export default function Home() {
           </TextSectionTestimonials>
           <ButtonPrincipal
             variant="primary"
-            onClick={() => alert("Botão Secundário Clicado!")}
+            onClick={() => navigate("/doacoes")}
           >
             Quero fazer parte dessa transformação
           </ButtonPrincipal>

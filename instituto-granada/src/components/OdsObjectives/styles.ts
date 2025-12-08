@@ -22,4 +22,5 @@ export const StyledOdsObjectives = styled.div`
 export const OdsObjectiveIcon = styled.img`
     width: 120px;
     height: 120;
+    border-radius: 4px;
 `;

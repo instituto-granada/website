@@ -27,9 +27,10 @@ export const Container = styled.section<HeroContainerProps>`
     width: 100%;
     height: 100%;
     background: radial-gradient(
-      circle at 30% 90%,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.4) 90%
+      circle at 90% 50%,
+      rgba(0, 0, 0, 0.09) 35%,   /* centro */
+      rgba(0, 0, 0, 0.5) 50%, /* transição */
+      rgba(0, 0, 0, 0.8) 100% /* bordas escuras */
     );
     z-index: 1;
   }
@@ -109,7 +110,15 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
+export const ButtonAndCaptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: ${({ theme }) => theme.spacing["2XS"]};
+`;
+
 export const Caption = styled.p`
+  width: 100%;
   color: ${({ theme }) => theme.colors.extra.white};
   font-size: ${({ theme }) => theme.typography.outfit.M};
   font-weight: ${({ theme }) => theme.fontWeight.regular};

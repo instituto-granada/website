@@ -6,9 +6,11 @@ import { ProjectGallery } from "./styles";
 import WideCard from "../../components/WideCard";
 import ProjectCarousel from "../../components/ProjectCarousel";
 import PageStructure from "../../components/PageStructure";
+import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
   const { text } = useTranslate();
+  const navigate  = useNavigate();
   const { hero, galleries, carousel } = text.projects;
 
   const imageIndex = {
@@ -45,12 +47,12 @@ export default function Projects() {
           {
             label: hero.buttons.secondary.label,
             variant: "secondary",
-            onClick: () => console.log("Clicou em Começar Agora!"),
+            onClick: () => navigate("/voluntarios"),
           },
           {
             label: hero.buttons.primary.label,
             variant: "primary",
-            onClick: () => console.log("Clicou em Começar Agora!"),
+            onClick: () => navigate("/doacoes"),
           },
         ]}
       />
@@ -70,7 +72,7 @@ export default function Projects() {
           title="Quer apoiar nossos projetos?"
           subTitle="Sua contribuição pode transformar vidas"
           buttonLabel="Faça parte dessa transformação"
-          onButtonClick={() => console.log("Clicou em um botão primário.")}
+          onButtonClick={() => navigate("/doacoes")}
         />
 
         {gallery02?.list.map((project) => (
