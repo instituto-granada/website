@@ -10,15 +10,18 @@ import {
 import { GenericTextAreaProps } from "./types";
 
 const TextArea: FC<GenericTextAreaProps> = ({
-  label,
   error,
+  label,
+  labelBlack,
   maxLengthMessage,
   placeholder,
   ...props
 }) => {
   return (
     <Field>
-      <Label error={!!error}>{label}</Label>
+      <Label error={!!error} labelBlack={labelBlack}>
+        {label}
+      </Label>
       <Textarea
         error={!!error}
         maxLength={500}

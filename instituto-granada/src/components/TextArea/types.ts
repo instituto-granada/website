@@ -4,4 +4,5 @@ export type GenericTextAreaProps =
     maxLengthMessage: string;
     placeholder: string;
     error?: string;
+    labelBlack?: boolean;
   };

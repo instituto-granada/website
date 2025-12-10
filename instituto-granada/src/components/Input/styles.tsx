@@ -6,14 +6,17 @@ export const Field = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing["2XS"]};
 `;
 
-export const Label = styled.label<{ error?: boolean }>`
+export const Label = styled.label<{ error?: boolean; labelBlack?: boolean }>`
   font-family: ${({ theme }) => theme.fontFamily.outfit};
   font-size: ${({ theme }) => theme.typography.outfit.S};
   font-weight: ${({ theme }) => theme.fontWeight.regular};
-  color: ${({ theme, error }) =>
-    error ? theme.colors.primary[400] : theme.colors.extra.white};
+  color: ${({ theme, error, labelBlack }) =>
+    error
+      ? theme.colors.primary[400]
+      : labelBlack
+        ? theme.colors.grayscale[600]
+        : theme.colors.extra.white};
   margin-bottom: ${({ theme }) => theme.spacing["3XS"]};
-
   &::after {
     content: "*";
     color: ${({ theme }) => theme.colors.primary[400]};

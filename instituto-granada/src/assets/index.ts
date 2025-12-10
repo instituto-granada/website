@@ -17,20 +17,9 @@ import academicSupport from "./images/academicSupport.png";
 import familySupport from "./images/familySupport.png";
 import freeMeals from "./images/freeMeals.png";
 import physicalEducatorPosition from "./images/physicalEducatorPosition.png";
-
-import World_people from "./icons/World_people.svg";
-import Gift from "./icons/Gift.svg";
-import Hands from "./icons/Hands.svg";
-import People from "./icons/People.svg";
-
-import Food from "./icons/Food.svg";
-import Kid from "./icons/Kid.svg";
-import Person from "./icons/Person.svg";
-import Shirt from "./icons/Shirt.svg";
-
-import Dish from "./icons/Dish.svg";
-import Coffee from "./icons/Coffee.svg";
-import Pencil from "./icons/Pencil.svg";
+import colorfulFacebook from "./images/colorfulFacebook.png";
+import colorfulInstagram from "./images/colorfulInstagram.png";
+import colorfulYoutube from "./images/colorfulYoutube.png";
 
 import Testimonials1 from "./images/reports/depoimento1.png";
 import Testimonials2 from "./images/reports/depoimento2.png";
@@ -48,24 +37,6 @@ import projectMulheresCapazes from "./images/projects/projectMulheresCapazes.png
 import projectNatal from "./images/projects/projectNatal.png";
 import projectPascoa from "./images/projects/projectPascoa.png";
 import projectFerias from "./images/projects/projectFerias.png";
-
-import whatsapp from "./icons/whatsapp.svg";
-import instagram from "./icons/instagram.svg";
-import facebook from "./icons/facebook.svg";
-
-import OdsEducation from "./icons/OdsEducation.svg";
-import OdsEquality from "./icons/OdsEquality.svg";
-import OdsHealth from "./icons/OdsHealth.svg";
-import OdsPoverty from "./icons/OdsPoverty.svg";
-import OdsWork from "./icons/OdsWork.svg";
-import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
-
-import Copy from "./icons/Copy.svg";
-import Check from "./icons/Check.svg";
-import ServiceLine from "./icons/ServiceLine.svg";
-import OpenArmLine from "./icons/OpenArmLine.svg";
-import UserStarLine from "./icons/UserStarLine.svg";
-
 //projectsCards
 import backgroundChristmas from "./images/projectsCards/backgroundChristmas.png";
 import backgroundEaster from "./images/projectsCards/backgroundEaster.png";
@@ -74,9 +45,37 @@ import cardChristmas from "./images/projectsCards/cardChristmas.png";
 import cardLearnMoreChristmas from "./images/projectsCards/cardLearnMoreChristmas.png";
 import cardVacation from "./images/projectsCards/cardVacation.png";
 import cardEaster from "./images/projectsCards/cardEaster.png";
-
 import mission from "./images/mission.png";
 import qrCodePix from "./images/qrCodePix.png";
+
+import briefcase from "./icons/briefcase.svg";
+import Check from "./icons/Check.svg";
+import Coffee from "./icons/Coffee.svg";
+import Copy from "./icons/Copy.svg";
+import Dish from "./icons/Dish.svg";
+import facebook from "./icons/facebook.svg";
+import Food from "./icons/Food.svg";
+import Gift from "./icons/Gift.svg";
+import Hands from "./icons/Hands.svg";
+import home from "./icons/home.svg";
+import instagram from "./icons/instagram.svg";
+import Kid from "./icons/Kid.svg";
+import mail from "./icons/mail.svg";
+import OdsEducation from "./icons/OdsEducation.svg";
+import OdsEquality from "./icons/OdsEquality.svg";
+import OdsHealth from "./icons/OdsHealth.svg";
+import OdsPoverty from "./icons/OdsPoverty.svg";
+import OdsWork from "./icons/OdsWork.svg";
+import OdsZeroHunger from "./icons/OdsZeroHunger.svg";
+import OpenArmLine from "./icons/OpenArmLine.svg";
+import Pencil from "./icons/Pencil.svg";
+import People from "./icons/People.svg";
+import Person from "./icons/Person.svg";
+import ServiceLine from "./icons/ServiceLine.svg";
+import Shirt from "./icons/Shirt.svg";
+import UserStarLine from "./icons/UserStarLine.svg";
+import whatsapp from "./icons/whatsapp.svg";
+import World_people from "./icons/World_people.svg";
 
 export const Images = {
   logo,
@@ -116,34 +115,40 @@ export const Images = {
   physicalEducatorPosition,
   mission,
   qrCodePix,
+  colorfulFacebook,
+  colorfulYoutube,
+  colorfulInstagram,
 };
 
 export const Icons = {
-  World_people,
+  briefcase,
+  Check,
+  Coffee,
+  Copy,
+  Dish,
+  facebook,
+  Food,
   Gift,
   Hands,
-  People,
-  Food,
-  Kid,
-  Person,
-  Shirt,
-  facebook,
+  home,
   instagram,
-  whatsapp,
-  Dish,
-  Coffee,
-  Pencil,
+  Kid,
+  mail,
   OdsEducation,
   OdsEquality,
   OdsHealth,
   OdsPoverty,
   OdsWork,
   OdsZeroHunger,
-  Copy,
-  Check,
-  ServiceLine,
   OpenArmLine,
+  Pencil,
+  People,
+  Person,
+  ServiceLine,
+  Shirt,
   UserStarLine,
+  whatsapp,
+  World_people,
 };
 
 export type IconName = keyof typeof Icons;

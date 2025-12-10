@@ -7,6 +7,12 @@ export const formSchema = z.object({
     .string()
     .min(3, "Nome deve ter no mínimo 3 caracteres")
     .regex(/^[A-Za-zÀ-ÿ\s]+$/, "Nome não pode conter números"),
+  phone: z
+    .string()
+    .transform((val) => val.replace(/\D/g, ""))
+    .refine((val) => val.length === 11, {
+      message: "Telefone inválido. Use o formato (11) 91234-5678",
+    }),
   position: z.string().min(1, "Selecione um item"),
 });
 

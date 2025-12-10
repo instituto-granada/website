@@ -7,4 +7,6 @@ export type FormTexts = {
   messageLabel: string;
   messageInputMaxLenght: string;
   messagePlaceholder: string;
+  phoneLabel: string;
+  phonePlaceholder: string;
 };

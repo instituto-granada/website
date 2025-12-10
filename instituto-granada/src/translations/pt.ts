@@ -385,6 +385,16 @@ export const pt = {
     ],
   },
   contact: {
+    contactSection: {
+      title: "Contato",
+      info: {
+        address:
+          "Rua Moisés de Camargo, s/n – altura do nº 150 - Vila Granada – Mairinque/SP - CEP: 18.120-000",
+        cnpj: "CNPJ: 12.194.599/0001-20",
+        mail: "contato@institutogranada.org.br",
+        phone: "+55 (11) 9 9620-6046",
+      },
+    },
     formSection: {
       buttonLabel: "Enviar mensagem",
       emailLabel: "E-mail",
@@ -394,6 +404,8 @@ export const pt = {
       messageLabel: "Mensagem",
       messageInputMaxLenght: "max. 500",
       messagePlaceholder: "Digite sua mensagem",
+      phoneLabel: "Número de telefone",
+      phonePlaceholder: "Insira seu telefone",
       title: "Envie sua mensagem",
     },
     hero: {
