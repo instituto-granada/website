@@ -133,16 +133,13 @@ export default function Contact() {
           </Items>
           <Card>
             <SocialMediaTitle>Acompanhe nossas redes sociais:</SocialMediaTitle>
-
             <IconsRow>
               <Touchable href="https://www.instagram.com/institutogranada/">
                 <Image name="colorfulInstagram" style={{ width: "60px" }} />
               </Touchable>
-
               <Touchable href="https://www.facebook.com/www.institutogranada.com.br">
                 <Image name="colorfulFacebook" style={{ width: "60px" }} />
               </Touchable>
-
               <Touchable href="https://www.youtube.com/@institutogranada7063">
                 <Image name="colorfulYoutube" style={{ width: "60px" }} />
               </Touchable>

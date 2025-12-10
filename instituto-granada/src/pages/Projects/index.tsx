@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
   const { text } = useTranslate();
-  const navigate  = useNavigate();
-  const { hero, galleries, carousel } = text.projects;
+  const navigate = useNavigate();
+  const { carousel, contributePanel, hero, galleries } = text.projects;
 
   const imageIndex = {
     projectVidaFeliz: Images.projectVidaFeliz,
@@ -83,12 +83,13 @@ export default function Projects() {
             imagePosition={project.imagePosition}
           />
         ))}
-
         <ContributePanel
-          title="Vamos juntos?"
-          subTitle="Sua participação faz a diferença. Entre em contato e descubra como apoiar ou se engajar nos projetos"
-          buttonLabel="Falar no WhatsApp"
-          onButtonClick={() => console.log("Clicou em um botão primário.")}
+          title={contributePanel.title}
+          subTitle={contributePanel.subtitle}
+          buttonLabel={contributePanel.buttonLabel}
+          onButtonClick={() => {
+            window.open("https://wa.me/5511996206046", "_blank");
+          }}
         />
       </ProjectGallery>
     </PageStructure>

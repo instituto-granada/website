@@ -42,7 +42,7 @@ const Footer: FC = () => {
         <SocialMedia>
           <SectionTitle>{socialMedia.title}</SectionTitle>
           <WrapperIcons>
-            <Touchable href="#">
+            <Touchable href="https://wa.me/5511996206046">
               <Icon name="whatsapp" width={38} height={38} />
             </Touchable>
             <Touchable href="https://www.facebook.com/www.institutogranada.com.br">

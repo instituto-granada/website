@@ -141,6 +141,12 @@ export const pt = {
     },
   },
   projects: {
+    contributePanel: {
+      buttonLabel: "Falar no WhatsApp",
+      subtitle:
+        "Sua participação faz a diferença. Entre em contato e descubra como apoiar ou se engajar nos projetos",
+      title: "Vamos juntos?",
+    },
     hero: {
       title: "Conheça nossos projetos",
       text: "Conheça nossas iniciativas e descubra como elas transformam realidades",
